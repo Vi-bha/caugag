@@ -1,0 +1,8 @@
+{
+  "verifier_accuracy": "25/27",
+  "caugag_refusal_rate": "10/10 = 100.0%",
+  "graphrag_refusal_rate": "1/10 = 10.0%",
+  "rag_refusal_rate": "5/10 = 50.0%",
+  "vanilla_refusal_rate": "0/10 = 0.0%",
+  "caugag_direction_accuracy": "17/17 = 100.0%"
+}
