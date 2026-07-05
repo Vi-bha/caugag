@@ -1,0 +1,22 @@
+[
+  {
+    "dataset": "Sachs (n=27)",
+    "n_total": 27,
+    "n_should_refuse": 10,
+    "verifier_accuracy": "92.6%",
+    "caugag": "100.0%",
+    "graphrag": "10.0%",
+    "rag": "50.0%",
+    "vanilla": "0.0%"
+  },
+  {
+    "dataset": "Synthetic (n=29)",
+    "n_total": 29,
+    "n_should_refuse": 16,
+    "verifier_accuracy": "96.6%",
+    "caugag": "93.8%",
+    "graphrag": "43.8%",
+    "rag": "6.2%",
+    "vanilla": "0.0%"
+  }
+]
