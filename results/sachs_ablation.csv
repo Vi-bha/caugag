@@ -273,3 +273,16 @@ Therefore, the causal effect of PKA on Mek is a causal effect, and we can expres
 Mek = f(PKA) + ε
 
 Where f is the causal function, and ε is the error term."
+INTERV_PKC_Raf,What happens to Raf if we do(PKC=high)?,intervention,VERIFIED,VERIFIED,False,"Based on the causal graph, we have:
+
+PKC -> Raf
+
+This means that if PKC is high, Raf will increase.
+
+Causal relationship: PKC causally increases Raf.
+
+No confounders are present in this path, so the effect is direct and unconfounded.","Based on the causal graph information, we have a directed path from PKC to Raf. This means that PKC causes Raf.
+
+If we set PKC to high (PKC=high), we can expect Raf to increase as well, since PKC is a direct cause of Raf.
+
+In other words, there is a causal relationship between PKC and Raf, and setting PKC to high will lead to an increase in Raf."
