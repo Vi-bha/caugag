@@ -38,3 +38,6 @@ DIR_TRUE_PKA_JNK,Does PKA directly cause JNK?,direction,VERIFIED,VERIFIED,False,
 Causal relationship: PKA causes JNK. 
 
 Directed path: PKA -> JNK.","Based on the causal graph information, the answer is yes. There is a directed path from PKA to JNK, indicating that PKA directly causes JNK."
+DIR_TRUE_PKA_P38,Is there a direct causal effect of PKA on P38?,direction,VERIFIED,VERIFIED,False,"Yes, there is a direct causal effect of PKA on P38. 
+
+Causal relationship: PKA causes P38.","Based on the information from the causal graph, there is a directed path from PKA to P38, which indicates a direct causal effect of PKA on P38."
