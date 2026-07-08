@@ -734,3 +734,16 @@ This means that blocking PIP3 would lead to a change in Akt.","Based on the give
 If PIP3 had been blocked, it would mean that the cause of PIP3 (Plcg) is still present, but the effect of PIP3 (Akt) would be disrupted. However, since there is a direct edge from PIP3 to Akt, we can conclude that blocking PIP3 would indeed affect Akt.
 
 Therefore, if PIP3 had been blocked, Akt would likely have changed."
+CF_Erk_PKC,"If Erk had been higher, would PKC have changed?",counterfactual,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from Erk to PKC. This means that the graph does not support a causal claim between Erk and PKC.
+
+Therefore, I cannot assert that if Erk had been higher, PKC would have changed. The graph provides no evidence of Erk causing PKC.
+
+It's also worth noting that correlation does not imply causation. Even if we observe a correlation between Erk and PKC, it does not necessarily mean that Erk causes PKC or vice versa. There could be other underlying factors or mechanisms at play that we are not aware of.","Based on the given causal graph, we can infer the following:
+
+- PKC is not directly affected by Erk (there is no edge from Erk to PKC).
+- However, Erk is influenced by Mek (Mek -> Erk), and Mek is influenced by PKC (PKC -> Mek).
+- This suggests that PKC has an indirect effect on Erk through Mek.
+
+Given that Erk is higher, we can infer that Mek is also higher (since Mek -> Erk). However, we cannot directly conclude that PKC would change based on the given edges. 
+
+But, if we consider the indirect effect of Erk on PKC through Mek, we can make a causal claim: if Erk had been higher, Mek would be higher, and as a result, PKC might be higher (PKC -> Mek)."
