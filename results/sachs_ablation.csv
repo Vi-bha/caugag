@@ -11,3 +11,10 @@ Graph proof: VERIFIED. Path: ['PKC', 'PIP2']. No confounders.
 Directed path: PKC -> PIP2
 
 Yes, PKC directly affects PIP2.","Based on the causal graph information, the answer is yes. There is a directed path from PKC to PIP2, indicating that PKC directly affects PIP2."
+DIR_TRUE_PKC_JNK,Does PKC directly cause JNK?,direction,VERIFIED,VERIFIED,False,"Yes, the causal graph has verified that PKC directly causes JNK. 
+
+Causal relationship: PKC causes JNK.
+
+Directed path: PKC -> JNK 
+
+There are no confounders on this path.","Based on the causal graph information provided, the answer is yes. The directed path from PKC to JNK indicates a direct causal relationship between PKC and JNK."
