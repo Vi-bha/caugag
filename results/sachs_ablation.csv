@@ -161,3 +161,26 @@ CONF_Raf_Erk,Is the naive association between Raf and Erk confounded?,confoundin
 The confounders are: ['PKA']","Yes, the naive association between Raf and Erk is confounded. The graph indicates that there is a common cause, 'PKA', which means that the association between Raf and Erk is not causal and can be influenced by other factors (in this case, PKA)."
 CONF_Mek_JNK,Is there confounding between Mek and JNK?,confounding,CONFOUNDED,CONFOUNDED,True,"Yes, there is confounding between Mek and JNK.","Yes, there is confounding between Mek and JNK. The information from the causal graph indicates that 'CONFOUNDED' is present, which means that there is a confounding variable affecting both Mek and JNK."
 CONF_Raf_P38,Is the relationship between Raf and P38 confounded?,confounding,CONFOUNDED,CONFOUNDED,True,"Yes, the relationship between Raf and P38 is confounded.","Yes, the relationship between Raf and P38 is confounded. The graph information indicates that there are common causes ('PKC', 'PKA') that affect both Raf and P38, which is a characteristic of confounding."
+INTERV_Mek_Erk,What happens to Erk if we intervene on Mek?,intervention,VERIFIED,VERIFIED,False,"Based on the causal graph, we have the following information:
+
+- Mek causally affects Erk.
+- The path from Mek to Erk is: ['Mek', 'Erk'].
+- The variables to adjust for are: ['PKC', 'PKA', 'Raf'].
+
+When we intervene on Mek, we are essentially setting Mek to a specific value. This means that the effect of Mek on Erk will be direct and not influenced by the variables to adjust for (PKC, PKA, and Raf).
+
+Therefore, if we intervene on Mek, the causal relationship is:
+
+Mek -> Erk
+
+This means that if we set Mek to a specific value, Erk will be directly affected by that value.
+
+However, without knowing the specific value of Mek or the effect size, we cannot provide a numeric effect with a confidence interval.","Based on the causal graph information provided, we have a directed path from Mek to Erk. This means that Mek is a direct cause of Erk.
+
+If we intervene on Mek (i.e., set Mek to a specific value), we can break the causal relationship between Mek and Erk. 
+
+However, since there are no other paths from Mek to Erk in the graph, and no other variables are connected to both Mek and Erk, the effect of intervening on Mek on Erk is simply to set Erk to a value that is not influenced by Mek.
+
+In other words, if we intervene on Mek, Erk will no longer be influenced by Mek's value, and its value will be determined by other factors not shown in the graph.
+
+The variables 'PKC', 'PKA', and 'Raf' are listed as variables to adjust for, which means that if we intervene on Mek, we should also adjust these variables to their counterfactual values to accurately estimate the effect of the intervention."
