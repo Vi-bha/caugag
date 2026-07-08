@@ -588,3 +588,22 @@ PIP3 -> Akt
 Since PIP3 is a direct cause of Akt, and Plcg is a direct cause of PIP3, we can conclude that Plcg indirectly causes Akt through PIP3.
 
 This is an example of a mediated causal relationship, where Plcg has an effect on Akt through an intermediate variable (PIP3)."
+MULTIHOP_PKA_Akt,Does PKA indirectly affect Akt via Erk?,intervention,VERIFIED,VERIFIED,False,"To determine if PKA indirectly affects Akt via Erk, we need to check if there's a path from PKA to Erk and Erk to Akt.
+
+The causal graph has VERIFIED that PKA causally affects Erk.
+Graph proof: VERIFIED. Path: ['PKA', 'Erk']. No confounders.
+Directed path: PKA -> Erk
+
+The causal graph has VERIFIED that Erk causally affects Akt.
+Graph proof: VERIFIED. Path: ['Erk', 'Akt']. No confounders.
+Directed path: Erk -> Akt
+
+Since there are paths from PKA to Erk and Erk to Akt, we can conclude that PKA indirectly affects Akt via Erk.
+
+Causal relationship: PKA indirectly affects Akt via Erk.","Yes, PKA indirectly affects Akt via Erk. 
+
+The causal edges from the graph are:
+PKA -> Erk
+Erk -> Akt
+
+This indicates that PKA can activate Erk, and Erk can then activate Akt. Therefore, PKA has an indirect effect on Akt via Erk."
