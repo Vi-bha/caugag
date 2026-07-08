@@ -380,3 +380,10 @@ This relationship is supported by the directed path in the graph, indicating a c
 The path from Plcg to Akt is: Plcg -> PIP3 -> Akt. This is a directed path, indicating a causal relationship. Since there are no confounders mentioned, we can infer that Plcg's effect on Akt is mediated by PIP3.
 
 So, the answer is: Yes, Plcg indirectly causes Akt through PIP3."
+MULTIHOP_PKA_Akt,Does PKA indirectly affect Akt via Erk?,intervention,VERIFIED,VERIFIED,False,"The causal graph has the following information:
+- VERIFIED: PKA causally affects Akt.
+- Path: ['PKA', 'Akt']
+- No confounders.
+- Directed path: PKA -> Akt
+
+However, there is no information about the relationship between PKA and Erk, or Erk and Akt in the provided graph. Therefore, we cannot determine if PKA indirectly affects Akt via Erk.","Based on the information provided, there is no direct or indirect path from PKA to Akt via Erk mentioned in the graph. The only verified path is PKA -> Akt with no confounders."
