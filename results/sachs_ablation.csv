@@ -18,3 +18,6 @@ Causal relationship: PKC causes JNK.
 Directed path: PKC -> JNK 
 
 There are no confounders on this path.","Based on the causal graph information provided, the answer is yes. The directed path from PKC to JNK indicates a direct causal relationship between PKC and JNK."
+DIR_TRUE_PKC_P38,Is there a direct causal effect of PKC on P38?,direction,VERIFIED,VERIFIED,False,"Yes, there is a direct causal effect of PKC on P38.
+
+Causal relationship: PKC causes P38.","Based on the information from the causal graph, there is a directed path from PKC to P38, which is PKC -> P38. This indicates that there is a direct causal effect of PKC on P38."
