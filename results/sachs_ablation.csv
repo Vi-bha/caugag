@@ -18,3 +18,6 @@ Causal relationship: PKC -> JNK","Yes, PKC directly causes JNK. This is based on
 DIR_TRUE_PKC_P38,Is there a direct causal effect of PKC on P38?,direction,VERIFIED,VERIFIED,False,"Yes, there is a direct causal effect of PKC on P38. 
 
 Causal relationship: PKC causes P38.","Based on the given causal edges, there is a direct causal effect of PKC on P38. The edge PKC -> P38 indicates that PKC causes P38."
+DIR_TRUE_PKA_Akt,Does PKA directly affect Akt?,direction,VERIFIED,VERIFIED,False,"Yes, the causal graph has VERIFIED that PKA directly affects Akt. 
+
+Causal relationship: PKA causes Akt.","Yes, PKA directly affects Akt. This is indicated by the causal edge PKA -> Akt in the graph."
