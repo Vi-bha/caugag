@@ -1,0 +1,22 @@
+{
+  "random_seed": 42,
+  "scm_seed": 42,
+  "model_sachs": "llama-3.1-8b-instant",
+  "model_synthetic": "llama-3.1-8b-instant",
+  "temperature": 0.1,
+  "max_tokens": 512,
+  "sleep_between_calls": 2,
+  "library_versions": {
+    "groq": "1.5.0",
+    "networkx": "3.6.1",
+    "pandas": "2.2.2",
+    "numpy": "2.0.2",
+    "scipy": "1.16.3",
+    "langchain-core": "1.4.8",
+    "langgraph": "1.2.6"
+  },
+  "sachs_n_total": 82,
+  "sachs_n_refusal": 41,
+  "synthetic_n_total": 34,
+  "synthetic_n_refusal": 16
+}
