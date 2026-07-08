@@ -1337,3 +1337,30 @@ We know that PIP2 is directly caused by PKC, Plcg, and PIP3.
 From PIP3, we know it directly causes Akt. 
 
 So, there is a path from PIP2 to Akt through PIP3. Therefore, PIP2 is associated with Akt."
+ASSOC_Mek_Akt,Is there a statistical association between Mek and Akt?,association,ASSOCIATED,yes_associated,CONFOUNDED,"There is a statistical association between Mek and Akt. However, this association is due to the presence of a common cause, 'PKA', which is confounding the relationship.",True,"Mek and Akt are both proteins involved in the PI3K/Akt signaling pathway, which plays a crucial role in cell survival, growth, and metabolism.
+
+Research has shown that there is a statistical association between Mek (also known as Mek1 or Mek2) and Akt. Mek is a kinase that phosphorylates and activates Erk (extracellular signal-regulated kinase), which in turn can activate Akt through a feedback loop.
+
+Studies have demonstrated that Mek and Akt can interact and regulate each other's activity. For example, Mek can phosphorylate and activate Akt, while Akt can also phosphorylate and activate Mek. This complex interplay between Mek and Akt is essential for the proper functioning of the PI3K/Akt signaling pathway.
+
+In particular, the association between Mek and Akt has been implicated in various diseases, including cancer, where dysregulation of the PI3K/Akt signaling pathway can lead to uncontrolled cell growth and survival.
+
+Overall, the statistical association between Mek and Akt is well-established, and their interaction plays a critical role in the regulation of cell signaling pathways.","Based on the provided context, we can analyze the relationship between Mek and Akt.
+
+From the Sachs signaling context, we know that PKA regulates Akt. However, there is no direct causal relationship mentioned between Mek and Akt. 
+
+However, we can infer that there might be an indirect association between Mek and Akt through other variables. Since PKA regulates both Mek and Akt, we can consider the following path: PKA -> Mek -> Erk (or other downstream effects of Mek) and PKA -> Akt. 
+
+However, to determine if there is a statistical association between Mek and Akt, we need to consider the backdoor criterion. 
+
+If we consider the set Z = {PKA}, it satisfies the backdoor criterion relative to (Mek, Akt) because PKA is not a descendant of Mek, and Z blocks every path between Mek and Akt that contains an arrow into Mek (i.e., the path PKA -> Mek -> Erk -> Akt is blocked by PKA).
+
+Therefore, based on the backdoor criterion, Mek and Akt are conditionally independent given PKA. This implies that there is no statistical association between Mek and Akt after adjusting for PKA.","To determine if there's a statistical association between Mek and Akt, we need to consider the causal relationships provided.
+
+We know that PKA directly causes Mek and PKA directly causes Akt. This suggests that PKA is a common cause of both Mek and Akt, which implies that there's a statistical association between Mek and Akt due to their shared cause (PKA).
+
+Additionally, Mek directly causes Erk, and Erk directly causes Akt. This suggests that Mek has an indirect effect on Akt through Erk.
+
+However, the presence of a common cause (PKA) and an indirect effect (through Erk) does not necessarily imply a direct causal relationship between Mek and Akt.
+
+Therefore, based on the provided causal relationships, there is a statistical association between Mek and Akt."
