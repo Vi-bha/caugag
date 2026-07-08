@@ -247,3 +247,8 @@ From the given causal edges, we can see that:
 - Raf causes Mek.
 
 Since PKC and PKA are common causes of both Mek and JNK, there is confounding between Mek and JNK."
+CONF_Raf_P38,Is the relationship between Raf and P38 confounded?,confounding,CONFOUNDED,CONFOUNDED,True,"Yes, the relationship between Raf and P38 is confounded.","To determine if the relationship between Raf and P38 is confounded, we need to check if there are any common causes (confounders) that affect both Raf and P38.
+
+From the given causal edges, we can see that both Raf and P38 are affected by PKC and PKA. This means that PKC and PKA are common causes of both Raf and P38.
+
+Therefore, the relationship between Raf and P38 is confounded by PKC and PKA."
