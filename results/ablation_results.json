@@ -1,0 +1,17 @@
+{
+  "n_refusal_cases": 41,
+  "caugag_full": {
+    "correct": 39,
+    "rate": "95.1%"
+  },
+  "caugag_nogate": {
+    "correct": 39,
+    "rate": "95.1%"
+  },
+  "mcnemar": {
+    "stat": 0.0,
+    "p": 1.0,
+    "sig": "ns"
+  },
+  "gate_contribution": "+0.0%"
+}
