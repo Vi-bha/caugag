@@ -1,0 +1,34 @@
+{
+  "dataset": "Sachs",
+  "n_refusal_cases": 39,
+  "per_question_correct": {
+    "caugag": 38,
+    "graphrag": 5,
+    "rag": 16,
+    "vanilla": 2
+  },
+  "refusal_rates": {
+    "caugag": "97.4%",
+    "graphrag": "12.8%",
+    "rag": "41.0%",
+    "vanilla": "5.1%"
+  },
+  "mcnemar_tests": {
+    "CauGAG_vs_Vanilla": {
+      "stat": 34.0278,
+      "p": 0.0,
+      "sig": "***"
+    },
+    "CauGAG_vs_RAG": {
+      "stat": 20.0455,
+      "p": 8e-06,
+      "sig": "***"
+    },
+    "CauGAG_vs_GraphRAG": {
+      "stat": 31.0303,
+      "p": 0.0,
+      "sig": "***"
+    }
+  },
+  "note": "Real per-question vectors from actual LLM responses via Groq API"
+}
