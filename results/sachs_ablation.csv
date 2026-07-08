@@ -24,3 +24,6 @@ Causal relationship: PKA causes Akt.","Yes, PKA directly affects Akt. This is in
 DIR_TRUE_PKA_Erk,Does PKA directly cause Erk?,direction,VERIFIED,VERIFIED,False,"The causal graph has VERIFIED that PKA causally affects Erk. 
 
 Causal relationship: PKA directly causes Erk.","Based on the given causal edges, PKA directly causes Erk. The edge PKA -> Erk indicates a direct causal relationship between PKA and Erk."
+DIR_TRUE_PKA_Raf,Is there a direct causal effect of PKA on Raf?,direction,VERIFIED,VERIFIED,False,"Yes, there is a direct causal effect of PKA on Raf. 
+
+Causal relationship: PKA causes Raf.","Based on the given causal edges, there is a direct causal effect of PKA on Raf. The edge PKA -> Raf indicates that PKA causes Raf."
