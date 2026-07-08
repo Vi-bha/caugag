@@ -341,3 +341,19 @@ It's essential to note that correlation does not imply causation. The absence of
 In causal inference, the absence of a directed path between two variables in a DAG (Directed Acyclic Graph) implies that there is no direct causal effect between them. However, it does not rule out the possibility of an indirect causal effect through other variables.
 
 In this case, since no directed path from Akt to PKA was found, we can conclude that the causal effect of Akt on PKA is not identifiable based on the given graph information."
+INTERV_FALSE_Mek_PKC,"If we intervene on Mek, what happens to PKC?",intervention,UNVERIFIABLE,VERIFIED,False,"Based on the causal graph, we have the following information:
+
+- PKC causally affects Mek (VERIFIED).
+- Directed path: PKC -> Mek
+
+When we intervene on Mek, we are essentially setting Mek to a specific value. This intervention can have a backdoor effect on PKC.
+
+However, since there are no confounders in the graph, we can conclude that intervening on Mek will not affect PKC. The causal relationship is as follows:
+
+Intervening on Mek does not affect PKC.","Based on the causal graph information, we have a directed path from PKC to Mek. This means that Mek is an effect of PKC.
+
+When we intervene on Mek, we are essentially setting Mek to a specific value, which means we are breaking the causal relationship between PKC and Mek.
+
+In this case, since there are no confounders on the path, the intervention on Mek will also break the causal relationship between PKC and Mek. This means that PKC will no longer affect Mek.
+
+However, the effect of the intervention on Mek on PKC is not specified in the graph. But generally, in causal inference, intervening on an effect (Mek) does not directly affect its cause (PKC)."
