@@ -77,3 +77,6 @@ Graph proof: VERIFIED. Path: ['Plcg', 'PIP2']. No confounders.
 Directed path: Plcg -> PIP2
 
 Yes, Plcg directly affects PIP2.","Yes, Plcg directly affects PIP2. This is based on the known causal edge from the graph: Plcg -> PIP2."
+DIR_REV_Mek_PKC,Does Mek directly cause PKC?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from Mek to PKC. This means that the graph does not support a causal claim between Mek and PKC. 
+
+In other words, the graph provides **NO EVIDENCE** of Mek causing PKC. I cannot assert causation between Mek and PKC based on the given information.","No, Mek does not directly cause PKC. The known causal edges from the graph do not show a direct causal relationship between Mek and PKC."
