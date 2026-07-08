@@ -24,3 +24,6 @@ Causal relationship: PKC causes P38.","Based on the information from the causal 
 DIR_TRUE_PKA_Akt,Does PKA directly affect Akt?,direction,VERIFIED,VERIFIED,False,"Yes, the causal graph has VERIFIED that PKA directly affects Akt. 
 
 Causal relationship: PKA causes Akt.","Based on the causal graph information, the answer is yes. PKA directly affects Akt. The directed path from PKA to Akt indicates a direct causal relationship between the two variables."
+DIR_TRUE_PKA_Erk,Does PKA directly cause Erk?,direction,VERIFIED,VERIFIED,False,"Yes, the causal graph has verified that PKA directly causes Erk. 
+
+Causal relationship: PKA -> Erk","Based on the causal graph information, the answer is yes. There is a directed path from PKA to Erk, indicating that PKA directly causes Erk."
