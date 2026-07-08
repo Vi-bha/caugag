@@ -683,3 +683,12 @@ There are two paths from Mek to Akt:
 2. PKA -> Mek -> Akt
 
 Since there are multiple paths from Mek to Akt, we can conclude that there is a statistical association between Mek and Akt."
+CF_PKA_Raf,"If PKA had been higher, would Raf have changed?",counterfactual,VERIFIED,VERIFIED,False,"Based on the causal graph, we have a verified causal relationship:
+
+PKA -> Raf
+
+This means that if PKA had been higher, Raf would have increased.","Based on the given causal edges, we can infer the following:
+
+PKA -> Raf
+
+This edge indicates that PKA is a cause of Raf. Therefore, if PKA had been higher, we can expect Raf to increase as well."
