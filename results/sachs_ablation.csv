@@ -36,3 +36,11 @@ Causal relationship: PKA -> JNK","Based on the given causal edges, we can see th
 DIR_TRUE_PKA_P38,Is there a direct causal effect of PKA on P38?,direction,VERIFIED,VERIFIED,False,"Yes, there is a direct causal effect of PKA on P38. 
 
 Causal relationship: PKA causes P38.","Based on the given causal edges, there is a direct causal effect of PKA on P38."
+DIR_TRUE_Raf_Mek,Does Raf directly affect Mek?,direction,VERIFIED,VERIFIED,False,"The causal graph has verified that Raf causally affects Mek. 
+
+Causal relationship: Raf directly affects Mek.","Based on the given causal edges, we can see that there are two paths from Raf to Mek:
+
+1. Raf -> Mek (direct edge)
+2. PKC -> Raf -> Mek (indirect edge)
+
+However, the direct edge Raf -> Mek is present, which means that Raf directly affects Mek."
