@@ -215,3 +215,14 @@ From the given edges, we have:
 - PKA -> Raf (PKA is also a cause of Raf)
 
 Since PKA is a common cause of both Raf and Akt, the relationship between Raf and Akt is confounded by PKA."
+CONF_Mek_Akt,Is the relationship between Mek and Akt confounded?,confounding,CONFOUNDED,CONFOUNDED,True,"Yes, the relationship between Mek and Akt is confounded.","To determine if the relationship between Mek and Akt is confounded, we need to check if there are any common causes of both Mek and Akt.
+
+From the given edges, we can see that:
+
+- PKA causes both Mek and Akt.
+- Raf causes Mek.
+- Mek causes Erk, and Erk causes Akt.
+
+However, there is no direct edge from Raf to Akt. 
+
+Since PKA is a common cause of both Mek and Akt, the relationship between Mek and Akt is confounded by PKA."
