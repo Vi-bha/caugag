@@ -117,3 +117,10 @@ DIR_REV_Erk_Mek,Does Erk directly cause Mek?,direction,UNVERIFIABLE,UNVERIFIABLE
 
 Therefore, I must conclude that the graph provides NO evidence of Erk causing Mek. I will not assert causation between Erk and Mek.","No, Erk does not directly cause Mek. The causal edge from Erk to Mek is not present in the graph. However, we can infer that Erk is indirectly caused by Mek, as there is a causal edge from Mek to Erk."
 DIR_REV_Akt_Erk,Is there a direct causal effect of Akt on Erk?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no direct causal effect of Akt on Erk. The graph does not support a causal claim between Akt and Erk, as there is no directed path from Akt to Erk in the DAG (Directed Acyclic Graph).","Based on the given causal edges, there is no direct causal effect of Akt on Erk. The edges show that Erk is influenced by Mek and PKA, but there is no edge directly from Akt to Erk."
+DIR_REV_PIP2_PIP3,Does PIP2 directly affect PIP3?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from PIP2 to PIP3. This means that the graph does not support a causal claim between PIP2 and PIP3. 
+
+In other words, the graph provides **NO EVIDENCE** of PIP2 causing PIP3. 
+
+I must **REFUSE** to assert causation between PIP2 and PIP3 based on this graph.
+
+It's also essential to note that **correlation does not imply causation**. The absence of a causal relationship in the graph does not necessarily mean that PIP2 and PIP3 are uncorrelated. However, based on the graph, we cannot conclude that PIP2 directly affects PIP3.","No, PIP2 does not directly affect PIP3."
