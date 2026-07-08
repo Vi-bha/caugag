@@ -456,3 +456,14 @@ Since Mek -> Erk is a directed path, we can conclude that if Mek is inhibited, E
 There is no need to provide a confidence interval or numeric effect, as the causal relationship is deterministic based on the graph.","Based on the causal graph information, we have a directed path from Mek to Erk. This means that Mek is a cause of Erk. 
 
 If Mek had been inhibited, it would have decreased the effect of Mek on Erk. Since the path is directed, we can conclude that inhibiting Mek would have led to a decrease in Erk."
+CF_PKC_JNK,"Had PKC been absent, would JNK have been affected?",counterfactual,VERIFIED,VERIFIED,False,"Based on the causal graph, we can conclude that:
+
+If PKC were absent (i.e., PKC = 0), then JNK would not have been affected (i.e., JNK = 0).
+
+The causal relationship is:
+
+PKC -> JNK
+
+This means that the presence of PKC is a necessary condition for JNK to be activated.","Based on the causal graph information, we can conclude that PKC is a direct cause of JNK. This means that if PKC were absent, JNK would indeed be affected.
+
+In other words, the absence of PKC would lead to a change in JNK, indicating a causal relationship between the two variables."
