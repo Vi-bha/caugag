@@ -474,3 +474,10 @@ Causal relationship: Blocking PIP3 causes a change in Akt.
 This is because the graph shows a directed path from PIP3 to Akt, indicating that PIP3 causally affects Akt.","Based on the causal graph information, we can conclude that PIP3 is a direct cause of Akt. This means that if PIP3 had been blocked, Akt would likely have changed.
 
 In other words, the causal relationship is as follows: if PIP3 is blocked (i.e., PIP3 = 0), then Akt would be affected (i.e., Akt ≠ Akt under normal conditions)."
+CF_Erk_PKC,"If Erk had been higher, would PKC have changed?",counterfactual,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, we cannot determine the effect of Erk on PKC. The graph does not support a causal claim between Erk and PKC, as there is no directed path from Erk to PKC in the DAG (Directed Acyclic Graph).
+
+Therefore, we cannot assert that if Erk had been higher, PKC would have changed. The graph provides no evidence of Erk causing PKC, and we should not assume a causal relationship between these two variables.
+
+It's also essential to note that correlation does not imply causation. Even if we observe a correlation between Erk and PKC, it does not necessarily mean that Erk causes PKC or vice versa.","Based on the causal graph information provided, there is no directed path from Erk to PKC. This means that Erk does not have a direct causal effect on PKC.
+
+Therefore, if Erk had been higher, it is unlikely that PKC would have changed."
