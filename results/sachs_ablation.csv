@@ -86,3 +86,6 @@ DIR_REV_P38_PKC,Is there a direct causal effect of P38 on PKC?,direction,UNVERIF
 DIR_REV_Akt_PKA,Does Akt directly affect PKA?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from Akt to PKA. This means that the graph provides NO evidence of Akt causing PKA. I cannot assert that Akt directly affects PKA. 
 
 It's essential to note that correlation does not imply causation, and without a direct causal relationship in the graph, we cannot conclude that Akt causes PKA.","Based on the information from the causal graph, there is no directed path from Akt to PKA. This suggests that Akt does not directly affect PKA."
+DIR_REV_Erk_PKA,Does Erk directly cause PKA?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from Erk to PKA. This means that the graph does not support a causal claim between Erk and PKA. 
+
+Therefore, I must conclude that the graph provides NO evidence of Erk causing PKA. I will not assert causation between Erk and PKA.","Based on the information from the causal graph, there is no directed path from Erk to PKA in the DAG (Directed Acyclic Graph). This suggests that Erk does not directly cause PKA."
