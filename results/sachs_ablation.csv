@@ -318,3 +318,12 @@ Given the information, we can infer that PKC's effect on Erk is mediated through
 PKC -> Mek -> Erk
 
 This suggests that PKC has a positive causal effect on Erk through its activation of Mek."
+INTERV_PIP3_Akt,What happens to Akt if PIP3 is experimentally increased?,intervention,VERIFIED,VERIFIED,False,"Based on the causal graph, we have a verified causal relationship: PIP3 causally affects Akt.
+
+Given that PIP3 is experimentally increased, we can infer that Akt will also increase, as PIP3 directly causes Akt.
+
+There is no information provided about the magnitude of the effect, so we cannot report a numeric effect with its confidence interval. However, we can conclude that an increase in PIP3 will lead to an increase in Akt.","Based on the given causal edges, we can infer the following:
+
+- PIP3 -> Akt: This edge directly indicates that an increase in PIP3 will lead to an increase in Akt.
+
+Therefore, if PIP3 is experimentally increased, we can expect Akt to increase as well."
