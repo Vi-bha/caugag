@@ -449,3 +449,20 @@ However, the graph does not provide a specific numeric effect or confidence inte
 PKC -> Raf
 
 This edge indicates that PKC (high) causes Raf to increase. Therefore, if we do (PKC=high), we can expect Raf to increase."
+INTERV_FALSE_Erk_PKC,What happens to PKC if we intervene on Erk?,intervention,UNVERIFIABLE,VERIFIED,False,"Since the causal graph has VERIFIED that PKC causally affects Erk, and there are no confounders, we can use the backdoor criterion to analyze the effect of intervening on Erk.
+
+Given the directed path: PKC -> Mek -> Erk, intervening on Erk would break the path from PKC to Erk.
+
+However, since there is no direct path from Erk back to PKC, and no confounders, we cannot conclude a causal effect of Erk on PKC.
+
+Therefore, the causal relationship is: Intervening on Erk does not affect PKC.","To determine the effect of intervening on Erk on PKC, we need to follow the causal path from Erk to PKC.
+
+The causal path from Erk to PKC is: Erk -> Mek -> PKC.
+
+However, we also know that PKC can directly activate Mek. Therefore, the causal path from Erk to PKC is: Erk -> Mek.
+
+Intervening on Erk would block the activation of Mek by Erk. However, Mek can still be activated by PKC. Therefore, intervening on Erk would not directly affect PKC.
+
+However, if we consider the overall effect of intervening on Erk, it would likely reduce the activity of Mek, which in turn could reduce the activity of PKC. But this is an indirect effect.
+
+So, the direct effect of intervening on Erk on PKC is 0, but the overall effect could be a reduction in PKC activity due to the indirect effect on Mek."
