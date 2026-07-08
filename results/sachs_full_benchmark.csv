@@ -1318,3 +1318,22 @@ But, in general, JNK and P38 are both MAPKs (Mitogen-Activated Protein Kinases) 
 So, based on this information, it is likely that JNK and P38 are correlated, but the exact nature of this correlation would depend on the specific context and the causal graph between them.","Since we know that PKC directly causes both JNK and P38, and PKA directly causes both JNK and P38, we can infer that JNK and P38 are correlated. 
 
 This is because both PKC and PKA are common causes of JNK and P38, which means that any variation in JNK is likely to be associated with variation in P38, and vice versa."
+ASSOC_PIP2_Akt,Is PIP2 associated with Akt?,association,ASSOCIATED,yes_associated,CONFOUNDED,"The relationship between PIP2 and Akt is confounded. 
+
+The confounders are: ['PIP3'].",True,"Yes, PIP2 (Phosphatidylinositol 4,5-bisphosphate) is associated with Akt (also known as Protein Kinase B). 
+
+Akt is a serine/threonine kinase that plays a crucial role in cell survival and metabolism. It is activated by phosphatidylinositol 3-kinase (PI3K), which generates PIP3 (Phosphatidylinositol 3,4,5-trisphosphate) from PIP2. 
+
+Akt then binds to PIP3, which is anchored to the plasma membrane by its negatively charged phosphate groups. This binding is crucial for Akt's activation and localization to the plasma membrane, where it can phosphorylate and regulate various downstream targets.","To answer this question, we need to establish a causal relationship between PIP2 and Akt. 
+
+From the context provided, we can use the backdoor criterion to determine if there's a causal relationship between PIP2 and Akt. 
+
+However, I don't have any information about PIP2 and Akt in the context provided. To answer your question, I would need more information about their relationship in the context of cell signaling pathways.
+
+If you provide more context or information about PIP2 and Akt, I can try to help you establish a causal relationship between them using the backdoor criterion or other causal inference methods.","To determine if PIP2 is associated with Akt, we need to look for a path from PIP2 to Akt in the graph.
+
+We know that PIP2 is directly caused by PKC, Plcg, and PIP3. 
+
+From PIP3, we know it directly causes Akt. 
+
+So, there is a path from PIP2 to Akt through PIP3. Therefore, PIP2 is associated with Akt."
