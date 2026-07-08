@@ -416,3 +416,10 @@ However, without more information, it is not possible to determine the causal ef
 To quantify the causal effect, we need more information about the relationship between V2 and V6, such as the direction and magnitude of the effect. However, based on the given information, we can conclude that V2 has a positive causal effect on V6.
 
 Additionally, we can also infer that V2 has an indirect causal effect on V6 through V5, since V5 directly causes V6 and V2 directly causes V5. However, the magnitude and direction of this indirect effect are not specified."
+SYN_EFFECT_4,What is the causal effect of V2 on V14?,intervention,VERIFIED,effect=-0.537,VERIFIED,False,"The causal effect of V2 on V14 is a direct causal effect. 
+
+Causal relationship: V2 causes V14.
+
+There is a direct, unconfounded path from V2 to V14.",I'm not aware of any information about V2 and V14. Could you please provide more context or information about what V2 and V14 refer to?,"Unfortunately, the context provided does not contain any information about V2 and V14. It appears to be related to protein signaling pathways, specifically the MAPK cascade and PKA regulation, but it does not mention V2 and V14.
+
+To determine the causal effect of V2 on V14, I would need more information about the relationships between these variables in the context of protein signaling pathways. If you provide more context or information about V2 and V14, I may be able to help you better.","Based on the given causal relationships, we can see that V2 directly causes V14. This means that V2 has a direct causal effect on V14."
