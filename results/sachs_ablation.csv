@@ -15,3 +15,6 @@ Directed path: PKC -> PIP2.","Yes, PKC directly affects PIP2. This is indicated 
 DIR_TRUE_PKC_JNK,Does PKC directly cause JNK?,direction,VERIFIED,VERIFIED,False,"Yes, the causal graph has VERIFIED that PKC directly causes JNK. 
 
 Causal relationship: PKC -> JNK","Yes, PKC directly causes JNK. This is based on the known causal edge from the graph: PKC -> JNK."
+DIR_TRUE_PKC_P38,Is there a direct causal effect of PKC on P38?,direction,VERIFIED,VERIFIED,False,"Yes, there is a direct causal effect of PKC on P38. 
+
+Causal relationship: PKC causes P38.","Based on the given causal edges, there is a direct causal effect of PKC on P38. The edge PKC -> P38 indicates that PKC causes P38."
