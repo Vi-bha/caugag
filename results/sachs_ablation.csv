@@ -195,3 +195,12 @@ Therefore, if we intervene on PKA, Akt will be directly affected by the interven
 If we intervene on PKA (i.e., we set PKA to a specific value or prevent it from occurring), we can expect the value of Akt to change accordingly.
 
 In this case, since there are no confounders on this path, the effect of intervening on PKA on Akt will be a direct causal effect."
+INTERV_PKC_Erk,What is the causal effect of PKC on Erk?,intervention,VERIFIED,VERIFIED,False,"Based on the causal graph, the causal effect of PKC on Erk is mediated by Mek. 
+
+The causal relationship is: PKC -> Mek -> Erk.
+
+There is no direct causal effect of PKC on Erk. The effect of PKC on Erk is indirect through Mek.","Based on the causal graph information provided, we can conclude that there is a direct causal effect of PKC on Erk through the path 'PKC', 'Mek', 'Erk'. 
+
+Since there are no confounders in this path, we can assume that the causal effect of PKC on Erk is mediated by Mek. This means that PKC affects Erk indirectly through its effect on Mek.
+
+Therefore, the causal effect of PKC on Erk is not a direct effect, but rather an indirect effect through Mek."
