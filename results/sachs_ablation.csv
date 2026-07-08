@@ -619,3 +619,20 @@ Plcg -> PIP2 (direct edge)
 PIP3 -> PIP2 (direct edge)
 
 Using the transitive property of causality, we can conclude that Plcg causes PIP2 through PIP3."
+MULTIHOP_PKC_Akt,What is the indirect causal effect of PKC on Akt?,intervention,VERIFIED,VERIFIED,False,"The indirect causal effect of PKC on Akt is mediated by the path ['PKC', 'Mek', 'Erk', 'Akt']. 
+
+Since there are no confounders, the causal effect of PKC on Akt is entirely due to this path.
+
+However, the graph does not provide information about the numeric effect of PKC on Akt.","To find the indirect causal effect of PKC on Akt, we need to look for paths from PKC to Akt that do not involve direct edges.
+
+One possible path is: PKC -> PIP2 -> PIP3 -> Akt
+
+Another possible path is: PKC -> Raf -> Erk -> Akt
+
+However, there is also a path: PKC -> Mek -> Erk -> Akt
+
+Since there are multiple paths, we can combine them to get the total indirect effect. 
+
+The total indirect effect of PKC on Akt is the sum of the effects of each path. However, without knowing the specific effect sizes of each edge, we can only express the total indirect effect as a combination of the effects of the individual paths.
+
+So, the total indirect effect of PKC on Akt is a combination of the effects of PKC -> PIP2 -> PIP3 -> Akt, PKC -> Raf -> Erk -> Akt, and PKC -> Mek -> Erk -> Akt."
