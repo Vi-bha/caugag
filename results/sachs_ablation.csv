@@ -539,3 +539,15 @@ It's essential to note that correlation does not imply causation. The absence of
 In general, the causal effect of a node on its parent is not defined in the context of causal inference. The causal effect of a node is typically defined as the effect of that node on its children. 
 
 However, we can infer that PKA has a causal effect on Akt, as PKA is the parent node of Akt."
+INTERV_FALSE_Mek_PKC,"If we intervene on Mek, what happens to PKC?",intervention,UNVERIFIABLE,VERIFIED,False,"Since the causal graph has VERIFIED that PKC causally affects Mek, and there are no confounders, we can infer the reverse causal relationship.
+
+The causal graph implies that Mek causally affects PKC.
+
+Directed path: Mek -> PKC","Based on the given causal graph, we can infer the following:
+
+- PKC directly causes Mek (PKC -> Mek).
+- Mek directly causes Erk (Mek -> Erk).
+
+If we intervene on Mek, we are essentially setting Mek to a specific value, which would break the direct causal relationship between Mek and Erk. However, the intervention on Mek would not directly affect PKC, as PKC is the cause of Mek, not the other way around.
+
+Therefore, if we intervene on Mek, PKC would not be directly affected by the intervention."
