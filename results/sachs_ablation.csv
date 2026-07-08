@@ -709,3 +709,14 @@ If Mek's inhibition only affects the Mek -> Erk edge, but not the other edges, t
 But, if Mek's inhibition also affects the PKA -> Mek or Raf -> Mek edges (which is not explicitly stated in the graph), then the effect on Erk would be more complex and depend on the specific relationships between these edges.
 
 In the absence of more information, we can conclude that if Mek had been inhibited, Erk would likely be lower due to the direct causal influence from Mek to Erk."
+CF_PKC_JNK,"Had PKC been absent, would JNK have been affected?",counterfactual,VERIFIED,VERIFIED,False,"Based on the causal graph, we can conclude that:
+
+If PKC were absent, JNK would not have been affected.
+
+This is because the graph shows a direct causal relationship from PKC to JNK, and there are no confounders. The absence of PKC would break this causal path, and therefore, JNK would not be affected.","Based on the given causal edges, we can infer the following:
+
+PKC -> JNK
+
+This edge indicates that PKC is a direct cause of JNK. 
+
+If PKC were absent, it would likely disrupt the causal pathway leading to JNK. Therefore, it is reasonable to conclude that if PKC were absent, JNK would have been affected."
