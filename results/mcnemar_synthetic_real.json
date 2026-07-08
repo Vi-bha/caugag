@@ -1,0 +1,36 @@
+{
+  "dataset": "Synthetic",
+  "n_total": 34,
+  "n_refusal_cases": 16,
+  "verifier_accuracy": "97.1%",
+  "per_question_correct": {
+    "caugag": 15,
+    "graphrag": 4,
+    "rag": 5,
+    "vanilla": 0
+  },
+  "refusal_rates": {
+    "caugag": "93.8%",
+    "graphrag": "25.0%",
+    "rag": "31.2%",
+    "vanilla": "0.0%"
+  },
+  "mcnemar_tests": {
+    "CauGAG vs Vanilla": {
+      "stat": 13.0667,
+      "p": 0.000301,
+      "sig": "***"
+    },
+    "CauGAG vs RAG": {
+      "stat": 8.1,
+      "p": 0.004427,
+      "sig": "**"
+    },
+    "CauGAG vs GraphRAG": {
+      "stat": 7.6923,
+      "p": 0.005546,
+      "sig": "**"
+    }
+  },
+  "note": "Real per-question vectors from actual LLM responses"
+}
