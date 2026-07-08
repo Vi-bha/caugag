@@ -33,3 +33,8 @@ Causal relationship: PKA causes Raf.","Based on the information from the causal 
 DIR_TRUE_PKA_Mek,Does PKA directly affect Mek?,direction,VERIFIED,VERIFIED,False,"Yes, the causal graph has VERIFIED that PKA directly affects Mek. 
 
 Causal relationship: PKA causes Mek.","Based on the causal graph information, the answer is yes. PKA directly affects Mek. The directed path from PKA to Mek indicates a direct causal relationship between the two variables."
+DIR_TRUE_PKA_JNK,Does PKA directly cause JNK?,direction,VERIFIED,VERIFIED,False,"Yes, the causal graph has VERIFIED that PKA directly causes JNK. 
+
+Causal relationship: PKA causes JNK. 
+
+Directed path: PKA -> JNK.","Based on the causal graph information, the answer is yes. There is a directed path from PKA to JNK, indicating that PKA directly causes JNK."
