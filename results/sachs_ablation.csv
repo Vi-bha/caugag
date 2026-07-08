@@ -720,3 +720,17 @@ PKC -> JNK
 This edge indicates that PKC is a direct cause of JNK. 
 
 If PKC were absent, it would likely disrupt the causal pathway leading to JNK. Therefore, it is reasonable to conclude that if PKC were absent, JNK would have been affected."
+CF_PIP3_Akt,"If PIP3 had been blocked, would Akt have changed?",counterfactual,VERIFIED,VERIFIED,False,"Based on the causal graph, we have a direct causal relationship from PIP3 to Akt. 
+
+If PIP3 had been blocked, we can infer that Akt would have changed. 
+
+The causal relationship is: PIP3 -> Akt
+
+This means that blocking PIP3 would lead to a change in Akt.","Based on the given causal edges, we can infer the following:
+
+- PIP3 -> Akt: This edge indicates that PIP3 causes Akt.
+- Plcg -> PIP3: This edge indicates that Plcg causes PIP3.
+
+If PIP3 had been blocked, it would mean that the cause of PIP3 (Plcg) is still present, but the effect of PIP3 (Akt) would be disrupted. However, since there is a direct edge from PIP3 to Akt, we can conclude that blocking PIP3 would indeed affect Akt.
+
+Therefore, if PIP3 had been blocked, Akt would likely have changed."
