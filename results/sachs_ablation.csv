@@ -1,0 +1,4 @@
+question_id,question,query_type,correct_verdict,verifier_verdict,caugag_full_refused,caugag_full_response,nogate_response
+DIR_TRUE_PKC_Mek,Does PKC directly cause Mek?,direction,VERIFIED,VERIFIED,False,"Based on the causal graph, the answer is: Yes, PKC directly causes Mek.
+
+The graph proof shows a directed path from PKC to Mek, indicating a direct causal relationship.","Based on the causal graph information, the answer is yes. There is a directed path from PKC to Mek, indicating that PKC directly causes Mek."
