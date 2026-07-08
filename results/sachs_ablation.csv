@@ -650,3 +650,13 @@ Once we adjust for ['PKA'], we can re-evaluate the relationship between Raf and 
 Since there's a direct causal effect from Raf to Mek and Mek to Erk, we can conclude that Raf has an indirect causal effect on Erk. However, to determine if Raf is statistically associated with Erk, we need to consider the direct causal effect of Raf on Erk.
 
 There is no direct causal edge from Raf to Erk in the given graph. However, since Raf has an indirect causal effect on Erk through Mek, we can conclude that Raf is statistically associated with Erk."
+ASSOC_JNK_P38,Is JNK correlated with P38?,association,ASSOCIATED,CONFOUNDED,True,"The relationship between JNK and P38 is confounded. 
+
+The confounders are PKC and PKA.","Based on the given causal edges, we can infer the following:
+
+- PKC -> JNK: PKC causes JNK
+- PKC -> P38: PKC causes P38
+- PKA -> JNK: PKA causes JNK
+- PKA -> P38: PKA causes P38
+
+Since both PKC and PKA are common causes of both JNK and P38, we can conclude that JNK and P38 are correlated. This is because they share common causes, which is a sufficient condition for correlation."
