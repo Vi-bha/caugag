@@ -251,3 +251,12 @@ Therefore, the interventional effect of PKC on Mek is:
 Mek = f(PKC)
 
 where f is the causal function representing the relationship between PKC and Mek."
+INTERV_Plcg_PIP2,"If Plcg is experimentally increased, what happens to PIP2?",intervention,VERIFIED,VERIFIED,False,"Based on the causal graph, we have a verified causal relationship:
+
+Plcg -> PIP2
+
+This means that if Plcg is experimentally increased, PIP2 will also increase.
+
+There is no information provided about the magnitude of the effect, so we cannot report a numeric effect with a confidence interval.","Based on the causal graph information, we have a directed path from Plcg to PIP2. This means that Plcg causes PIP2.
+
+If Plcg is experimentally increased, we can infer that PIP2 will also increase, given that there are no confounders in this path. This is because Plcg directly influences PIP2, and increasing Plcg will lead to an increase in PIP2."
