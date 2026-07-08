@@ -206,3 +206,12 @@ The known causal edges from the graph are:
 - Mek -> Erk
 
 There is no direct causal edge from P38 to Mek."
+CONF_Raf_Akt,Is the relationship between Raf and Akt confounded?,confounding,CONFOUNDED,CONFOUNDED,True,"Yes, the relationship between Raf and Akt is confounded.","To determine if the relationship between Raf and Akt is confounded, we need to check if there are any common causes of both Raf and Akt.
+
+From the given edges, we have:
+
+- PKC -> Raf (PKC is a cause of Raf)
+- PKA -> Akt (PKA is a cause of Akt)
+- PKA -> Raf (PKA is also a cause of Raf)
+
+Since PKA is a common cause of both Raf and Akt, the relationship between Raf and Akt is confounded by PKA."
