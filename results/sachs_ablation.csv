@@ -49,3 +49,6 @@ DIR_TRUE_Mek_Erk,Does Mek directly cause Erk?,direction,VERIFIED,VERIFIED,False,
 Yes, Mek directly causes Erk.
 
 The graph proof states: Directed path: Mek -> Erk. This indicates a direct causal relationship between Mek and Erk.","According to the causal graph information, there is a directed path from Mek to Erk. This means that Mek directly causes Erk."
+DIR_TRUE_Erk_Akt,Is there a direct causal effect of Erk on Akt?,direction,VERIFIED,VERIFIED,False,"Yes, there is a direct causal effect of Erk on Akt. 
+
+Causal relationship: Erk causes Akt.","According to the causal graph information, there is a directed path from Erk to Akt, which means Erk has a direct causal effect on Akt."
