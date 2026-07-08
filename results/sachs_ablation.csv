@@ -576,3 +576,15 @@ PKC -> Mek
 Mek -> Erk
 
 This suggests that PKC indirectly causes Erk through Mek."
+MULTIHOP_Plcg_Akt,Does Plcg indirectly cause Akt through PIP3?,intervention,VERIFIED,VERIFIED,False,"Yes, the graph verifies that Plcg indirectly causes Akt through PIP3.
+
+Causal relationship: Plcg -> Akt (indirectly through PIP3)
+
+Path: ['Plcg', 'PIP3', 'Akt']","Based on the given causal edges, we can infer the following causal relationship:
+
+Plcg -> PIP3
+PIP3 -> Akt
+
+Since PIP3 is a direct cause of Akt, and Plcg is a direct cause of PIP3, we can conclude that Plcg indirectly causes Akt through PIP3.
+
+This is an example of a mediated causal relationship, where Plcg has an effect on Akt through an intermediate variable (PIP3)."
