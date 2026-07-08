@@ -177,3 +177,17 @@ DIR_NONE_Erk_Plcg,Does Erk directly cause Plcg?,direction,UNVERIFIABLE,UNVERIFIA
 
 Therefore, I must conclude that the graph provides NO evidence of Erk causing Plcg. I will not assert causation between Erk and Plcg.","No, Erk does not directly cause Plcg."
 DIR_NONE_Akt_PIP2,Does Akt directly cause PIP2?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from Akt to PIP2. This means that the graph provides NO evidence of Akt causing PIP2. I cannot assert causation between Akt and PIP2. Correlation does not imply causation, and without a direct causal link, we cannot conclude that Akt directly causes PIP2.","No, Akt does not directly cause PIP2. The known causal edges from the graph do not show a direct causal relationship between Akt and PIP2."
+DIR_NONE_JNK_Akt,Does JNK directly cause Akt?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from JNK to Akt. This means that the graph does not support a causal claim between JNK and Akt. Therefore, I must conclude that the graph provides NO evidence of JNK causing Akt. 
+
+I will not assert that JNK does not cause Akt, as that would be an inverse claim that is also not supported by the graph. I will only say that the graph does not provide evidence for a causal relationship between JNK and Akt.
+
+It's also worth noting that correlation does not imply causation, and the absence of a causal relationship in the graph does not necessarily mean that JNK and Akt are not related in some other way.","No, JNK does not directly cause Akt. 
+
+The known causal edges from the graph are:
+PKC -> JNK
+PKA -> Akt
+PKA -> JNK
+Erk -> Akt
+PIP3 -> Akt
+
+There is no direct causal edge from JNK to Akt. However, PKA causes both JNK and Akt, suggesting that PKA could be an intermediate cause of Akt through JNK."
