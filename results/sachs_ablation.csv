@@ -409,3 +409,15 @@ However, since we do not have information about the interventional effects of PK
 But we can say that the interventional effect of PKC on Mek is at least as large as the direct effect (PKC -> Mek), since the direct effect is a component of the total effect.
 
 Therefore, the interventional effect of PKC on Mek is at least as large as the direct effect, which is a causal claim based on the given edges."
+INTERV_Plcg_PIP2,"If Plcg is experimentally increased, what happens to PIP2?",intervention,VERIFIED,VERIFIED,False,"Based on the causal graph, we have a verified causal relationship:
+
+Plcg -> PIP2
+
+This means that if Plcg is experimentally increased, PIP2 will also increase.
+
+There is no information provided about the magnitude of the effect, so we cannot report a numeric effect with a confidence interval.","Based on the known causal edges, if Plcg is experimentally increased, we can infer the following effects on PIP2:
+
+1. Plcg -> PIP3: An increase in Plcg will lead to an increase in PIP3.
+2. Plcg -> PIP2: An increase in Plcg will directly lead to an increase in PIP2.
+
+Therefore, if Plcg is experimentally increased, we can conclude that PIP2 will increase."
