@@ -64,3 +64,8 @@ Therefore, based on the information provided, it appears that PIP3 does not dire
 DIR_TRUE_PIP3_Akt,Does PIP3 directly cause Akt?,direction,VERIFIED,VERIFIED,False,"Yes, the causal graph has verified that PIP3 directly causes Akt. 
 
 Causal relationship: PIP3 -> Akt","Based on the causal graph information provided, the answer is yes. PIP3 directly causes Akt, as indicated by the directed path 'PIP3 -> Akt'."
+DIR_TRUE_Plcg_PIP3,Is there a direct causal effect of Plcg on PIP3?,direction,VERIFIED,VERIFIED,False,"Yes, there is a direct causal effect of Plcg on PIP3. 
+
+Causal relationship: Plcg causes PIP3.","Based on the information from the causal graph, there is a directed path from Plcg to PIP3, which indicates that Plcg causes PIP3. However, the question is about a direct causal effect.
+
+Since there are no confounders on the path and the path is directed, we can conclude that there is a direct causal effect of Plcg on PIP3."
