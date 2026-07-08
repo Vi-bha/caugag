@@ -33,3 +33,6 @@ Causal relationship: PKA causes Mek.","Yes, PKA directly affects Mek. This is be
 DIR_TRUE_PKA_JNK,Does PKA directly cause JNK?,direction,VERIFIED,VERIFIED,False,"Yes, the causal graph has VERIFIED that PKA directly causes JNK. 
 
 Causal relationship: PKA -> JNK","Based on the given causal edges, we can see that PKA directly causes JNK. The edge PKA -> JNK indicates a direct causal relationship between PKA and JNK."
+DIR_TRUE_PKA_P38,Is there a direct causal effect of PKA on P38?,direction,VERIFIED,VERIFIED,False,"Yes, there is a direct causal effect of PKA on P38. 
+
+Causal relationship: PKA causes P38.","Based on the given causal edges, there is a direct causal effect of PKA on P38."
