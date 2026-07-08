@@ -636,3 +636,17 @@ Since there are multiple paths, we can combine them to get the total indirect ef
 The total indirect effect of PKC on Akt is the sum of the effects of each path. However, without knowing the specific effect sizes of each edge, we can only express the total indirect effect as a combination of the effects of the individual paths.
 
 So, the total indirect effect of PKC on Akt is a combination of the effects of PKC -> PIP2 -> PIP3 -> Akt, PKC -> Raf -> Erk -> Akt, and PKC -> Mek -> Erk -> Akt."
+ASSOC_Raf_Erk,Is Raf statistically associated with Erk?,association,ASSOCIATED,CONFOUNDED,True,"The relationship between Raf and Erk is confounded. 
+
+To determine the statistical association, we need to adjust for the confounders. In this case, the confounders are ['PKA']. 
+
+Once we adjust for ['PKA'], we can re-evaluate the relationship between Raf and Erk.","Based on the given causal edges, we can infer the following:
+
+- PKA -> Raf (direct causal effect)
+- PKA -> Erk (direct causal effect)
+- Raf -> Mek (direct causal effect)
+- Mek -> Erk (direct causal effect)
+
+Since there's a direct causal effect from Raf to Mek and Mek to Erk, we can conclude that Raf has an indirect causal effect on Erk. However, to determine if Raf is statistically associated with Erk, we need to consider the direct causal effect of Raf on Erk.
+
+There is no direct causal edge from Raf to Erk in the given graph. However, since Raf has an indirect causal effect on Erk through Mek, we can conclude that Raf is statistically associated with Erk."
