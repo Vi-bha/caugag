@@ -388,3 +388,24 @@ When PKA is experimentally manipulated, we can expect the following outcomes:
 - If PKA is inhibited (e.g., through an antagonist), Erk will be indirectly deactivated by the reduction in Mek activation (PKA -> Mek -> Erk). However, Erk will still be directly activated by Mek (Mek -> Erk) to some extent, as the direct effect of PKA on Erk (PKA -> Erk) is blocked. Therefore, Erk activation will decrease, but not completely.
 
 In summary, manipulating PKA will have a direct and indirect effect on Erk activation."
+INTERV_PKC_Mek,What is the interventional effect of PKC on Mek?,intervention,VERIFIED,VERIFIED,False,"Based on the causal graph, the interventional effect of PKC on Mek is:
+
+Mek = PKC
+
+This means that if we intervene on PKC, Mek will be equal to PKC. There are no confounders in the path, so this effect is direct and unconfounded.
+
+Since the graph does not provide a numeric effect, we cannot report a confidence interval.","To determine the interventional effect of PKC on Mek, we need to consider the causal edges from the graph. 
+
+PKC directly causes Mek (PKC -> Mek). This means that if we intervene on PKC, we can directly affect the level of Mek.
+
+However, we also see that PKA and Raf both cause Mek (PKA -> Mek and Raf -> Mek). This means that the effect of PKC on Mek is not the only pathway through which Mek is affected.
+
+To calculate the interventional effect of PKC on Mek, we need to consider the total effect of PKC on Mek, including both the direct effect and the indirect effects through other variables.
+
+Using the causal graph, we can see that the total effect of PKC on Mek is the sum of the direct effect (PKC -> Mek) and the indirect effects through PKA and Raf.
+
+However, since we do not have information about the interventional effects of PKA and Raf on Mek, we cannot calculate the total interventional effect of PKC on Mek.
+
+But we can say that the interventional effect of PKC on Mek is at least as large as the direct effect (PKC -> Mek), since the direct effect is a component of the total effect.
+
+Therefore, the interventional effect of PKC on Mek is at least as large as the direct effect, which is a causal claim based on the given edges."
