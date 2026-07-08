@@ -353,3 +353,10 @@ The graph proof shows a directed path from PKC to Mek, indicating a direct causa
 PKC can phosphorylate and activate Raf, which in turn activates MEK, leading to the activation of ERK (Extracellular Signal-Regulated Kinase). So, while PKC doesn't directly cause Mek, it can indirectly activate MEK through the Raf-MEK-ERK pathway.","Based on the provided context, we can see that PKC phosphorylates downstream proteins in a cascade pathway, but it does not directly phosphorylate Mek. 
 
 According to the context, the MAPK cascade is a well-characterized causal chain: Raf -> Mek -> Erk. This suggests that Raf is the one that phosphorylates Mek, not PKC.","Yes, PKC directly causes Mek. This is a known causal relationship from the graph."
+DIR_TRUE_PKC_PIP2,Does PKC directly affect PIP2?,direction,VERIFIED,yes,VERIFIED,"Yes, the causal graph has VERIFIED that PKC directly affects PIP2. 
+
+Causal relationship: PKC causes PIP2.",False,"Phospholipase C (PLC) is the enzyme that directly affects PIP2 (Phosphatidylinositol 4,5-bisphosphate). When PLC is activated, it catalyzes the hydrolysis of PIP2 into two secondary messengers: IP3 (Inositol trisphosphate) and DAG (Diacylglycerol).","Unfortunately, the provided context does not contain information about PKC's direct effect on PIP2. However, I can tell you that PKC (Protein Kinase C) is a family of enzymes that play a significant role in cell signaling, and PIP2 (Phosphatidylinositol 4,5-bisphosphate) is a phospholipid that serves as a precursor for the second messenger molecule IP3.
+
+In general, PKC can be activated by PIP2, but this is not a direct effect. Instead, PIP2 can bind to and activate PKC, which then phosphorylates downstream targets. However, without more specific information, I cannot confirm whether PKC directly affects PIP2.
+
+If you have more context or information about the specific scenario you are interested in, I may be able to provide a more detailed answer.","Yes, PKC directly causes PIP2."
