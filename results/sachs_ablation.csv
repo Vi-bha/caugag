@@ -65,3 +65,6 @@ DIR_TRUE_PIP3_PIP2,Does PIP3 directly affect PIP2?,direction,VERIFIED,VERIFIED,F
 Yes, PIP3 directly affects PIP2. 
 
 Causal relationship: PIP3 -> PIP2","Based on the given causal edges, we can see that PIP3 directly affects PIP2. The edge ""PIP3 -> PIP2"" indicates a direct causal relationship between PIP3 and PIP2."
+DIR_TRUE_PIP3_Akt,Does PIP3 directly cause Akt?,direction,VERIFIED,VERIFIED,False,"Yes, PIP3 directly causes Akt. 
+
+Causal relationship: PIP3 -> Akt","Based on the given causal edges, we can see that PIP3 has a direct causal edge to Akt. This means that PIP3 directly causes Akt."
