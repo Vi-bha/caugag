@@ -252,3 +252,30 @@ CONF_Raf_P38,Is the relationship between Raf and P38 confounded?,confounding,CON
 From the given causal edges, we can see that both Raf and P38 are affected by PKC and PKA. This means that PKC and PKA are common causes of both Raf and P38.
 
 Therefore, the relationship between Raf and P38 is confounded by PKC and PKA."
+INTERV_Mek_Erk,What happens to Erk if we intervene on Mek?,intervention,VERIFIED,VERIFIED,False,"Based on the causal graph, we have the following information:
+
+- Mek causally affects Erk.
+- The path from Mek to Erk is: ['Mek', 'Erk'].
+- The variables to adjust for are: ['PKC', 'PKA', 'Raf'].
+
+When we intervene on Mek, we are essentially setting Mek to a specific value (e.g., Mek = 1 or Mek = 0). This intervention breaks the causal path from Mek to Erk, and we need to adjust for the variables in the path.
+
+However, since the path is direct (Mek -> Erk), we don't need to adjust for any variables. The causal effect of Mek on Erk is not confounded by any other variables.
+
+Therefore, if we intervene on Mek, the effect on Erk will be the same as the direct causal effect of Mek on Erk.
+
+The causal relationship is: Mek -> Erk.
+
+Since the graph does not provide a numeric effect, we cannot report a specific effect with a confidence interval.","To determine the effect of intervening on Mek on Erk, we need to look at the causal edges involving Mek.
+
+We know that Mek is directly affected by PKC, PKA, and Raf. 
+
+If we intervene on Mek, we are essentially setting Mek to a specific value (let's say, Mek = 0). 
+
+Now, let's look at the edges involving Erk. We know that Erk is directly affected by Mek (Mek -> Erk) and indirectly affected by PKA (PKA -> Mek -> Erk) and Raf (Raf -> Mek -> Erk).
+
+If we intervene on Mek, the edge Mek -> Erk will be broken, as Mek is now set to 0. However, the indirect edges PKA -> Mek -> Erk and Raf -> Mek -> Erk will still be active, as Mek is still a part of these paths.
+
+Since PKA and Raf are still affecting Erk indirectly through Mek, we can conclude that intervening on Mek will not completely eliminate the effect of PKA and Raf on Erk. However, the direct effect of Mek on Erk will be eliminated.
+
+Therefore, if we intervene on Mek, Erk will still be affected by PKA and Raf, but the effect of Mek on Erk will be eliminated."
