@@ -102,3 +102,6 @@ DIR_REV_Mek_PKA,Does Mek directly affect PKA?,direction,UNVERIFIABLE,UNVERIFIABL
 In other words, the graph provides **NO EVIDENCE** of Mek causing PKA. 
 
 I must emphasize that **correlation does not imply causation**, and without a direct causal link, we cannot assert that Mek directly affects PKA.","No, Mek does not directly affect PKA. The causal edges from the graph show that PKA affects Mek (PKC -> Mek is not a direct edge to PKA, but PKA -> Mek is), but there is no edge indicating that Mek affects PKA."
+DIR_REV_JNK_PKA,Does JNK directly cause PKA?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from JNK to PKA. This means the graph provides NO evidence of JNK causing PKA. Therefore, I cannot assert that JNK directly causes PKA. 
+
+It's essential to note that correlation does not imply causation, and without a direct causal link, we cannot conclude a causal relationship between JNK and PKA.","No, JNK does not directly cause PKA. The known causal edge is PKC -> JNK, but there is no known causal edge from JNK to PKA."
