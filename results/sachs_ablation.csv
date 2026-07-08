@@ -204,3 +204,12 @@ There is no direct causal effect of PKC on Erk. The effect of PKC on Erk is indi
 Since there are no confounders in this path, we can assume that the causal effect of PKC on Erk is mediated by Mek. This means that PKC affects Erk indirectly through its effect on Mek.
 
 Therefore, the causal effect of PKC on Erk is not a direct effect, but rather an indirect effect through Mek."
+INTERV_PIP3_Akt,What happens to Akt if PIP3 is experimentally increased?,intervention,VERIFIED,VERIFIED,False,"Based on the causal graph, we have a verified causal relationship: PIP3 causally affects Akt.
+
+Given that PIP3 is experimentally increased, we can infer that Akt will also increase. 
+
+The causal relationship is: PIP3 -> Akt.
+
+There is no information provided about the magnitude of the effect, so we cannot report a numeric effect with its confidence interval.","Based on the causal graph information, we have a directed path from PIP3 to Akt with no confounders. This means that PIP3 causes Akt.
+
+If PIP3 is experimentally increased, we can infer that Akt will also increase, given the causal relationship between PIP3 and Akt. This is because the increase in PIP3 will lead to an increase in Akt, following the causal path PIP3 -> Akt."
