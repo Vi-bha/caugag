@@ -908,3 +908,39 @@ PKC → Mek (direct)
 PKC → Raf → Mek (indirect)
 
 The total interventional effect of PKC on Mek is the sum of these two effects."
+INTERV_Plcg_PIP2,"If Plcg is experimentally increased, what happens to PIP2?",intervention,VERIFIED,yes_causal_effect,VERIFIED,"Based on the causal graph, we have a verified causal relationship:
+
+Plcg -> PIP2
+
+This means that if Plcg is experimentally increased, PIP2 will also increase.
+
+There is no information about the magnitude of the effect, so we cannot provide a numeric effect with a confidence interval.",False,"If PLCγ (Plcg) is experimentally increased, it will lead to an increase in the breakdown of PIP2 (Phosphatidylinositol 4,5-bisphosphate). 
+
+PLCγ is an enzyme that catalyzes the hydrolysis of PIP2 into two products: IP3 (Inositol trisphosphate) and DAG (Diacylglycerol). 
+
+So, when PLCγ is increased, it will result in a decrease in PIP2 levels and an increase in IP3 and DAG levels.","To answer this question, we need to apply the do-calculus. 
+
+Let's assume that Plcg is the variable X and PIP2 is the variable Y. We want to find P(PIP2|do(Plcg)).
+
+According to the do-calculus, P(PIP2|do(Plcg)) is the interventional distribution when Plcg is set by external intervention. This means that we are considering a scenario where Plcg is experimentally increased.
+
+The do-operator removes all incoming edges to Plcg in the causal graph. This implies that the effect of PIP2 on Plcg is removed.
+
+Now, we need to find the causal relationship between Plcg and PIP2. Plcg is a phospholipase C gamma, which is an enzyme that hydrolyzes PIP2 to produce IP3 and DAG. Therefore, Plcg is a cause of PIP2.
+
+Since Plcg is a cause of PIP2, the causal graph has an arrow from Plcg to PIP2. When we apply the do-operator, this arrow is removed.
+
+After removing the arrow, we are left with the causal graph where Plcg is a cause of PIP2. This means that Plcg is a direct cause of PIP2.
+
+Therefore, if Plcg is experimentally increased, PIP2 will be decreased.
+
+In other words, P(PIP2|do(Plcg)) < P(PIP2).","Based on the given causal relationships, we know that Plcg directly causes PIP3 and PIP2. 
+
+If Plcg is experimentally increased, we can infer the following:
+
+1. Plcg causes PIP3 (direct causal relationship)
+2. PIP3 causes PIP2 (direct causal relationship)
+
+Therefore, if Plcg is experimentally increased, it will cause an increase in PIP3, which in turn will cause an increase in PIP2.
+
+So, if Plcg is experimentally increased, PIP2 will increase."
