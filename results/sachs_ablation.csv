@@ -387,3 +387,13 @@ MULTIHOP_PKA_Akt,Does PKA indirectly affect Akt via Erk?,intervention,VERIFIED,V
 - Directed path: PKA -> Akt
 
 However, there is no information about the relationship between PKA and Erk, or Erk and Akt in the provided graph. Therefore, we cannot determine if PKA indirectly affects Akt via Erk.","Based on the information provided, there is no direct or indirect path from PKA to Akt via Erk mentioned in the graph. The only verified path is PKA -> Akt with no confounders."
+MULTIHOP_Plcg_PIP2,Does Plcg cause PIP2 through PIP3?,intervention,VERIFIED,VERIFIED,False,"The causal graph has the following information:
+- VERIFIED that Plcg causally affects PIP2.
+- Graph proof: VERIFIED. Path: ['Plcg', 'PIP2']. No confounders.
+- Directed path: Plcg -> PIP2
+
+However, there is no information about a path from Plcg to PIP2 through PIP3. The graph only verifies the direct causal relationship between Plcg and PIP2.","Based on the information provided, we can see that there is a directed path from Plcg to PIP2. However, there is no information about PIP3 being involved in this path.
+
+Since the question is asking if Plcg causes PIP2 through PIP3, and there is no information about PIP3 being involved in the path from Plcg to PIP2, we cannot confirm this causal relationship based on the provided information.
+
+However, we can say that Plcg causes PIP2 directly, as indicated by the directed path Plcg -> PIP2."
