@@ -71,3 +71,9 @@ Causal relationship: PIP3 -> Akt","Based on the given causal edges, we can see t
 DIR_TRUE_Plcg_PIP3,Is there a direct causal effect of Plcg on PIP3?,direction,VERIFIED,VERIFIED,False,"Yes, there is a direct causal effect of Plcg on PIP3. 
 
 Causal relationship: Plcg causes PIP3.","Based on the given causal edges, there is a direct causal effect of Plcg on PIP3. The edge ""Plcg -> PIP3"" directly indicates that Plcg causes PIP3."
+DIR_TRUE_Plcg_PIP2,Does Plcg directly affect PIP2?,direction,VERIFIED,VERIFIED,False,"The causal graph has VERIFIED that Plcg causally affects PIP2. 
+
+Graph proof: VERIFIED. Path: ['Plcg', 'PIP2']. No confounders.
+Directed path: Plcg -> PIP2
+
+Yes, Plcg directly affects PIP2.","Yes, Plcg directly affects PIP2. This is based on the known causal edge from the graph: Plcg -> PIP2."
