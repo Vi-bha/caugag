@@ -228,3 +228,13 @@ To estimate the causal effect of Raf on Erk, we need to control for the confound
 The directed path from Raf to Erk is: Raf -> Mek -> Erk, which indicates a direct causal relationship between Raf and Erk through Mek.
 
 Therefore, the causal effect of Raf on Erk, adjusting for PKC and PKA, can be estimated using the path ['Raf', 'Mek', 'Erk'] and controlling for the confounding variables ['PKC', 'PKA']."
+INTERV_PKA_Erk,What happens to Erk when PKA is experimentally manipulated?,intervention,VERIFIED,VERIFIED,False,"Based on the causal graph, we have verified that PKA causally affects Erk. 
+
+The causal relationship is: 
+PKA causes Erk.
+
+In other words, manipulating PKA experimentally will lead to a change in Erk.","Based on the causal graph information, we can infer the following:
+
+Since there is a directed path from PKA to Erk (PKA -> Erk), we can conclude that manipulating PKA experimentally will have a causal effect on Erk. 
+
+In other words, if PKA is experimentally manipulated (e.g., increased or decreased), Erk will also be affected in a predictable way."
