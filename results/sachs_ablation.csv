@@ -490,3 +490,22 @@ Intervening on Akt would also prevent Erk and PIP3 from activating Akt, but this
 Therefore, the effect of intervening on Akt on Raf would be to reduce the activation of Raf by PKA through Akt, but not to eliminate it entirely, since PKA still activates Raf directly.
 
 So, the causal effect of intervening on Akt on Raf is a reduction in the activation of Raf."
+INTERV_FALSE_JNK_Mek,"If we intervene on JNK, what happens to Mek?",intervention,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from JNK to Mek. This means that the graph does not support a causal claim between JNK and Mek.
+
+Therefore, when we intervene on JNK, we cannot assert what happens to Mek based on the causal graph alone. The graph provides no evidence of a causal relationship between JNK and Mek.
+
+In other words, intervening on JNK may or may not affect Mek, but the causal graph does not provide any information about the potential effect.
+
+It's also worth noting that correlation does not imply causation, and without a causal relationship established, we cannot make any claims about the effect of intervening on JNK on Mek.","To determine the effect of intervening on JNK on Mek, we need to look at the causal graph.
+
+We know that PKC -> JNK and PKA -> JNK. This means that both PKC and PKA are causal parents of JNK.
+
+We also know that PKC -> Mek and PKA -> Mek. This means that both PKC and PKA are causal parents of Mek.
+
+However, we also know that Mek -> Erk. This is a downstream effect of Mek.
+
+Now, if we intervene on JNK, we are essentially blocking the effect of PKC and PKA on JNK. This means that the effect of PKC and PKA on Mek through JNK is also blocked.
+
+However, PKC and PKA still have a direct effect on Mek. Therefore, intervening on JNK will not block the effect of PKC and PKA on Mek.
+
+So, the effect of intervening on JNK on Mek is that it will not block the effect of PKC and PKA on Mek."
