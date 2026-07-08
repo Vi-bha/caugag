@@ -90,3 +90,8 @@ DIR_REV_Erk_PKA,Does Erk directly cause PKA?,direction,UNVERIFIABLE,UNVERIFIABLE
 
 Therefore, I must conclude that the graph provides NO evidence of Erk causing PKA. I will not assert causation between Erk and PKA.","Based on the information from the causal graph, there is no directed path from Erk to PKA in the DAG (Directed Acyclic Graph). This suggests that Erk does not directly cause PKA."
 DIR_REV_Raf_PKA,Is there a direct causal effect of Raf on PKA?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no direct causal effect of Raf on PKA. The graph does not support a causal claim between Raf and PKA, as there is no directed path from Raf to PKA in the DAG (Directed Acyclic Graph).","Based on the information provided from the causal graph, there is no directed path from Raf to PKA in the Directed Acyclic Graph (DAG). This indicates that there is no direct causal effect of Raf on PKA."
+DIR_REV_Mek_PKA,Does Mek directly affect PKA?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from Mek to PKA. This means that the graph does not support a causal claim between Mek and PKA. 
+
+In other words, the graph provides NO evidence of Mek causing PKA. I cannot assert that Mek directly affects PKA. 
+
+It's also essential to note that correlation does not imply causation. Even if there is a correlation between Mek and PKA, it does not necessarily mean that Mek causes PKA.","Based on the information from the causal graph, there is no directed path from Mek to PKA. This suggests that Mek does not directly affect PKA."
