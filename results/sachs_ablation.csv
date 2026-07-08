@@ -12,3 +12,6 @@ DIR_TRUE_PKC_PIP2,Does PKC directly affect PIP2?,direction,VERIFIED,VERIFIED,Fal
 Causal relationship: PKC causes PIP2. 
 
 Directed path: PKC -> PIP2.","Yes, PKC directly affects PIP2. This is indicated by the causal edge ""PKC -> PIP2"" in the graph."
+DIR_TRUE_PKC_JNK,Does PKC directly cause JNK?,direction,VERIFIED,VERIFIED,False,"Yes, the causal graph has VERIFIED that PKC directly causes JNK. 
+
+Causal relationship: PKC -> JNK","Yes, PKC directly causes JNK. This is based on the known causal edge from the graph: PKC -> JNK."
