@@ -260,3 +260,16 @@ This means that if Plcg is experimentally increased, PIP2 will also increase.
 There is no information provided about the magnitude of the effect, so we cannot report a numeric effect with a confidence interval.","Based on the causal graph information, we have a directed path from Plcg to PIP2. This means that Plcg causes PIP2.
 
 If Plcg is experimentally increased, we can infer that PIP2 will also increase, given that there are no confounders in this path. This is because Plcg directly influences PIP2, and increasing Plcg will lead to an increase in PIP2."
+INTERV_PKA_Mek,What is the causal effect of PKA on Mek?,intervention,VERIFIED,VERIFIED,False,"The causal effect of PKA on Mek is a direct causal effect. 
+
+Causal relationship: PKA causes Mek.
+
+There is no confounding variable in the path, so the causal effect is not confounded.","Based on the causal graph information provided, we can conclude that there is a direct causal effect of PKA on Mek. 
+
+Since there are no confounders on the path from PKA to Mek, and the path is directed (PKA -> Mek), we can say that PKA causes Mek. 
+
+Therefore, the causal effect of PKA on Mek is a causal effect, and we can express it as:
+
+Mek = f(PKA) + ε
+
+Where f is the causal function, and ε is the error term."
