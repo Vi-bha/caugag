@@ -131,3 +131,13 @@ Therefore, I must conclude that the graph provides NO evidence of PIP3 causing P
 DIR_REV_PIP2_Plcg,Does PIP2 directly affect Plcg?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from PIP2 to Plcg. This means that the graph provides NO evidence of PIP2 causing Plcg. 
 
 I cannot assert that PIP2 directly affects Plcg, as the graph does not support this causal claim.","No, PIP2 does not directly affect Plcg."
+DIR_NONE_JNK_Erk,Does JNK directly cause Erk?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from JNK to Erk. This means that the graph provides NO evidence of JNK causing Erk. I cannot assert causation between JNK and Erk. Correlation does not imply causation, and without a direct causal link, we cannot conclude that JNK directly causes Erk.","No, JNK does not directly cause Erk. 
+
+We know the following causal edges:
+- PKC -> JNK
+- PKA -> Erk
+- PKA -> JNK
+- Mek -> Erk
+- Erk -> Akt
+
+There is no direct causal edge from JNK to Erk."
