@@ -21,3 +21,6 @@ There are no confounders on this path.","Based on the causal graph information p
 DIR_TRUE_PKC_P38,Is there a direct causal effect of PKC on P38?,direction,VERIFIED,VERIFIED,False,"Yes, there is a direct causal effect of PKC on P38.
 
 Causal relationship: PKC causes P38.","Based on the information from the causal graph, there is a directed path from PKC to P38, which is PKC -> P38. This indicates that there is a direct causal effect of PKC on P38."
+DIR_TRUE_PKA_Akt,Does PKA directly affect Akt?,direction,VERIFIED,VERIFIED,False,"Yes, the causal graph has VERIFIED that PKA directly affects Akt. 
+
+Causal relationship: PKA causes Akt.","Based on the causal graph information, the answer is yes. PKA directly affects Akt. The directed path from PKA to Akt indicates a direct causal relationship between the two variables."
