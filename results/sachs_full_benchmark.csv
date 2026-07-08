@@ -707,3 +707,29 @@ So, the relationship is more like: PIP2 → PI3K → PIP3 → Akt activation.","
 To establish causation, we would need more information about the relationship between Akt and PIP2, such as a direct causal chain or a well-characterized pathway. Without this information, we cannot conclude that Akt directly causes PIP2.","No, Akt does not directly cause PIP2. 
 
 From the given causal relationships, we know that PIP3 directly causes Akt and PIP3 also directly causes PIP2. However, there is no direct causal relationship between Akt and PIP2."
+DIR_NONE_JNK_Akt,Does JNK directly cause Akt?,direction,UNVERIFIABLE,no,UNVERIFIABLE,"Based on the provided causal graph, there is no directed path from JNK to Akt. This means that the graph provides NO evidence of JNK causing Akt. I cannot assert causation between JNK and Akt. Correlation does not imply causation, and without a direct causal link, we cannot conclude that JNK directly causes Akt.",True,"JNK (c-Jun N-terminal kinase) and Akt are two distinct signaling pathways. While they can interact and influence each other, JNK does not directly cause Akt activation.
+
+JNK typically activates downstream targets like c-Jun and ATF2, which can then influence various cellular processes, including apoptosis and inflammation. Akt, on the other hand, is a key component of the PI3K/Akt signaling pathway, which regulates cell survival, growth, and metabolism.
+
+However, there are some indirect interactions between JNK and Akt. For example, JNK can phosphorylate and inhibit the phosphatase and tensin homolog (PTEN), which is a negative regulator of the PI3K/Akt pathway. This can lead to increased Akt activity. Additionally, JNK can also interact with other signaling molecules that can influence Akt activation.
+
+So, while JNK does not directly cause Akt activation, it can indirectly influence the PI3K/Akt pathway through various mechanisms.","To determine if JNK directly causes Akt, we need to examine the relationship between JNK and Akt. 
+
+JNK (c-Jun N-terminal kinase) is a member of the mitogen-activated protein kinase (MAPK) family, which is involved in stress signaling pathways. Akt (also known as Protein Kinase B), on the other hand, is a serine/threonine kinase that plays a crucial role in cell survival and metabolism.
+
+While JNK and Akt are both involved in signaling pathways, there is no direct causal relationship between them. JNK can activate various downstream targets, but Akt is not a direct target of JNK.
+
+However, it's worth noting that JNK can indirectly influence Akt activity through other signaling molecules. For example, JNK can activate the MAPK-activated protein kinase 2 (MK2), which in turn can phosphorylate and inhibit the phosphatase and tensin homolog (PTEN), leading to increased Akt activity.
+
+To establish a direct causal relationship between JNK and Akt, we would need to demonstrate that JNK directly phosphorylates and activates Akt. However, based on the current understanding of their signaling pathways, this does not appear to be the case.
+
+Therefore, based on the context provided, we can conclude that JNK does not directly cause Akt.","No, JNK does not directly cause Akt. 
+
+The known causal relationships from the graph are:
+- PKC directly causes JNK
+- PKA directly causes Akt
+- PKA directly causes JNK
+- Erk directly causes Akt
+- PIP3 directly causes Akt
+
+There is no known causal relationship between JNK and Akt."
