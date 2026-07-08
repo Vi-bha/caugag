@@ -44,3 +44,14 @@ Causal relationship: Raf directly affects Mek.","Based on the given causal edges
 2. PKC -> Raf -> Mek (indirect edge)
 
 However, the direct edge Raf -> Mek is present, which means that Raf directly affects Mek."
+DIR_TRUE_Mek_Erk,Does Mek directly cause Erk?,direction,VERIFIED,VERIFIED,False,"Based on the provided causal graph, the answer is:
+
+Yes, Mek directly causes Erk.
+
+The graph proof shows a directed path from Mek to Erk, indicating a direct causal relationship between the two variables.","Based on the given causal edges, we can see that there are two paths from Mek to Erk:
+
+1. PKC -> Mek -> Erk
+2. PKA -> Mek -> Erk
+3. Raf -> Mek -> Erk
+
+Since there are multiple paths from Mek to Erk, we cannot conclude that Mek directly causes Erk. However, we can say that Mek is a mediator in the causal relationship between PKC, PKA, and Raf to Erk."
