@@ -430,3 +430,8 @@ Since there is no directed path between JNK and P38, it suggests that they are n
 However, the graph also mentions that JNK and P38 are confounded by common causes, which are 'PKC' and 'PKA'. This means that the observed correlation between JNK and P38 may be due to the shared common causes rather than a direct causal relationship.
 
 Therefore, the correlation between JNK and P38 is likely to be spurious or confounded, and we cannot conclude that they are directly correlated."
+ASSOC_PIP2_Akt,Is PIP2 associated with Akt?,association,ASSOCIATED,CONFOUNDED,True,"The relationship between PIP2 and Akt is confounded. 
+
+The confounders are: ['PIP3']. 
+
+To understand the association between PIP2 and Akt, we need to adjust for the confounder PIP3.","Based on the information from the causal graph, we cannot determine if PIP2 is associated with Akt. The graph indicates that there is no directed path between PIP2 and Akt, suggesting that they are not directly causally related. However, it also mentions that PIP2 and Akt are confounded by a common cause, PIP3. This means that the association between PIP2 and Akt may be due to their shared relationship with PIP3, rather than a direct causal relationship between them."
