@@ -27,3 +27,6 @@ Causal relationship: PKA directly causes Erk.","Based on the given causal edges,
 DIR_TRUE_PKA_Raf,Is there a direct causal effect of PKA on Raf?,direction,VERIFIED,VERIFIED,False,"Yes, there is a direct causal effect of PKA on Raf. 
 
 Causal relationship: PKA causes Raf.","Based on the given causal edges, there is a direct causal effect of PKA on Raf. The edge PKA -> Raf indicates that PKA causes Raf."
+DIR_TRUE_PKA_Mek,Does PKA directly affect Mek?,direction,VERIFIED,VERIFIED,False,"Yes, the causal graph has verified that PKA directly affects Mek. 
+
+Causal relationship: PKA causes Mek.","Yes, PKA directly affects Mek. This is because there is a known causal edge from PKA to Mek in the graph."
