@@ -52,3 +52,12 @@ The graph proof states: Directed path: Mek -> Erk. This indicates a direct causa
 DIR_TRUE_Erk_Akt,Is there a direct causal effect of Erk on Akt?,direction,VERIFIED,VERIFIED,False,"Yes, there is a direct causal effect of Erk on Akt. 
 
 Causal relationship: Erk causes Akt.","According to the causal graph information, there is a directed path from Erk to Akt, which means Erk has a direct causal effect on Akt."
+DIR_TRUE_PIP3_PIP2,Does PIP3 directly affect PIP2?,direction,VERIFIED,VERIFIED,False,"Based on the causal graph, the answer is: 
+
+Yes, PIP3 directly affects PIP2. 
+
+Causal relationship: PIP3 -> PIP2","Based on the causal graph information, there is a directed path from PIP3 to PIP2. However, the question is whether PIP3 directly affects PIP2.
+
+The directed path indicates that PIP3 causes PIP2, but it does not necessarily mean that the effect is direct. The graph also mentions that there is an adjustable path from PIP3 to PIP2, which is adjusted for 'Plcg'. This suggests that the effect of PIP3 on PIP2 is mediated by 'Plcg'.
+
+Therefore, based on the information provided, it appears that PIP3 does not directly affect PIP2, but rather its effect on PIP2 is indirect and mediated by 'Plcg'."
