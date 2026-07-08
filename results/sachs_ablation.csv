@@ -397,3 +397,18 @@ However, there is no information about a path from Plcg to PIP2 through PIP3. Th
 Since the question is asking if Plcg causes PIP2 through PIP3, and there is no information about PIP3 being involved in the path from Plcg to PIP2, we cannot confirm this causal relationship based on the provided information.
 
 However, we can say that Plcg causes PIP2 directly, as indicated by the directed path Plcg -> PIP2."
+MULTIHOP_PKC_Akt,What is the indirect causal effect of PKC on Akt?,intervention,VERIFIED,VERIFIED,False,"Based on the causal graph, the indirect causal effect of PKC on Akt is mediated by the pathway: PKC -> Mek -> Erk -> Akt.
+
+Since there are no confounders, the causal effect of PKC on Akt is entirely due to this pathway.
+
+The indirect causal effect of PKC on Akt is equivalent to the direct effect of PKC on Akt, as the graph does not specify any direct causal relationship between PKC and Akt.
+
+Therefore, the indirect causal effect of PKC on Akt is the same as the direct effect of PKC on Akt, which is not specified in the graph.","Based on the causal graph, we can see that there is a directed path from PKC to Akt: PKC -> Mek -> Erk -> Akt. Since there are no confounders on this path, we can use the formula for indirect causal effect:
+
+Indirect Causal Effect = P(Akt|do(PKC)) - P(Akt|do(not PKC))
+
+However, since we don't have information about the probability of Akt given do(PKC) and do(not PKC), we can't calculate the exact indirect causal effect.
+
+But we can say that the indirect causal effect of PKC on Akt is mediated by the pathway: PKC -> Mek -> Erk -> Akt. This means that PKC affects Akt through its influence on Mek and Erk.
+
+To calculate the indirect causal effect, we would need to know the probabilities of the intermediate variables (Mek and Erk) given PKC and not PKC, as well as the probability of Akt given the intermediate variables."
