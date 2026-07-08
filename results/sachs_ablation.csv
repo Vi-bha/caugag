@@ -238,3 +238,12 @@ From the given edges, we have:
 - Erk -> Akt
 
 PKA is a common cause that affects both Raf and Erk. This means that the association between Raf and Erk is confounded by PKA."
+CONF_Mek_JNK,Is there confounding between Mek and JNK?,confounding,CONFOUNDED,CONFOUNDED,True,"Yes, there is confounding between Mek and JNK.","To determine if there is confounding between Mek and JNK, we need to check if there are common causes of both Mek and JNK.
+
+From the given causal edges, we can see that:
+
+- PKC causes both Mek and JNK.
+- PKA causes both Mek and JNK.
+- Raf causes Mek.
+
+Since PKC and PKA are common causes of both Mek and JNK, there is confounding between Mek and JNK."
