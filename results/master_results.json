@@ -1,0 +1,48 @@
+{
+  "sachs": {
+    "n_total": 82,
+    "n_refusal_cases": 39,
+    "verifier_accuracy": "97.4%",
+    "keyword_matching": {
+      "caugag": "97.4%",
+      "graphrag": "12.8%",
+      "rag": "41.0%",
+      "vanilla": "5.1%"
+    },
+    "llm_judge": {
+      "caugag": "97.4%",
+      "graphrag": "25.6%",
+      "rag": "33.3%",
+      "vanilla": "12.8%"
+    },
+    "mcnemar_llm_judge": {
+      "vs_vanilla": "p<0.001 ***",
+      "vs_rag": "p<0.001 ***",
+      "vs_graphrag": "p<0.001 ***"
+    }
+  },
+  "synthetic": {
+    "n_total": 34,
+    "n_refusal_cases": 16,
+    "verifier_accuracy": "97.1%",
+    "issue": "Generic variable names (V1-V15) cause vanilla to refuse due to unknown variables not causal reasoning \u2014 needs rebuild with meaningful names",
+    "llm_judge_valid": {
+      "caugag": "93.8%",
+      "graphrag": "18.8%",
+      "rag": "56.2%"
+    },
+    "vanilla_invalid": "81.2% \u2014 artifact of unknown variable names"
+  },
+  "ablation": {
+    "caugag_full": "95.1%",
+    "caugag_nogate": "17.1%",
+    "gate_contribution": "+78.0%",
+    "mcnemar": "p<0.001 ***"
+  },
+  "pending": [
+    "Rebuild synthetic with meaningful variable names",
+    "Add third dataset (Alarm network)",
+    "Effect size calibration",
+    "Expand synthetic to 100+ QA pairs"
+  ]
+}
