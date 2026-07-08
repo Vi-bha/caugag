@@ -466,3 +466,27 @@ Intervening on Erk would block the activation of Mek by Erk. However, Mek can st
 However, if we consider the overall effect of intervening on Erk, it would likely reduce the activity of Mek, which in turn could reduce the activity of PKC. But this is an indirect effect.
 
 So, the direct effect of intervening on Erk on PKC is 0, but the overall effect could be a reduction in PKC activity due to the indirect effect on Mek."
+INTERV_FALSE_Akt_Raf,What is the effect of intervening on Akt on Raf?,intervention,UNVERIFIABLE,UNVERIFIABLE,True,"Given the causal graph, we can analyze the effect of intervening on Akt on Raf. 
+
+Since there is no directed path from Akt to Raf in the DAG, intervening on Akt will not have a direct effect on Raf. 
+
+In other words, if we were to manipulate or intervene on Akt, it would not directly cause a change in Raf. 
+
+This is because the causal graph does not support a causal claim between Akt and Raf, as I mentioned earlier.","To determine the effect of intervening on Akt on Raf, we need to consider the causal relationships between these variables.
+
+From the given edges, we know that:
+
+- PKA -> Akt (PKA activates Akt)
+- PKA -> Raf (PKA activates Raf)
+- Erk -> Akt (Erk activates Akt)
+- PIP3 -> Akt (PIP3 activates Akt)
+
+When we intervene on Akt, we are essentially blocking or modifying the effect of its activators. 
+
+Since PKA activates both Akt and Raf, intervening on Akt would prevent PKA from activating Raf through Akt. However, PKA still activates Raf directly.
+
+Intervening on Akt would also prevent Erk and PIP3 from activating Akt, but this would not have a direct effect on Raf.
+
+Therefore, the effect of intervening on Akt on Raf would be to reduce the activation of Raf by PKA through Akt, but not to eliminate it entirely, since PKA still activates Raf directly.
+
+So, the causal effect of intervening on Akt on Raf is a reduction in the activation of Raf."
