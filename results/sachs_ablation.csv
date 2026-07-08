@@ -286,3 +286,18 @@ No confounders are present in this path, so the effect is direct and unconfounde
 If we set PKC to high (PKC=high), we can expect Raf to increase as well, since PKC is a direct cause of Raf.
 
 In other words, there is a causal relationship between PKC and Raf, and setting PKC to high will lead to an increase in Raf."
+INTERV_FALSE_Erk_PKC,What happens to PKC if we intervene on Erk?,intervention,UNVERIFIABLE,VERIFIED,False,"Since the causal graph has VERIFIED that PKC causally affects Erk, and there are no confounders, we can use the backdoor criterion to analyze the effect of intervening on Erk.
+
+However, the graph does not provide information about the effect of intervening on Erk on PKC. To determine the effect of intervening on Erk on PKC, we would need to know the causal relationship between Erk and PKC, which is not provided in the given graph.
+
+But, we can analyze the effect of intervening on Erk on PKC using the following steps:
+
+1. Intervene on Erk.
+2. Since Erk is an effect of PKC, intervening on Erk will break the path from PKC to Erk.
+3. However, the graph does not provide information about the effect of intervening on Erk on PKC.
+
+Therefore, we cannot determine the effect of intervening on Erk on PKC based on the given graph.","Based on the causal graph, we have the path: ['PKC', 'Mek', 'Erk']. Since there are no confounders, we can use the backdoor criterion to determine the effect of intervening on Erk.
+
+Intervening on Erk means we set Erk to a specific value (e.g., its parent Mek will be set to a value that would cause Erk to be set to that value). 
+
+Since there is no direct edge from Erk to PKC, and no confounders, we can conclude that intervening on Erk will not affect PKC."
