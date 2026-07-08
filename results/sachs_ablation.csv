@@ -126,3 +126,6 @@ It's also essential to note that correlation does not imply causation. The absen
 DIR_REV_PIP2_Plcg,Does PIP2 directly affect Plcg?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from PIP2 to Plcg. This means that the graph provides NO evidence of PIP2 causing Plcg. 
 
 I cannot assert that PIP2 directly affects Plcg, as the graph does not support this causal claim.","Based on the information from the causal graph, there is no directed path from PIP2 to Plcg. This suggests that PIP2 does not directly affect Plcg."
+DIR_NONE_JNK_Erk,Does JNK directly cause Erk?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from JNK to Erk. This means that the graph does not support a causal claim between JNK and Erk. 
+
+In other words, the graph provides NO evidence of JNK causing Erk.","Based on the information from the causal graph, there is no directed path from JNK to Erk. This suggests that JNK does not directly cause Erk."
