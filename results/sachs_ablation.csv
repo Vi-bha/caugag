@@ -129,3 +129,6 @@ I cannot assert that PIP2 directly affects Plcg, as the graph does not support t
 DIR_NONE_JNK_Erk,Does JNK directly cause Erk?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from JNK to Erk. This means that the graph does not support a causal claim between JNK and Erk. 
 
 In other words, the graph provides NO evidence of JNK causing Erk.","Based on the information from the causal graph, there is no directed path from JNK to Erk. This suggests that JNK does not directly cause Erk."
+DIR_NONE_P38_Akt,Does P38 directly cause Akt?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from P38 to Akt. This means that the graph does not support a causal claim between P38 and Akt. 
+
+Therefore, I must conclude that the graph provides NO evidence of P38 causing Akt. I will not assert causation between these two variables. It's essential to note that correlation does not imply causation, and further investigation is necessary to determine the relationship between P38 and Akt.","Based on the information from the causal graph, there is no directed path from P38 to Akt. This suggests that P38 does not directly cause Akt."
