@@ -440,3 +440,12 @@ The indirect effect of PKA on Mek through Raf is 1 (since there is a causal edge
 Therefore, the total effect of PKA on Mek is 1 + 1 = 2.
 
 So, the causal effect of PKA on Mek is 2."
+INTERV_PKC_Raf,What happens to Raf if we do(PKC=high)?,intervention,VERIFIED,VERIFIED,False,"Based on the causal graph, we have a direct causal relationship: PKC -> Raf.
+
+If we set PKC to a high value, we can expect Raf to increase.
+
+However, the graph does not provide a specific numeric effect or confidence interval.","Based on the given causal edges, we can infer the following:
+
+PKC -> Raf
+
+This edge indicates that PKC (high) causes Raf to increase. Therefore, if we do (PKC=high), we can expect Raf to increase."
