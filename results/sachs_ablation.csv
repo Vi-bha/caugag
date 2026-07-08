@@ -4,3 +4,6 @@ DIR_TRUE_PKC_Mek,Does PKC directly cause Mek?,direction,VERIFIED,VERIFIED,False,
 Yes, PKC directly causes Mek.
 
 The graph proof shows a directed path from PKC to Mek, indicating a direct causal relationship.","Yes, PKC directly causes Mek. This is evident from the known causal edge: PKC -> Mek."
+DIR_TRUE_PKC_Raf,Is there a direct causal effect of PKC on Raf?,direction,VERIFIED,VERIFIED,False,"Yes, there is a direct causal effect of PKC on Raf. 
+
+Causal relationship: PKC causes Raf.","Yes, there is a direct causal effect of PKC on Raf. This is stated in the known causal edges from the graph: PKC -> Raf."
