@@ -41,3 +41,6 @@ Directed path: PKA -> JNK.","Based on the causal graph information, the answer i
 DIR_TRUE_PKA_P38,Is there a direct causal effect of PKA on P38?,direction,VERIFIED,VERIFIED,False,"Yes, there is a direct causal effect of PKA on P38. 
 
 Causal relationship: PKA causes P38.","Based on the information from the causal graph, there is a directed path from PKA to P38, which indicates a direct causal effect of PKA on P38."
+DIR_TRUE_Raf_Mek,Does Raf directly affect Mek?,direction,VERIFIED,VERIFIED,False,"The causal graph has verified that Raf causally affects Mek. 
+
+Causal relationship: Raf directly affects Mek.","According to the causal graph information, there is a directed path from 'Raf' to 'Mek'. This indicates that 'Raf' directly affects 'Mek'."
