@@ -1257,3 +1257,35 @@ PKA directly causes Akt. However, PKA is not directly related to PKC in the give
 Erk directly causes Akt. However, Erk is not directly related to PKC in the given graph.
 
 Therefore, the indirect causal effect of PKC on Akt is through PIP2 and PIP3."
+ASSOC_Raf_Erk,Is Raf statistically associated with Erk?,association,ASSOCIATED,yes_associated,CONFOUNDED,"The relationship between Raf and Erk is confounded. 
+
+To determine if there's a statistical association, we need to consider the presence of confounders. In this case, the confounders are ['PKA']. 
+
+Without adjusting for the confounders, we cannot conclude that there's a direct statistical association between Raf and Erk.",True,"Raf (Rapidly Accelerated Fibrosarcoma) and Erk (Extracellular signal-Regulated Kinase) are indeed statistically associated. 
+
+Raf is a family of serine/threonine kinases that activate the MAPK/Erk signaling pathway. Specifically, Raf kinases (A, B, and C) phosphorylate and activate the downstream kinase MEK, which in turn phosphorylates and activates Erk. This signaling cascade plays a crucial role in various cellular processes, including cell proliferation, differentiation, and survival.
+
+So, there is a direct and well-established statistical association between Raf and Erk, with Raf serving as an upstream activator of the Erk pathway.","Based on the context provided, we can analyze the causal chain between Raf and Erk.
+
+The MAPK cascade Raf->Mek->Erk is a well-characterized causal chain. This implies that Raf is a direct cause of Mek, and Mek is a direct cause of Erk. 
+
+However, to determine if Raf is statistically associated with Erk, we need to consider the backdoor criterion. If there's a backdoor path between Raf and Erk, it could indicate a statistical association between them.
+
+In this case, since Raf directly influences Mek, which in turn influences Erk, there's a direct causal chain between Raf and Erk. This direct causal chain does not violate the backdoor criterion, as there are no variables in the causal chain that are descendants of Raf.
+
+Therefore, based on the provided context, Raf is statistically associated with Erk.","To determine if Raf is statistically associated with Erk, we need to check if there's a direct or indirect causal relationship between them.
+
+From the given causal relationships:
+
+1. PKC directly causes Raf
+2. PKA directly causes Erk
+3. PKA directly causes Raf
+4. Raf directly causes Mek
+5. Mek directly causes Erk
+6. Erk directly causes Akt
+
+We can see that there's a direct causal relationship between Raf and Erk through Mek (Raf -> Mek -> Erk). 
+
+However, we also have a direct causal relationship between PKA and Erk (PKA -> Erk) and a direct causal relationship between PKA and Raf (PKA -> Raf). 
+
+Since PKA causes both Raf and Erk, we can conclude that Raf is statistically associated with Erk."
