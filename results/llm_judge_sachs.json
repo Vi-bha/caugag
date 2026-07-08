@@ -1,0 +1,25 @@
+{
+  "n_refusal_cases": 39,
+  "method": "LLM judge (llama-3.1-8b-instant)",
+  "caugag": 38,
+  "graphrag": 10,
+  "rag": 13,
+  "vanilla": 5,
+  "mcnemar": {
+    "CauGAG vs Vanilla": {
+      "stat": 29.2571,
+      "p": 0.0,
+      "sig": "***"
+    },
+    "CauGAG vs RAG": {
+      "stat": 23.04,
+      "p": 2e-06,
+      "sig": "***"
+    },
+    "CauGAG vs GraphRAG": {
+      "stat": 26.0357,
+      "p": 0.0,
+      "sig": "***"
+    }
+  }
+}
