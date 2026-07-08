@@ -68,3 +68,6 @@ Causal relationship: PIP3 -> PIP2","Based on the given causal edges, we can see 
 DIR_TRUE_PIP3_Akt,Does PIP3 directly cause Akt?,direction,VERIFIED,VERIFIED,False,"Yes, PIP3 directly causes Akt. 
 
 Causal relationship: PIP3 -> Akt","Based on the given causal edges, we can see that PIP3 has a direct causal edge to Akt. This means that PIP3 directly causes Akt."
+DIR_TRUE_Plcg_PIP3,Is there a direct causal effect of Plcg on PIP3?,direction,VERIFIED,VERIFIED,False,"Yes, there is a direct causal effect of Plcg on PIP3. 
+
+Causal relationship: Plcg causes PIP3.","Based on the given causal edges, there is a direct causal effect of Plcg on PIP3. The edge ""Plcg -> PIP3"" directly indicates that Plcg causes PIP3."
