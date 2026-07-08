@@ -568,3 +568,11 @@ To answer the question, we need to consider the causal effect of Erk on Mek and 
 Given the edges, we can infer that when Erk is experimentally manipulated, it will have a causal effect on Mek (Mek -> Erk), and then Mek will have a causal effect on Raf (Raf -> Mek). 
 
 Therefore, when Erk is experimentally manipulated, it will have an indirect causal effect on Raf through Mek."
+MULTIHOP_PKC_Erk,Does PKC indirectly cause Erk through Mek?,intervention,VERIFIED,VERIFIED,False,"Yes, the graph verifies that PKC indirectly causes Erk through Mek. 
+
+Causal relationship: PKC -> Mek -> Erk","Based on the given causal edges, we can infer the following causal path:
+
+PKC -> Mek
+Mek -> Erk
+
+This suggests that PKC indirectly causes Erk through Mek."
