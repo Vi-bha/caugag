@@ -3,13 +3,11 @@ from enum import Enum
 from typing import Optional
 import networkx as nx
 
-
 class Verdict(str, Enum):
     VERIFIED = "VERIFIED"
     CONFOUNDED = "CONFOUNDED"
     UNVERIFIABLE = "UNVERIFIABLE"
     ASSOCIATED = "ASSOCIATED"
-
 
 @dataclass
 class VerificationResult:
@@ -22,11 +20,10 @@ class VerificationResult:
     identifiable: bool = False
     explanation: str = ""
 
-
 class GraphVerifier:
     def __init__(self, dag: nx.DiGraph):
         if not nx.is_directed_acyclic_graph(dag):
-            raise ValueError("Input graph is not a DAG — contains cycles.")
+            raise ValueError("Input graph is not a DAG.")
         self.dag = dag
         self.nodes = list(dag.nodes())
 
@@ -35,11 +32,13 @@ class GraphVerifier:
         source, target = query.source_var, query.target_var
         if source not in self.nodes:
             return VerificationResult(Verdict.UNVERIFIABLE, source, target,
-                explanation=f"Variable {source} not in DAG. Available: {self.nodes}")
+                explanation=f"Variable {source} not in DAG.")
         if target not in self.nodes:
             return VerificationResult(Verdict.UNVERIFIABLE, source, target,
-                explanation=f"Variable {target} not in DAG. Available: {self.nodes}")
+                explanation=f"Variable {target} not in DAG.")
         if query.query_type == QueryType.ASSOCIATION:
+            if self._has_common_cause(source, target):
+                return self._check_confounding(source, target)
             return self._check_association(source, target)
         elif query.query_type in (QueryType.INTERVENTION, QueryType.COUNTERFACTUAL):
             return self._check_causal_identifiability(source, target)
@@ -47,15 +46,28 @@ class GraphVerifier:
             return VerificationResult(Verdict.UNVERIFIABLE, source, target,
                 explanation="Unknown query type.")
 
+    def _has_common_cause(self, source, target):
+        parents_src = set(self.dag.predecessors(source))
+        parents_tgt = set(self.dag.predecessors(target))
+        return bool(parents_src & parents_tgt)
+
+    def _check_confounding(self, source, target):
+        parents_src = set(self.dag.predecessors(source))
+        parents_tgt = set(self.dag.predecessors(target))
+        common = list(parents_src & parents_tgt)
+        return VerificationResult(Verdict.CONFOUNDED, source, target,
+            identifiable=False, adjustment_set=common,
+            explanation=f"CONFOUNDED. Common causes: {common}.")
+
     def _check_association(self, source, target):
         skeleton = self.dag.to_undirected()
         if nx.has_path(skeleton, source, target):
             path = nx.shortest_path(skeleton, source, target)
             return VerificationResult(Verdict.ASSOCIATED, source, target,
                 directed_path=path, identifiable=True,
-                explanation=f"Association path: {chr(32).join(path)}")
+                explanation=f"Association path: {str(path)}")
         return VerificationResult(Verdict.UNVERIFIABLE, source, target,
-            explanation=f"No path between {source} and {target} — d-separated.")
+            explanation=f"No path between {source} and {target}.")
 
     def _check_causal_identifiability(self, source, target):
         if not nx.has_path(self.dag, source, target):
@@ -99,11 +111,3 @@ class GraphVerifier:
         if parents:
             return parents
         return None
-
-    @classmethod
-    def from_edge_list(cls, edges, all_nodes=None):
-        dag = nx.DiGraph()
-        if all_nodes:
-            dag.add_nodes_from(all_nodes)
-        dag.add_edges_from(edges)
-        return cls(dag)
