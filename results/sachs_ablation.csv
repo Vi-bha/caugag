@@ -226,3 +226,15 @@ From the given edges, we can see that:
 However, there is no direct edge from Raf to Akt. 
 
 Since PKA is a common cause of both Mek and Akt, the relationship between Mek and Akt is confounded by PKA."
+CONF_Raf_Erk,Is the naive association between Raf and Erk confounded?,confounding,CONFOUNDED,CONFOUNDED,True,"Yes, the naive association between Raf and Erk is confounded. 
+
+The confounders are: ['PKA']","To determine if the naive association between Raf and Erk is confounded, we need to check if there's a common cause that affects both Raf and Erk.
+
+From the given edges, we have:
+- PKA -> Raf
+- PKA -> Erk
+- Raf -> Mek
+- Mek -> Erk
+- Erk -> Akt
+
+PKA is a common cause that affects both Raf and Erk. This means that the association between Raf and Erk is confounded by PKA."
