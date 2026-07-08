@@ -44,3 +44,8 @@ Causal relationship: PKA causes P38.","Based on the information from the causal 
 DIR_TRUE_Raf_Mek,Does Raf directly affect Mek?,direction,VERIFIED,VERIFIED,False,"The causal graph has verified that Raf causally affects Mek. 
 
 Causal relationship: Raf directly affects Mek.","According to the causal graph information, there is a directed path from 'Raf' to 'Mek'. This indicates that 'Raf' directly affects 'Mek'."
+DIR_TRUE_Mek_Erk,Does Mek directly cause Erk?,direction,VERIFIED,VERIFIED,False,"Based on the provided causal graph, the answer is:
+
+Yes, Mek directly causes Erk.
+
+The graph proof states: Directed path: Mek -> Erk. This indicates a direct causal relationship between Mek and Erk.","According to the causal graph information, there is a directed path from Mek to Erk. This means that Mek directly causes Erk."
