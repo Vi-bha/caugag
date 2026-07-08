@@ -467,3 +467,10 @@ PKC -> JNK
 This means that the presence of PKC is a necessary condition for JNK to be activated.","Based on the causal graph information, we can conclude that PKC is a direct cause of JNK. This means that if PKC were absent, JNK would indeed be affected.
 
 In other words, the absence of PKC would lead to a change in JNK, indicating a causal relationship between the two variables."
+CF_PIP3_Akt,"If PIP3 had been blocked, would Akt have changed?",counterfactual,VERIFIED,VERIFIED,False,"Based on the causal graph, we can conclude that if PIP3 had been blocked, Akt would have changed.
+
+Causal relationship: Blocking PIP3 causes a change in Akt.
+
+This is because the graph shows a directed path from PIP3 to Akt, indicating that PIP3 causally affects Akt.","Based on the causal graph information, we can conclude that PIP3 is a direct cause of Akt. This means that if PIP3 had been blocked, Akt would likely have changed.
+
+In other words, the causal relationship is as follows: if PIP3 is blocked (i.e., PIP3 = 0), then Akt would be affected (i.e., Akt ≠ Akt under normal conditions)."
