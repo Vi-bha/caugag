@@ -412,3 +412,12 @@ However, since we don't have information about the probability of Akt given do(P
 But we can say that the indirect causal effect of PKC on Akt is mediated by the pathway: PKC -> Mek -> Erk -> Akt. This means that PKC affects Akt through its influence on Mek and Erk.
 
 To calculate the indirect causal effect, we would need to know the probabilities of the intermediate variables (Mek and Erk) given PKC and not PKC, as well as the probability of Akt given the intermediate variables."
+ASSOC_Raf_Erk,Is Raf statistically associated with Erk?,association,ASSOCIATED,CONFOUNDED,True,"The relationship between Raf and Erk is confounded. 
+
+To determine the statistical association, we need to adjust for the confounders. In this case, the adjustment set needed is ['PKA']. 
+
+Once we adjust for ['PKA'], we can re-evaluate the relationship between Raf and Erk.","Based on the information provided from the causal graph, we cannot conclude that Raf is statistically associated with Erk. 
+
+The graph indicates that there is a confounding variable, 'PKA', which is a common cause of both Raf and Erk. This means that the observed association between Raf and Erk may be due to the effect of 'PKA' rather than a direct causal relationship between Raf and Erk. 
+
+In causal inference, the presence of a confounding variable can lead to spurious associations, and therefore, we cannot assume a statistical association between Raf and Erk based on observational data alone."
