@@ -113,3 +113,8 @@ DIR_REV_PIP2_PIP3,Does PIP2 directly affect PIP3?,direction,UNVERIFIABLE,UNVERIF
 I **REFUSE** to assert causation between PIP2 and PIP3, as the graph does not support this claim.
 
 It's also essential to note that **correlation does not imply causation**. The absence of a causal relationship in the graph does not necessarily mean that PIP2 and PIP3 are uncorrelated, but it does mean that we cannot infer causation based on the provided information.","Based on the causal graph information provided, there is no directed path from PIP2 to PIP3. This suggests that PIP2 does not directly affect PIP3."
+DIR_REV_Akt_PIP3,Does Akt directly cause PIP3?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from Akt to PIP3. This means that the graph does not support a causal claim between Akt and PIP3. 
+
+Therefore, I must conclude that the graph provides **NO EVIDENCE** of Akt causing PIP3. I will not assert causation between Akt and PIP3. 
+
+It's also essential to note that correlation does not imply causation. The absence of a causal relationship in the graph does not necessarily mean that Akt and PIP3 are uncorrelated, but rather that the graph does not provide evidence for a causal link between them.","Based on the information from the causal graph, there is no directed path from Akt to PIP3. This suggests that Akt does not directly cause PIP3."
