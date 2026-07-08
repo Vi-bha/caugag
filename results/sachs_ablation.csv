@@ -438,3 +438,14 @@ To understand the association between PIP2 and Akt, we need to adjust for the co
 ASSOC_Mek_Akt,Is there a statistical association between Mek and Akt?,association,ASSOCIATED,CONFOUNDED,True,"There is a statistical association between Mek and Akt. However, this association is due to the presence of a common cause, 'PKA', which is confounding the relationship.","Based on the provided causal graph information, there is no directed path between Mek and Akt. However, the graph does indicate that there is a common cause, 'PKA', which is confounded. 
 
 In the context of causal inference, the presence of a common cause (confounding variable) can lead to a statistical association between two variables, even if there is no direct causal relationship between them. Therefore, it is likely that there is a statistical association between Mek and Akt due to the confounding effect of 'PKA'."
+CF_PKA_Raf,"If PKA had been higher, would Raf have changed?",counterfactual,VERIFIED,VERIFIED,False,"Based on the causal graph, we have a verified causal relationship: PKA causally affects Raf.
+
+Since there are no confounders on the path, we can conclude that if PKA had been higher, Raf would have changed.
+
+In other words, there is a causal effect of PKA on Raf.","Based on the causal graph information, we can conclude that there is a direct causal relationship between PKA and Raf, with PKA causing Raf. 
+
+Since there are no confounders on this path, we can apply the backdoor adjustment formula or the causal effect formula. 
+
+In this case, the causal effect of PKA on Raf is simply the effect of PKA on Raf, as there are no confounders. 
+
+So, if PKA had been higher, Raf would have increased."
