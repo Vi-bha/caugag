@@ -5,3 +5,9 @@ The graph proof shows a directed path from PKC to Mek, indicating a direct causa
 DIR_TRUE_PKC_Raf,Is there a direct causal effect of PKC on Raf?,direction,VERIFIED,VERIFIED,False,"Yes, there is a direct causal effect of PKC on Raf. 
 
 Causal relationship: PKC causes Raf.","Based on the information from the causal graph, there is a directed path from PKC to Raf, which indicates a direct causal effect of PKC on Raf."
+DIR_TRUE_PKC_PIP2,Does PKC directly affect PIP2?,direction,VERIFIED,VERIFIED,False,"The causal graph has VERIFIED that PKC causally affects PIP2. 
+
+Graph proof: VERIFIED. Path: ['PKC', 'PIP2']. No confounders.
+Directed path: PKC -> PIP2
+
+Yes, PKC directly affects PIP2.","Based on the causal graph information, the answer is yes. There is a directed path from PKC to PIP2, indicating that PKC directly affects PIP2."
