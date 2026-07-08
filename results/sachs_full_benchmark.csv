@@ -983,3 +983,12 @@ Therefore, the causal effect of PKA on Mek is:
 P(Mek|do(PKA=x)) = P(Mek|do(Raf=x))
 
 This means that the causal effect of PKA on Mek is equal to the causal effect of Raf on Mek.",The causal effect of PKA on Mek is direct.
+INTERV_PKC_Raf,What happens to Raf if we do(PKC=high)?,intervention,VERIFIED,yes_causal_effect,VERIFIED,"Based on the causal graph, we have a direct causal relationship between PKC and Raf. 
+
+If PKC is set to high, then Raf will be affected.
+
+Causal relationship: PKC -> Raf
+
+No confounders are present in this path, so the effect of PKC on Raf is direct and unconfounded.
+
+No numeric effect is provided, so we cannot report a specific effect with a confidence interval.",False,"I'm not aware of any information about a ""Raf"" in the context of a specific system or scenario. Could you provide more context or clarify what ""Raf"" and ""PKC"" refer to?","I can't answer that. Can you provide more context or information about the variables involved (Raf, PKC)?","If we set PKC to high, we know that PKC directly causes Raf. Therefore, if PKC is high, Raf will be caused to be high."
