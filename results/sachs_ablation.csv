@@ -69,3 +69,6 @@ DIR_TRUE_Plcg_PIP3,Is there a direct causal effect of Plcg on PIP3?,direction,VE
 Causal relationship: Plcg causes PIP3.","Based on the information from the causal graph, there is a directed path from Plcg to PIP3, which indicates that Plcg causes PIP3. However, the question is about a direct causal effect.
 
 Since there are no confounders on the path and the path is directed, we can conclude that there is a direct causal effect of Plcg on PIP3."
+DIR_TRUE_Plcg_PIP2,Does Plcg directly affect PIP2?,direction,VERIFIED,VERIFIED,False,"Yes, the causal graph has VERIFIED that Plcg directly affects PIP2.
+
+Causal relationship: Plcg causes PIP2.","Based on the causal graph information provided, the answer is yes. There is a directed path from Plcg to PIP2, indicating that Plcg directly affects PIP2."
