@@ -305,3 +305,16 @@ So, if we intervene on PKA, we can expect Erk to change as well, which in turn w
 Therefore, the effect of intervening on PKA on Akt will be indirect, and we can expect Akt to change in response to the change in PKA, but also in response to the change in Erk.
 
 To quantify the effect of intervening on PKA on Akt, we would need to consider the strength of the edges and the relationships between the variables. However, based on the given edges, we can conclude that intervening on PKA will affect Akt, but the effect will be mediated by Erk."
+INTERV_PKC_Erk,What is the causal effect of PKC on Erk?,intervention,VERIFIED,VERIFIED,False,"Based on the causal graph, the causal effect of PKC on Erk is mediated by Mek. 
+
+The causal relationship is: PKC -> Mek -> Erk.
+
+There is no direct causal effect of PKC on Erk.","To determine the causal effect of PKC on Erk, we need to consider the known causal edges from the graph.
+
+We know that PKC directly activates Mek and Erk is directly activated by Mek. However, there is no direct edge from PKC to Erk. 
+
+Given the information, we can infer that PKC's effect on Erk is mediated through Mek. This means that PKC's causal effect on Erk is indirect and can be represented as follows:
+
+PKC -> Mek -> Erk
+
+This suggests that PKC has a positive causal effect on Erk through its activation of Mek."
