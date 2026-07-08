@@ -388,3 +388,20 @@ PKA can phosphorylate and activate RAF (Rapidly Accelerated Fibrosarcoma), which
 From the Sachs_signaling context, we know that PKA phosphorylates downstream proteins, including Raf, Mek, Akt, JNK, and P38. However, it does not directly phosphorylate Erk. 
 
 The MAPK cascade Raf->Mek->Erk is a well-characterized causal chain, indicating that Raf phosphorylates Mek, and Mek phosphorylates Erk. PKA regulates Raf, but it does not directly regulate Erk. Therefore, PKA does not directly cause Erk.","Yes, PKA directly causes Erk."
+DIR_TRUE_PKA_JNK,Does PKA directly cause JNK?,direction,VERIFIED,yes,VERIFIED,"Yes, the causal graph has VERIFIED that PKA directly causes JNK. 
+
+Causal relationship: PKA causes JNK. 
+
+Directed path: PKA -> JNK",False,"PKA (Protein Kinase A) and JNK (c-Jun N-terminal kinase) are both signaling pathways, but they are not directly linked in a straightforward manner.
+
+However, PKA can indirectly activate JNK through several mechanisms:
+
+1. PKA can phosphorylate and activate RAF, which in turn activates MEK and ERK. ERK can then phosphorylate and activate MKK4, which activates JNK.
+2. PKA can also phosphorylate and activate the transcription factor CREB, which can induce the expression of genes involved in the JNK pathway.
+3. PKA can modulate the activity of other kinases, such as PAK, which can activate JNK.
+
+So, while PKA does not directly activate JNK, it can influence the JNK pathway through various indirect mechanisms.","Based on the provided context, we can see that PKA regulates Raf, Mek, Akt, JNK, and P38. However, the context does not explicitly state that PKA directly causes JNK. 
+
+To determine if PKA directly causes JNK, we would need to examine the causal chain or signaling pathway more closely. The context mentions that PKA phosphorylates Raf, Mek, Erk, and also regulates Akt, JNK, and P38. 
+
+Given the information, it appears that PKA has a regulatory effect on JNK, but it does not explicitly state that PKA directly causes JNK. A more detailed examination of the signaling pathway would be required to determine the exact causal relationship between PKA and JNK.","Yes, PKA directly causes JNK."
