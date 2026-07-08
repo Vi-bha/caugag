@@ -128,3 +128,6 @@ DIR_REV_Akt_PIP3,Does Akt directly cause PIP3?,direction,UNVERIFIABLE,UNVERIFIAB
 DIR_REV_PIP3_Plcg,Is there a direct causal effect of PIP3 on Plcg?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from PIP3 to Plcg. This means that the graph does not support a causal claim between PIP3 and Plcg. 
 
 Therefore, I must conclude that the graph provides NO evidence of PIP3 causing Plcg.","No, there is no direct causal effect of PIP3 on Plcg. The known causal edges from the graph show that Plcg has an effect on PIP3 (Plcg -> PIP3), but there is no edge indicating a direct causal effect of PIP3 on Plcg."
+DIR_REV_PIP2_Plcg,Does PIP2 directly affect Plcg?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from PIP2 to Plcg. This means that the graph provides NO evidence of PIP2 causing Plcg. 
+
+I cannot assert that PIP2 directly affects Plcg, as the graph does not support this causal claim.","No, PIP2 does not directly affect Plcg."
