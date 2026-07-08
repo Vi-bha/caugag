@@ -97,3 +97,8 @@ It's also essential to note that correlation does not imply causation, and the a
 DIR_REV_Raf_PKA,Is there a direct causal effect of Raf on PKA?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from Raf to PKA. This means that the graph does not support a causal claim between Raf and PKA. 
 
 In other words, the graph provides NO evidence of Raf causing PKA.","No, there is no direct causal effect of Raf on PKA. The known causal edges from the graph do not show a direct edge from Raf to PKA."
+DIR_REV_Mek_PKA,Does Mek directly affect PKA?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from Mek to PKA. This means that the graph does not support a causal claim between Mek and PKA. 
+
+In other words, the graph provides **NO EVIDENCE** of Mek causing PKA. 
+
+I must emphasize that **correlation does not imply causation**, and without a direct causal link, we cannot assert that Mek directly affects PKA.","No, Mek does not directly affect PKA. The causal edges from the graph show that PKA affects Mek (PKC -> Mek is not a direct edge to PKA, but PKA -> Mek is), but there is no edge indicating that Mek affects PKA."
