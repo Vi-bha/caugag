@@ -660,3 +660,17 @@ The confounders are PKC and PKA.","Based on the given causal edges, we can infer
 - PKA -> P38: PKA causes P38
 
 Since both PKC and PKA are common causes of both JNK and P38, we can conclude that JNK and P38 are correlated. This is because they share common causes, which is a sufficient condition for correlation."
+ASSOC_PIP2_Akt,Is PIP2 associated with Akt?,association,ASSOCIATED,CONFOUNDED,True,"The relationship between PIP2 and Akt is confounded. 
+
+The confounders are: ['PIP3'].","Based on the given causal edges, we can see that PIP2 is associated with Akt through two paths:
+
+1. PIP3 -> PIP2 (PIP3 is a cause of PIP2)
+2. PIP3 -> Akt (PIP3 is a direct cause of Akt)
+
+However, we also have the edge PKC -> PIP2, which suggests that PKC is a cause of PIP2. But we don't have a direct edge from PKC to Akt. 
+
+We also have the edge Plcg -> PIP2, which suggests that Plcg is a cause of PIP2. But we don't have a direct edge from Plcg to Akt.
+
+We have the edge PKA -> Akt, which suggests that PKA is a direct cause of Akt. We also have the edge Erk -> Akt, which suggests that Erk is a direct cause of Akt.
+
+However, we can infer that PIP2 is associated with Akt through the intermediate PIP3, which is a direct cause of Akt."
