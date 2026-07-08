@@ -118,3 +118,8 @@ DIR_REV_Akt_PIP3,Does Akt directly cause PIP3?,direction,UNVERIFIABLE,UNVERIFIAB
 Therefore, I must conclude that the graph provides **NO EVIDENCE** of Akt causing PIP3. I will not assert causation between Akt and PIP3. 
 
 It's also essential to note that correlation does not imply causation. The absence of a causal relationship in the graph does not necessarily mean that Akt and PIP3 are uncorrelated, but rather that the graph does not provide evidence for a causal link between them.","Based on the information from the causal graph, there is no directed path from Akt to PIP3. This suggests that Akt does not directly cause PIP3."
+DIR_REV_PIP3_Plcg,Is there a direct causal effect of PIP3 on Plcg?,direction,UNVERIFIABLE,UNVERIFIABLE,True,"Based on the provided causal graph, there is no directed path from PIP3 to Plcg. This means that the graph provides NO evidence of PIP3 causing Plcg. 
+
+Therefore, I must REFUSE to assert causation between PIP3 and Plcg. 
+
+It's also essential to note that correlation does not imply causation. The absence of a causal relationship in the graph does not necessarily mean that PIP3 and Plcg are uncorrelated, but it does mean that we cannot infer causation based on this graph alone.","Based on the information from the causal graph, there is no directed path from PIP3 to Plcg. This suggests that there is no direct causal effect of PIP3 on Plcg."
