@@ -5,13 +5,13 @@
     "rate": "95.1%"
   },
   "caugag_nogate": {
-    "correct": 39,
-    "rate": "95.1%"
+    "correct": 7,
+    "rate": "17.1%"
   },
   "mcnemar": {
-    "stat": 0.0,
-    "p": 1.0,
-    "sig": "ns"
+    "stat": 30.0312,
+    "p": 0.0,
+    "sig": "***"
   },
-  "gate_contribution": "+0.0%"
+  "gate_contribution": "+78.0%"
 }

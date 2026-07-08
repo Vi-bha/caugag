@@ -1,28 +1,35 @@
 from groq import Groq
-from caugag.graph_verifier import VerificationResult
+import networkx as nx
 
 class NoGateBaseline:
     """
-    Ablation: inject graph context but no generation gate.
-    LLM sees the graph information but is free to assert any causal claim.
-    Shows contribution of the gate specifically.
+    Ablation: inject raw graph edges as context but NO gate.
+    LLM sees edge list only — not the verifier verdict or explanation.
+    This isolates the gate contribution from graph context contribution.
     """
-    def __init__(self, groq_api_key: str, model: str = "llama-3.1-8b-instant"):
+    def __init__(self, groq_api_key: str, dag: nx.DiGraph,
+                 model: str = "llama-3.1-8b-instant"):
         self.client = Groq(api_key=groq_api_key)
         self.model = model
+        self.triples = [f"{u} -> {v}" for u,v in dag.edges()]
 
-    def answer(self, question: str, verification: VerificationResult) -> str:
-        # Give LLM the graph info but NO gate instruction
-        context = f"""You are a causal inference assistant.
-Here is information from the causal graph about {verification.source_var} and {verification.target_var}:
-{verification.explanation}
-Directed path if any: {" -> ".join(verification.directed_path) if verification.directed_path else "None found"}
-Answer the user question based on this graph information."""
+    def answer(self, question: str, source: str, target: str) -> str:
+        # Give raw edge list only — no verdict, no explanation
+        relevant = [t for t in self.triples
+                    if source.lower() in t.lower()
+                    or target.lower() in t.lower()]
+        context = "\n".join(relevant) if relevant else "No relevant edges found."
+
+        system = f"""You are a causal inference assistant.
+Known causal edges from the graph:
+{context}
+
+Answer the question. You may make causal claims based on these edges."""
 
         response = self.client.chat.completions.create(
             model=self.model,
             messages=[
-                {"role": "system", "content": context},
+                {"role": "system", "content": system},
                 {"role": "user", "content": question},
             ],
             temperature=0.1, max_tokens=512,
