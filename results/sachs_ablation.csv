@@ -238,3 +238,16 @@ In other words, manipulating PKA experimentally will lead to a change in Erk.","
 Since there is a directed path from PKA to Erk (PKA -> Erk), we can conclude that manipulating PKA experimentally will have a causal effect on Erk. 
 
 In other words, if PKA is experimentally manipulated (e.g., increased or decreased), Erk will also be affected in a predictable way."
+INTERV_PKC_Mek,What is the interventional effect of PKC on Mek?,intervention,VERIFIED,VERIFIED,False,"Based on the causal graph, the interventional effect of PKC on Mek is:
+
+Mek = PKC
+
+This means that if we intervene on PKC, we can directly control the value of Mek.","Based on the causal graph information provided, we have a directed path from PKC to Mek, indicating that PKC causes Mek. Since there are no confounders on this path, we can conclude that the interventional effect of PKC on Mek is causal.
+
+In other words, if we intervene on PKC, we can directly affect Mek. This means that if we were to set PKC to a specific value (e.g., PKC = 1), we would expect Mek to change accordingly.
+
+Therefore, the interventional effect of PKC on Mek is:
+
+Mek = f(PKC)
+
+where f is the causal function representing the relationship between PKC and Mek."
