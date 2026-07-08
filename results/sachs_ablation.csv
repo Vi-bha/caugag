@@ -372,3 +372,19 @@ The total causal effect of PKA on Erk through Raf is (PKA -> Raf) * (Raf -> Erk)
 Since the effect of PKA on Raf is 1 (assuming a binary causal relationship), and the effect of Raf on Erk is also 1, the total causal effect of PKA on Erk through Raf is 1 * 1 = 1.
 
 However, we also need to consider the"
+INTERV_PKA_Erk,What happens to Erk when PKA is experimentally manipulated?,intervention,VERIFIED,VERIFIED,False,"Based on the causal graph, we have verified that PKA causally affects Erk. 
+
+The causal relationship is: 
+PKA causes Erk.
+
+In other words, manipulating PKA experimentally will lead to a change in Erk.","Based on the given causal edges, we can infer the following:
+
+- PKA directly activates Erk (PKA -> Erk).
+- Erk is also activated by Mek (Mek -> Erk), but this is an indirect effect of PKA activation since PKA directly activates Mek (PKA -> Mek).
+
+When PKA is experimentally manipulated, we can expect the following outcomes:
+
+- If PKA is activated (e.g., through an agonist), Erk will be directly activated by PKA (PKA -> Erk) and indirectly activated by Mek (PKA -> Mek -> Erk). Therefore, Erk activation will increase.
+- If PKA is inhibited (e.g., through an antagonist), Erk will be indirectly deactivated by the reduction in Mek activation (PKA -> Mek -> Erk). However, Erk will still be directly activated by Mek (Mek -> Erk) to some extent, as the direct effect of PKA on Erk (PKA -> Erk) is blocked. Therefore, Erk activation will decrease, but not completely.
+
+In summary, manipulating PKA will have a direct and indirect effect on Erk activation."
