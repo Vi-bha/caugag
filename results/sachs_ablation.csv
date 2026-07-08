@@ -213,3 +213,18 @@ The causal relationship is: PIP3 -> Akt.
 There is no information provided about the magnitude of the effect, so we cannot report a numeric effect with its confidence interval.","Based on the causal graph information, we have a directed path from PIP3 to Akt with no confounders. This means that PIP3 causes Akt.
 
 If PIP3 is experimentally increased, we can infer that Akt will also increase, given the causal relationship between PIP3 and Akt. This is because the increase in PIP3 will lead to an increase in Akt, following the causal path PIP3 -> Akt."
+INTERV_Raf_Erk,What is the causal effect of Raf on Erk?,intervention,VERIFIED,VERIFIED,False,"Based on the causal graph, the causal effect of Raf on Erk is mediated by Mek. 
+
+The causal relationship is: Raf -> Mek -> Erk.
+
+This means that Raf has a causal effect on Erk through Mek.","Based on the provided causal graph information, we can determine the causal effect of Raf on Erk.
+
+The path from Raf to Erk is: ['Raf', 'Mek', 'Erk']. This path is verified and adjustable.
+
+However, there are confounding variables that need to be adjusted for: ['PKC', 'PKA'].
+
+To estimate the causal effect of Raf on Erk, we need to control for the confounding variables PKC and PKA.
+
+The directed path from Raf to Erk is: Raf -> Mek -> Erk, which indicates a direct causal relationship between Raf and Erk through Mek.
+
+Therefore, the causal effect of Raf on Erk, adjusting for PKC and PKA, can be estimated using the path ['Raf', 'Mek', 'Erk'] and controlling for the confounding variables ['PKC', 'PKA']."
