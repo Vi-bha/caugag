@@ -4,6 +4,12 @@ import numpy as np
 import pandas as pd
 import networkx as nx
 
+# Economics domain variables — LLM has real prior knowledge to hallucinate from
+ECO_NODES = [
+    "Income", "Savings", "Consumption", "Investment", "Inflation",
+    "InterestRate", "Employment", "GDP", "Exports", "Imports",
+    "GovernmentSpending", "TaxRevenue", "Debt", "MoneySupply", "Productivity"
+]
 
 @dataclass
 class CausalQAPair:
@@ -17,14 +23,13 @@ class CausalQAPair:
     ground_truth_path: list = field(default_factory=list)
     notes: str = ""
 
-
 class SyntheticSCM:
     def __init__(self, n_nodes=15, edge_density=0.3, seed=42):
         self.n_nodes = n_nodes
         self.edge_density = edge_density
         self.seed = seed
         self.rng = np.random.default_rng(seed)
-        self.nodes = [f"V{i}" for i in range(1, n_nodes+1)]
+        self.nodes = ECO_NODES[:n_nodes]
         self.dag = None
         self.beta = None
         self.data = None
@@ -43,17 +48,17 @@ class SyntheticSCM:
 
     def assign_coefficients(self):
         beta = {}
-        for u, v in self.dag.edges():
+        for u,v in self.dag.edges():
             coef = self.rng.uniform(0.2, 1.0)
             if self.rng.random() < 0.5:
                 coef = -coef
-            beta[(u, v)] = coef
+            beta[(u,v)] = coef
         self.beta = beta
         return beta
 
     def generate_data(self, n_samples=1000):
         topo_order = list(nx.topological_sort(self.dag))
-        node_idx = {node: i for i, node in enumerate(self.nodes)}
+        node_idx = {node: i for i,node in enumerate(self.nodes)}
         data = np.zeros((n_samples, self.n_nodes))
         for node in topo_order:
             idx = node_idx[node]
@@ -62,7 +67,7 @@ class SyntheticSCM:
             value = noise.copy()
             for parent in parents:
                 p_idx = node_idx[parent]
-                value += self.beta[(parent, node)] * data[:, p_idx]
+                value += self.beta[(parent,node)] * data[:, p_idx]
             data[:, idx] = value
         self.data = pd.DataFrame(data, columns=self.nodes)
         return self.data
@@ -83,46 +88,53 @@ class SyntheticSCM:
         qa_pairs = []
         edges = list(self.dag.edges())
         non_edges = [
-            (u, v) for u in self.nodes for v in self.nodes
-            if u != v and not self.dag.has_edge(u, v) and not self.dag.has_edge(v, u)
+            (u,v) for u in self.nodes for v in self.nodes
+            if u != v and not self.dag.has_edge(u,v)
+            and not self.dag.has_edge(v,u)
         ]
-        reversed_edges = [(v, u) for u, v in edges]
+        reversed_edges = [(v,u) for u,v in edges]
 
         # TRUE causal — direct edges
-        for i, (src, tgt) in enumerate(edges[:10]):
+        for i,(src,tgt) in enumerate(edges[:10]):
             qa_pairs.append(CausalQAPair(
-                f"SYN_TRUE_{i}", f"Does {src} directly cause {tgt}?",
-                "direction", src, tgt, "yes", "VERIFIED", [src, tgt],
+                f"SYN_TRUE_{i}",
+                f"Does {src} directly cause {tgt}?",
+                "direction", src, tgt, "yes", "VERIFIED", [src,tgt],
                 notes=f"beta={self.beta.get((src,tgt),0):.3f}"))
 
         # FALSE — reversed edges
         self.rng.shuffle(reversed_edges)
-        for i, (src, tgt) in enumerate(reversed_edges[:8]):
+        for i,(src,tgt) in enumerate(reversed_edges[:8]):
             qa_pairs.append(CausalQAPair(
-                f"SYN_REV_{i}", f"Does {src} directly cause {tgt}?",
+                f"SYN_REV_{i}",
+                f"Does {src} directly cause {tgt}?",
                 "direction", src, tgt, "no", "UNVERIFIABLE",
                 notes="Reversed edge"))
 
         # FALSE — non edges
         self.rng.shuffle(non_edges)
-        for i, (src, tgt) in enumerate(non_edges[:8]):
+        for i,(src,tgt) in enumerate(non_edges[:8]):
             qa_pairs.append(CausalQAPair(
-                f"SYN_NONE_{i}", f"What is the causal effect of {src} on {tgt}?",
-                "intervention", src, tgt, "no_causal_effect", "UNVERIFIABLE",
+                f"SYN_NONE_{i}",
+                f"What is the causal effect of {src} on {tgt}?",
+                "intervention", src, tgt,
+                "no_causal_effect", "UNVERIFIABLE",
                 notes="No edge"))
 
         # Intervention with true effect
-        for i, (src, tgt) in enumerate(edges[:8]):
+        for i,(src,tgt) in enumerate(edges[:8]):
             effect = self.get_true_total_effect(src, tgt)
             qa_pairs.append(CausalQAPair(
-                f"SYN_EFFECT_{i}", f"What is the causal effect of {src} on {tgt}?",
-                "intervention", src, tgt, f"effect={effect:.3f}", "VERIFIED",
-                [src, tgt], notes=f"True effect={effect:.3f}"))
+                f"SYN_EFFECT_{i}",
+                f"What happens to {tgt} if we intervene on {src}?",
+                "intervention", src, tgt,
+                f"effect={effect:.3f}", "VERIFIED",
+                [src,tgt], notes=f"True effect={effect:.3f}"))
 
         return qa_pairs
 
     def get_dag_dot(self):
-        edges_str = "; ".join([f"{u} -> {v}" for u, v in self.dag.edges()])
+        edges_str = "; ".join([f"{u} -> {v}" for u,v in self.dag.edges()])
         return f"digraph {{ {edges_str} }}"
 
     @classmethod
