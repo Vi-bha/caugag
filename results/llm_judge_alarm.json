@@ -1,0 +1,27 @@
+{
+  "dataset": "Alarm Network",
+  "n_total": 57,
+  "n_refusal_cases": 29,
+  "verifier_accuracy": "100.0%",
+  "caugag": 29,
+  "graphrag": 3,
+  "rag": 9,
+  "vanilla": 9,
+  "mcnemar": {
+    "CauGAG vs Vanilla": {
+      "stat": 18.05,
+      "p": 2.2e-05,
+      "sig": "***"
+    },
+    "CauGAG vs RAG": {
+      "stat": 18.05,
+      "p": 2.2e-05,
+      "sig": "***"
+    },
+    "CauGAG vs GraphRAG": {
+      "stat": 24.0385,
+      "p": 1e-06,
+      "sig": "***"
+    }
+  }
+}
