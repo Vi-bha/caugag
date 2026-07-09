@@ -1,0 +1,27 @@
+{
+  "dataset": "Synthetic Economics",
+  "n_total": 34,
+  "n_refusal_cases": 16,
+  "verifier_accuracy": "97.1%",
+  "caugag": 15,
+  "graphrag": 1,
+  "rag": 6,
+  "vanilla": 0,
+  "mcnemar": {
+    "CauGAG vs Vanilla": {
+      "stat": 13.0667,
+      "p": 0.000301,
+      "sig": "***"
+    },
+    "CauGAG vs RAG": {
+      "stat": 5.8182,
+      "p": 0.015861,
+      "sig": "*"
+    },
+    "CauGAG vs GraphRAG": {
+      "stat": 12.0714,
+      "p": 0.000512,
+      "sig": "***"
+    }
+  }
+}
