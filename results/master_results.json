@@ -1,35 +1,30 @@
 {
   "sachs": {
-    "n_total": 82,
-    "n_refusal_cases": 39,
-    "verifier_accuracy": "97.4%",
-    "llm_judge": {
-      "caugag": "97.4%",
-      "graphrag": "25.6%",
-      "rag": "33.3%",
-      "vanilla": "12.8%"
-    },
-    "mcnemar": {
-      "vs_vanilla": "p<0.001 ***",
-      "vs_rag": "p<0.001 ***",
-      "vs_graphrag": "p<0.001 ***"
-    }
+    "n": 82,
+    "n_ref": 39,
+    "verifier": "97.4%",
+    "caugag": "97.4%",
+    "graphrag": "25.6%",
+    "rag": "33.3%",
+    "vanilla": "12.8%"
   },
-  "synthetic_economics": {
-    "n_total": 34,
-    "n_refusal_cases": 16,
-    "verifier_accuracy": "97.1%",
-    "llm_judge": {
-      "caugag": "93.8%",
-      "graphrag": "6.2%",
-      "rag": "37.5%",
-      "vanilla": "0.0%"
-    },
-    "mcnemar": {
-      "vs_vanilla": "p<0.001 ***",
-      "vs_rag": "p=0.016 *",
-      "vs_graphrag": "p<0.001 ***"
-    }
+  "synthetic": {
+    "n": 34,
+    "n_ref": 16,
+    "verifier": "97.1%",
+    "caugag": "93.8%",
+    "graphrag": "6.2%",
+    "rag": "37.5%",
+    "vanilla": "0.0%"
+  },
+  "alarm": {
+    "n": 57,
+    "n_ref": 29,
+    "verifier": "100.0%",
+    "caugag": "100.0%",
+    "graphrag": "10.3%",
+    "rag": "31.0%",
+    "vanilla": "31.0%"
   },
   "ablation": {
     "caugag_full": "95.1%",
@@ -37,8 +32,24 @@
     "gate_contribution": "+78.0%",
     "mcnemar": "p<0.001 ***"
   },
+  "mcnemar": {
+    "sachs": {
+      "vs_vanilla": "p<0.001 ***",
+      "vs_rag": "p<0.001 ***",
+      "vs_graphrag": "p<0.001 ***"
+    },
+    "synthetic": {
+      "vs_vanilla": "p<0.001 ***",
+      "vs_rag": "p=0.016 *",
+      "vs_graphrag": "p<0.001 ***"
+    },
+    "alarm": {
+      "vs_vanilla": "p<0.001 ***",
+      "vs_rag": "p<0.001 ***",
+      "vs_graphrag": "p<0.001 ***"
+    }
+  },
   "pending": [
-    "Third dataset: Alarm network",
     "Effect size calibration",
     "Paper writing on Overleaf"
   ]
