@@ -5491,3 +5491,42 @@ In summary, based on the backdoor criterion, it appears that inflation indirectl
 We know that Inflation directly causes Employment and Employment directly causes Debt. 
 
 So, Inflation indirectly causes Debt through Employment."
+SYN_MULTI_8,Does Consumption indirectly cause MoneySupply?,intervention,VERIFIED,yes_indirect,VERIFIED,False,"Yes, the causal graph has VERIFIED that Consumption indirectly causes MoneySupply.
+
+The causal relationship is: Consumption -> Inflation -> MoneySupply
+
+This means that an increase in Consumption can lead to an increase in Inflation, which in turn can lead to an increase in MoneySupply.","Yes, consumption can indirectly cause an increase in money supply. 
+
+When consumers spend money on goods and services, businesses receive the money and can then deposit it into their bank accounts. This increases the deposits held by commercial banks. As a result, banks can lend more money to other customers, which increases the money supply in the economy.
+
+This process is often referred to as the ""money multiplier"" effect, where an initial increase in deposits can lead to a larger increase in the money supply through the banking system.","To determine if consumption indirectly causes money supply, we need to consider the relationships between these variables and identify any potential backdoor paths.
+
+Let's assume we have the following variables and their relationships:
+
+- Consumption (C)
+- Money Supply (M)
+- Interest Rate (I)
+- GDP (G)
+
+We can represent these relationships using a directed acyclic graph (DAG):
+
+C -> I
+I -> M
+C -> G
+G -> M
+
+In this graph, consumption (C) affects the interest rate (I), which in turn affects money supply (M). Additionally, consumption (C) affects GDP (G), which also affects money supply (M).
+
+To determine if consumption indirectly causes money supply, we need to check if there's a backdoor path from consumption to money supply. A backdoor path is a path that contains an arrow into the variable of interest (money supply) and is not blocked by any variable.
+
+In this case, the path C -> G -> M is a backdoor path because it contains an arrow into money supply (M) and is not blocked by any variable. Therefore, consumption indirectly causes money supply through the backdoor path.
+
+However, we can block this backdoor path by conditioning on GDP (G). If we condition on GDP (G), the backdoor path C -> G -> M is blocked, and the only remaining path is C -> I -> M, which is a direct effect of consumption on money supply.
+
+Therefore, consumption indirectly causes money supply, but this effect can be blocked by conditioning on GDP (G).","Based on the given causal relationships, we can infer that Consumption indirectly causes MoneySupply.
+
+The direct causal relationships are:
+- Consumption directly causes Inflation
+- Inflation directly causes MoneySupply
+
+So, Consumption indirectly causes MoneySupply through Inflation."
