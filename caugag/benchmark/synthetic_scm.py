@@ -4,7 +4,6 @@ import numpy as np
 import pandas as pd
 import networkx as nx
 
-# Economics domain variables — LLM has real prior knowledge to hallucinate from
 ECO_NODES = [
     "Income", "Savings", "Consumption", "Investment", "Inflation",
     "InterestRate", "Employment", "GDP", "Exports", "Imports",
@@ -37,9 +36,8 @@ class SyntheticSCM:
     def generate_dag(self):
         dag = nx.DiGraph()
         dag.add_nodes_from(self.nodes)
-        n = self.n_nodes
-        for i in range(n):
-            for j in range(i+1, n):
+        for i in range(self.n_nodes):
+            for j in range(i+1, self.n_nodes):
                 if self.rng.random() < self.edge_density:
                     dag.add_edge(self.nodes[i], self.nodes[j])
         assert nx.is_directed_acyclic_graph(dag)
@@ -84,36 +82,46 @@ class SyntheticSCM:
             total += effect
         return total
 
-    def generate_qa_pairs(self, n_pairs=40):
+    def generate_qa_pairs(self):
+        """Generate comprehensive QA pairs — 120+ total."""
         qa_pairs = []
         edges = list(self.dag.edges())
+        reversed_edges = [(v,u) for u,v in edges]
+        edge_set = set(edges)
+        rev_set = set(reversed_edges)
+
         non_edges = [
             (u,v) for u in self.nodes for v in self.nodes
-            if u != v and not self.dag.has_edge(u,v)
-            and not self.dag.has_edge(v,u)
+            if u != v
+            and (u,v) not in edge_set
+            and (v,u) not in edge_set
         ]
-        reversed_edges = [(v,u) for u,v in edges]
+        self.rng.shuffle(non_edges)
 
-        # TRUE causal — direct edges
-        for i,(src,tgt) in enumerate(edges[:10]):
+        # 1. ALL true direct edges
+        dir_templates = [
+            "Does {s} directly cause {t}?",
+            "Is there a direct causal effect of {s} on {t}?",
+            "Does {s} directly affect {t}?",
+            "Is {s} a direct cause of {t}?",
+        ]
+        for i,(src,tgt) in enumerate(edges):
+            q = dir_templates[i%4].format(s=src,t=tgt)
             qa_pairs.append(CausalQAPair(
-                f"SYN_TRUE_{i}",
-                f"Does {src} directly cause {tgt}?",
-                "direction", src, tgt, "yes", "VERIFIED", [src,tgt],
+                f"SYN_TRUE_{i}", q, "direction",
+                src, tgt, "yes", "VERIFIED", [src,tgt],
                 notes=f"beta={self.beta.get((src,tgt),0):.3f}"))
 
-        # FALSE — reversed edges
-        self.rng.shuffle(reversed_edges)
-        for i,(src,tgt) in enumerate(reversed_edges[:8]):
+        # 2. ALL reversed edges
+        for i,(src,tgt) in enumerate(reversed_edges):
+            q = dir_templates[i%4].format(s=src,t=tgt)
             qa_pairs.append(CausalQAPair(
-                f"SYN_REV_{i}",
-                f"Does {src} directly cause {tgt}?",
-                "direction", src, tgt, "no", "UNVERIFIABLE",
+                f"SYN_REV_{i}", q, "direction",
+                src, tgt, "no", "UNVERIFIABLE",
                 notes="Reversed edge"))
 
-        # FALSE — non edges
-        self.rng.shuffle(non_edges)
-        for i,(src,tgt) in enumerate(non_edges[:8]):
+        # 3. Non-edges — 20 cases
+        for i,(src,tgt) in enumerate(non_edges[:20]):
             qa_pairs.append(CausalQAPair(
                 f"SYN_NONE_{i}",
                 f"What is the causal effect of {src} on {tgt}?",
@@ -121,8 +129,8 @@ class SyntheticSCM:
                 "no_causal_effect", "UNVERIFIABLE",
                 notes="No edge"))
 
-        # Intervention with true effect
-        for i,(src,tgt) in enumerate(edges[:8]):
+        # 4. True interventions — all edges
+        for i,(src,tgt) in enumerate(edges):
             effect = self.get_true_total_effect(src, tgt)
             qa_pairs.append(CausalQAPair(
                 f"SYN_EFFECT_{i}",
@@ -131,11 +139,53 @@ class SyntheticSCM:
                 f"effect={effect:.3f}", "VERIFIED",
                 [src,tgt], notes=f"True effect={effect:.3f}"))
 
+        # 5. False interventions — 15 reversed
+        self.rng.shuffle(reversed_edges)
+        for i,(src,tgt) in enumerate(reversed_edges[:15]):
+            qa_pairs.append(CausalQAPair(
+                f"SYN_FALSE_INTERV_{i}",
+                f"If we intervene on {src}, what happens to {tgt}?",
+                "intervention", src, tgt,
+                "no_causal_effect", "UNVERIFIABLE",
+                notes="Reversed — no causal path"))
+
+        # 6. Multihop paths
+        multihop = []
+        for src in self.nodes:
+            for tgt in self.nodes:
+                if src != tgt and nx.has_path(self.dag, src, tgt):
+                    path = nx.shortest_path(self.dag, src, tgt)
+                    if len(path) >= 3:
+                        multihop.append((src, tgt, path))
+        self.rng.shuffle(multihop)
+        for i,(src,tgt,path) in enumerate(multihop[:10]):
+            qa_pairs.append(CausalQAPair(
+                f"SYN_MULTI_{i}",
+                f"Does {src} indirectly cause {tgt}?",
+                "intervention", src, tgt,
+                "yes_indirect", "VERIFIED", path,
+                notes="Multi-hop"))
+
+        # 7. Association questions
+        assoc_pairs = [
+            (u,v) for u in self.nodes[:8] for v in self.nodes[:8]
+            if u != v
+        ][:10]
+        for i,(src,tgt) in enumerate(assoc_pairs):
+            skeleton = self.dag.to_undirected()
+            connected = nx.has_path(skeleton, src, tgt)
+            qa_pairs.append(CausalQAPair(
+                f"SYN_ASSOC_{i}",
+                f"Is {src} statistically associated with {tgt}?",
+                "association", src, tgt,
+                "yes" if connected else "no",
+                "ASSOCIATED" if connected else "UNVERIFIABLE"))
+
         return qa_pairs
 
     def get_dag_dot(self):
-        edges_str = "; ".join([f"{u} -> {v}" for u,v in self.dag.edges()])
-        return f"digraph {{ {edges_str} }}"
+        return "digraph { " + "; ".join(
+            [f"{u} -> {v}" for u,v in self.dag.edges()]) + " }"
 
     @classmethod
     def build(cls, n_nodes=15, edge_density=0.3, n_samples=1000, seed=42):
