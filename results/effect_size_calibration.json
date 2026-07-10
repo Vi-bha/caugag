@@ -1,0 +1,74 @@
+{
+  "n_edges": 8,
+  "llm_rmse": 0.3951,
+  "llm_mae": 0.3376,
+  "caugag_rmse": 0.0,
+  "improvement": 0.3951,
+  "per_edge": {
+    "Raf_Mek": {
+      "source": "Raf",
+      "target": "Mek",
+      "true_effect": 0.4265,
+      "llm_estimate": 0.5,
+      "absolute_error": 0.0735,
+      "reasoning": "The causal effect size of Raf on Mek is estimated to be 0.5, indicating that for every unit increase in Raf, Mek increases by 0.5 units."
+    },
+    "Mek_Erk": {
+      "source": "Mek",
+      "target": "Erk",
+      "true_effect": 0.5047,
+      "llm_estimate": 0.35,
+      "absolute_error": 0.1547,
+      "reasoning": "The causal effect size of Mek on Erk in the Sachs protein signaling network is estimated to be 0.35, indicating that for every unit increase in Mek, Erk is expected to increase by 0.35 units."
+    },
+    "Erk_Akt": {
+      "source": "Erk",
+      "target": "Akt",
+      "true_effect": 0.5091,
+      "llm_estimate": 0.34,
+      "absolute_error": 0.1691,
+      "reasoning": "The causal effect size of Erk on Akt is estimated to be 0.34, indicating that for every unit increase in Erk, Akt is expected to increase by approximately 0.34 units."
+    },
+    "PKA_Akt": {
+      "source": "PKA",
+      "target": "Akt",
+      "true_effect": 0.8286,
+      "llm_estimate": 0.234,
+      "absolute_error": 0.5946,
+      "reasoning": "The causal effect size of PKA on Akt in the Sachs protein signaling network is estimated to be 0.234, indicating that for every unit increase in PKA, Akt is expected to increase by 0.234 units."
+    },
+    "PKA_Erk": {
+      "source": "PKA",
+      "target": "Erk",
+      "true_effect": 0.8366,
+      "llm_estimate": 0.345,
+      "absolute_error": 0.4916,
+      "reasoning": "The causal effect size of PKA on Erk in the Sachs protein signaling network is estimated to be 0.345, indicating that Erk is expected to increase by approximately 34.5% for every unit increase in PKA."
+    },
+    "PKC_Raf": {
+      "source": "PKC",
+      "target": "Raf",
+      "true_effect": 0.3233,
+      "llm_estimate": 0.176,
+      "absolute_error": 0.1473,
+      "reasoning": "The causal effect size of PKC on Raf in the Sachs protein signaling network is estimated to be 0.176, indicating that for every unit increase in PKC, Raf is expected to increase by 0.176 units."
+    },
+    "PKC_Mek": {
+      "source": "PKC",
+      "target": "Mek",
+      "true_effect": 0.6338,
+      "llm_estimate": 0.124,
+      "absolute_error": 0.5098,
+      "reasoning": "The causal effect size of PKC on Mek in the Sachs protein signaling network is estimated to be 0.124, indicating that for every unit increase in PKC, Mek is expected to increase by 0.124 units."
+    },
+    "PIP3_Akt": {
+      "source": "PIP3",
+      "target": "Akt",
+      "true_effect": -0.0303,
+      "llm_estimate": 0.53,
+      "absolute_error": 0.5603,
+      "reasoning": "The causal effect size of PIP3 on Akt is estimated to be 0.53, indicating that for every unit increase in PIP3, Akt is expected to increase by 0.53 units."
+    }
+  },
+  "note": "CauGAG injects DoWhy OLS estimate directly \u2014 LLM guesses from training data"
+}
