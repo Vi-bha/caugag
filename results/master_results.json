@@ -50,7 +50,21 @@
     }
   },
   "pending": [
-    "Effect size calibration",
+    "Human evaluation (in progress)",
     "Paper writing on Overleaf"
-  ]
+  ],
+  "synthetic_v2": {
+    "n_total": 145,
+    "n_ref": 65,
+    "verifier": "98.6%",
+    "caugag": "96.9%",
+    "graphrag": "20.0%",
+    "rag": "32.3%",
+    "vanilla": "0.0%",
+    "mcnemar": {
+      "vs_vanilla": "p<0.001 ***",
+      "vs_rag": "p<0.001 ***",
+      "vs_graphrag": "p<0.001 ***"
+    }
+  }
 }
