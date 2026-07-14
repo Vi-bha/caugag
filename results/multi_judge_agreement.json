@@ -1,0 +1,32 @@
+{
+  "judges": [
+    "Claude (claude-sonnet-4-6)",
+    "ChatGPT (GPT-4o)",
+    "Gemini"
+  ],
+  "n_questions": 20,
+  "n_responses": 80,
+  "pairwise_agreement": {
+    "Claude_vs_ChatGPT": {
+      "agreement": "91.2%",
+      "kappa": 0.7778,
+      "level": "Substantial"
+    },
+    "Claude_vs_Gemini": {
+      "agreement": "86.2%",
+      "kappa": 0.6615,
+      "level": "Substantial"
+    },
+    "ChatGPT_vs_Gemini": {
+      "agreement": "90.0%",
+      "kappa": 0.7621,
+      "level": "Substantial"
+    }
+  },
+  "overall": {
+    "all_3_agree": "83.8%",
+    "average_kappa": 0.7338,
+    "interpretation": "Substantial agreement \u2014 validates LLM judge reliability"
+  },
+  "note": "Evaluated on 20 blinded questions from Sachs and Alarm benchmarks"
+}
