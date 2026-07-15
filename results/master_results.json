@@ -50,7 +50,7 @@
     }
   },
   "pending": [
-    "Human evaluation (in progress)",
+    "Streamlit demo",
     "Paper writing on Overleaf"
   ],
   "synthetic_v2": {
@@ -64,6 +64,22 @@
     "mcnemar": {
       "vs_vanilla": "p<0.001 ***",
       "vs_rag": "p<0.001 ***",
+      "vs_graphrag": "p<0.001 ***"
+    }
+  },
+  "german_credit": {
+    "n_total": 39,
+    "n_ref": 18,
+    "verifier_accuracy": "97.4%",
+    "llm_judge": {
+      "caugag": "83.3%",
+      "graphrag": "11.1%",
+      "rag": "22.2%",
+      "vanilla": "5.6%"
+    },
+    "mcnemar": {
+      "vs_vanilla": "p<0.001 ***",
+      "vs_rag": "p=0.006 **",
       "vs_graphrag": "p<0.001 ***"
     }
   }
