@@ -672,3 +672,58 @@ If CreditHistory improves, it means that the cause (CreditHistory) is changing i
 Since the relationship is direct, we can infer that LoanDefault will decrease. 
 
 Therefore, if CreditHistory improves, LoanDefault is likely to decrease."
+GER_INTERV_LoanAmount_LoanDefault,"If we intervene on LoanAmount, what happens to LoanDefault?",intervention,VERIFIED,yes_causal_effect,VERIFIED,False,"Based on the causal graph, we have the following causal relationship:
+
+LoanAmount -> LoanDefault
+
+If we intervene on LoanAmount, we are changing the value of LoanAmount. According to the causal graph, this will directly affect LoanDefault.
+
+Therefore, intervening on LoanAmount will cause a change in LoanDefault.
+
+To quantify the effect, we need more information about the relationship between LoanAmount and LoanDefault. However, based on the graph, we can say that LoanDefault is causally affected by LoanAmount.
+
+If we have a numeric effect, we can report it with its confidence interval. However, without more information, we cannot provide a specific numeric effect.
+
+In general, we can say that intervening on LoanAmount will increase or decrease LoanDefault, depending on the direction of the causal relationship.","To determine the effect of intervening on LoanAmount on LoanDefault, we would need to know the underlying relationship between these two variables. However, based on general knowledge, LoanAmount is a predictor of LoanDefault in many models.
+
+If we intervene on LoanAmount, it means we are changing the loan amount. This could lead to a change in LoanDefault. Here are a few possible scenarios:
+
+1. **Increasing LoanAmount**: If we increase the loan amount, it's likely to increase the probability of LoanDefault, as borrowers may struggle to repay larger loans.
+2. **Decreasing LoanAmount**: If we decrease the loan amount, it's likely to decrease the probability of LoanDefault, as borrowers may find it easier to repay smaller loans.
+
+However, the exact relationship between LoanAmount and LoanDefault depends on various factors, such as interest rates, credit scores, and borrower behavior. A more accurate analysis would require a specific model or data set.
+
+In general, intervening on LoanAmount can have a non-trivial effect on LoanDefault, but the direction and magnitude of the effect depend on the underlying relationships between these variables.","To determine the effect of intervening on LoanAmount on LoanDefault, we need to consider the causal graph and apply the do-calculus.
+
+Let's assume the causal graph is as follows:
+
+LoanAmount -> LoanDefault
+
+In this graph, LoanAmount is the cause and LoanDefault is the effect.
+
+When we intervene on LoanAmount using the do-operator, we remove all incoming edges to LoanAmount. This means that the causal graph becomes:
+
+do(LoanAmount) -> LoanDefault
+
+Since there are no incoming edges to LoanAmount, the intervention does not block any paths between LoanAmount and LoanDefault. Therefore, the do-calculus states that:
+
+P(LoanDefault|do(LoanAmount)) = P(LoanDefault|LoanAmount)
+
+This means that intervening on LoanAmount has the same effect as observing LoanAmount. In other words, if we set LoanAmount to a specific value, the probability of LoanDefault will be the same as if we were observing LoanAmount at that value.
+
+So, in this case, intervening on LoanAmount will directly affect LoanDefault, and the probability of LoanDefault will be a function of the intervened value of LoanAmount.","To determine the effect of intervening on LoanAmount on LoanDefault, we need to consider the causal relationships involving LoanAmount.
+
+We know that LoanAmount directly causes LoanDefault. This means that if we intervene on LoanAmount, it will directly affect LoanDefault.
+
+However, we also know that Income directly causes LoanAmount. This means that if we intervene on LoanAmount, it may also affect Income, which in turn affects LoanDefault.
+
+To determine the overall effect, we need to consider the paths from LoanAmount to LoanDefault. There are two paths:
+
+1. LoanAmount -> LoanDefault (direct effect)
+2. LoanAmount -> Income -> LoanDefault (indirect effect)
+
+When we intervene on LoanAmount, the direct effect is to increase LoanDefault. However, the indirect effect through Income may also affect LoanDefault.
+
+Since we don't have information about the strength of these effects, we can only conclude that intervening on LoanAmount will affect LoanDefault, but the direction and magnitude of the effect are uncertain.
+
+In causal inference, this is known as a ""confounding"" effect, where the variable being intervened on (LoanAmount) is also a cause of the outcome variable (LoanDefault), and the effect of the intervention is uncertain due to the presence of other causal relationships."
