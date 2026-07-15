@@ -1,0 +1,27 @@
+{
+  "dataset": "German Credit",
+  "n_total": 39,
+  "n_refusal_cases": 18,
+  "verifier_accuracy": "82.1%",
+  "caugag": 15,
+  "graphrag": 2,
+  "rag": 4,
+  "vanilla": 1,
+  "mcnemar": {
+    "CauGAG vs Vanilla": {
+      "stat": 12.0714,
+      "p": 0.000512,
+      "sig": "***"
+    },
+    "CauGAG vs RAG": {
+      "stat": 7.6923,
+      "p": 0.005546,
+      "sig": "**"
+    },
+    "CauGAG vs GraphRAG": {
+      "stat": 11.0769,
+      "p": 0.000874,
+      "sig": "***"
+    }
+  }
+}
