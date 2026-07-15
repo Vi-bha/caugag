@@ -622,3 +622,53 @@ However, we also know that Income directly causes Savings. Savings directly caus
 To resolve this, we need to consider the overall effect. Since Income has a direct positive effect on LoanDefault and a positive effect on Savings (which has a negative effect on LoanDefault), we can conclude that the overall effect of increasing Income on LoanDefault risk is likely to be positive, but the magnitude might be reduced due to the positive effect of Income on Savings.
 
 Therefore, if we increase Income, LoanDefault risk is likely to increase, but the increase might be less than it would be without the positive effect of Income on Savings."
+GER_INTERV_CreditHistory_LoanDefault,What happens to LoanDefault if CreditHistory improves?,intervention,VERIFIED,yes_causal_effect,VERIFIED,False,"Based on the causal graph, we have the following causal relationship:
+
+CreditHistory -> LoanDefault
+
+This means that an improvement in CreditHistory will lead to a decrease in LoanDefault.
+
+Since the graph has verified this relationship, we can conclude that:
+
+If CreditHistory improves, LoanDefault will decrease.
+
+There is no numeric effect provided, so we cannot report a confidence interval.","If a person's credit history improves, it typically has a positive impact on their loan default risk. This is because a better credit history often indicates a lower risk of default, as the individual has demonstrated responsible borrowing and repayment habits in the past.
+
+As a result, lenders may view the individual as a lower credit risk, and they may be more likely to approve loans or offer more favorable loan terms, such as lower interest rates or larger loan amounts. This can make it easier for the individual to obtain credit and can also help them to save money on interest payments over the life of the loan.
+
+In terms of specific metrics, a better credit history may lead to a lower LoanDefault probability, as the individual's creditworthiness is viewed as higher. This can be measured using various credit scoring models, such as FICO or VantageScore, which take into account factors such as payment history, credit utilization, and credit age to generate a credit score.","To determine the effect of improving CreditHistory on LoanDefault, we need to analyze the causal relationship between these two variables.
+
+Let's assume we have a causal graph with the following variables and edges:
+
+- CreditHistory (X)
+- LoanDefault (Y)
+
+We want to find P(LoanDefault|do(CreditHistory = ""improved"")).
+
+To do this, we need to apply the do-calculus. The do-operator removes all incoming edges to X (CreditHistory) in the causal graph. This means we are assuming that CreditHistory is set by external intervention, and its value is not influenced by any other variables.
+
+Now, we need to check if there are any backdoor paths between CreditHistory and LoanDefault. A backdoor path is a path that contains an arrow into CreditHistory.
+
+If there are no backdoor paths, then we can apply the backdoor criterion, and we can condition on any set Z that blocks every path between CreditHistory and LoanDefault.
+
+However, without more information about the causal graph, it's difficult to provide a specific answer. If you have more information about the causal relationships between these variables, I can help you determine the effect of improving CreditHistory on LoanDefault.
+
+For example, if the causal graph contains the following edges:
+
+- CreditHistory → LoanDefault
+
+Then, improving CreditHistory would likely decrease the probability of LoanDefault, since CreditHistory is a direct cause of LoanDefault.
+
+But if the causal graph contains the following edges:
+
+- Income → CreditHistory → LoanDefault
+
+Then, improving CreditHistory might not necessarily decrease the probability of LoanDefault, since the effect of CreditHistory on LoanDefault is mediated by Income.
+
+In general, to determine the effect of improving CreditHistory on LoanDefault, we need to analyze the causal relationships between these variables and apply the do-calculus and backdoor criterion accordingly.","Based on the given causal relationships, we know that CreditHistory directly causes LoanDefault. 
+
+If CreditHistory improves, it means that the cause (CreditHistory) is changing in a positive direction. 
+
+Since the relationship is direct, we can infer that LoanDefault will decrease. 
+
+Therefore, if CreditHistory improves, LoanDefault is likely to decrease."
