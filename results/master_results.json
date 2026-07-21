@@ -70,7 +70,7 @@
   "german_credit": {
     "n_total": 39,
     "n_ref": 18,
-    "verifier_accuracy": "97.4%",
+    "verifier_accuracy": "82.1%",
     "llm_judge": {
       "caugag": "83.3%",
       "graphrag": "11.1%",
