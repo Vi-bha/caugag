@@ -1,0 +1,97 @@
+No,Question,What_should_happen,Response_A,Response_B,Response_C,Response_D,Best_response,Worst_response,Notes,_A_model,_B_model,_C_model,_D_model
+1,Does LoanDefault directly cause Savings?,AI should REFUSE — no causal evidence exists,"To determine if LoanDefault directly causes Savings, we need to establish a causal relationship between the two variables. However, based on the provided context, we only have information about correlation, backdoor criterion, and d-separation.
+
+Since we don't have any information about the relation","No, LoanDefault does not directly cause Savings. In fact, LoanDefault is more likely to decrease Savings, as borrowers who default on loans may have to use their savings to pay off the debt or may face financial penalties that reduce their savings.","No, LoanDefault does not directly cause Savings.","Based on the provided causal graph, there is no directed path from LoanDefault to Savings. This means the graph provides NO evidence of LoanDefault causing Savings. 
+
+In other words, the causal graph does not support a causal claim between LoanDefault and Savings. Therefore, I cannot assert that Loa",,,,RAG,Vanilla,GraphRAG,CauGAG
+2,Does Age indirectly affect LoanDefault through Income?,AI should CONFIRM — causation is verified,"Based on the given causal relationships, we can infer the following:
+
+1. Age directly causes Income.
+2. Income directly causes LoanDefault.
+
+Since Age causes Income and Income causes LoanDefault, we can conclude that Age indirectly affects LoanDefault through Income.","To determine if Age indirectly affects LoanDefault through Income, we need to analyze the relationships between these variables.
+
+Let's assume the following causal relationships:
+
+- Age → Income (Age affects Income)
+- Income → LoanDefault (Income affects LoanDefault)
+
+We can represent these relation","Based on the provided causal graph, we cannot confirm the indirect effect of Age on LoanDefault through Income. 
+
+The graph only verifies the path ['Age', 'Employment', 'LoanDefault'] with no confounders. The presence of Income as a potential mediator is not explicitly mentioned in the provided grap","Yes, age can indirectly affect loan default through income. 
+
+As people age, their income often changes due to factors such as career progression, education, and work experience. Older individuals may have higher incomes due to seniority, promotions, or higher-paying jobs, which can improve their cr",,,,GraphRAG,RAG,CauGAG,Vanilla
+3,Does LoanDefault directly cause Income?,AI should REFUSE — no causal evidence exists,"No, LoanDefault does not directly cause Income. LoanDefault is typically a negative event where a borrower fails to repay a loan, whereas Income is the amount of money earned or received by an individual or business. These two concepts are generally unrelated, and LoanDefault might even negatively i","No, LoanDefault does not directly cause Income. 
+
+The known causal relationships from the graph show that Income directly causes LoanDefault, but there is no direct causal relationship from LoanDefault to Income.","Based on the context provided, we cannot directly conclude that LoanDefault causes Income. This is because correlation does not imply causation. There could be other factors at play, such as a common cause or coincidence.
+
+However, if we were to use the backdoor criterion or d-separation to establis","Based on the provided causal graph, there is no directed path from LoanDefault to Income. This means that the graph provides NO evidence of LoanDefault causing Income. 
+
+In other words, the causal graph does not support a causal claim between LoanDefault and Income. Therefore, I must REFUSE to asser",,,,Vanilla,GraphRAG,RAG,CauGAG
+4,Does Age directly affect Employment status?,AI should CONFIRM — causation is verified,"Age can indirectly affect employment status in several ways. While age itself is not a direct determinant of employment status, it can influence various factors that impact job prospects and career advancement. Here are some examples:
+
+1. **Discrimination**: Ageism, or age-based discrimination, can ","To determine if Age directly affects Employment status, we need to consider the relationship between these two variables. 
+
+In this case, let's assume Age (X) and Employment status (Y) are the variables of interest. 
+
+If we consider the backdoor criterion, we need to find a set Z that blocks every p","Based on the provided causal graph, there is no evidence to support a direct causal relationship between Age and Employment status. The graph does not include a direct edge between these two variables, which suggests that the relationship between Age and Employment status is not a direct cause-and-e","Yes, Age directly causes Employment.",,,,Vanilla,RAG,CauGAG,GraphRAG
+5,Does LoanDuration directly affect Savings?,AI should REFUSE — no causal evidence exists,"Yes, LoanDuration can directly affect Savings. When you take a loan with a longer duration, you typically pay lower monthly installments. However, this can also lead to paying more interest over the life of the loan, which can reduce your savings.
+
+On the other hand, taking a loan with a shorter dur","To determine if LoanDuration directly affects Savings, we need to establish a causal relationship between the two variables. 
+
+However, based on the provided context, we can't directly infer causation from correlation. We need to use causal identification techniques, such as the backdoor criterion o","No, LoanDuration does not directly affect Savings.","Based on the provided causal graph, there is no directed path from LoanDuration to Savings. This means that the graph does not support a causal claim between LoanDuration and Savings.
+
+In other words, the graph provides **NO EVIDENCE** of LoanDuration causing Savings. I cannot assert causation betwe",,,,Vanilla,RAG,GraphRAG,CauGAG
+6,What happens to LoanDefault if LoanDuration is extended?,AI should CONFIRM — causation is verified,"To answer this question, I'll need more context about the variables LoanDefault and LoanDuration. However, I can provide a general explanation.
+
+LoanDefault is typically a binary variable (0 or 1) that indicates whether a loan has defaulted or not. LoanDuration is a variable that represents the leng","Based on the given causal relationships, we know that LoanDuration directly causes LoanDefault. 
+
+If LoanDuration is extended, it is likely to increase the LoanDefault. This is because a longer loan duration may increase the risk of default due to various factors such as higher interest rates, longe","To determine the effect of extending LoanDuration on LoanDefault, we need to consider the causal graph and apply the do-calculus.
+
+Let's assume the causal graph is as follows:
+
+- LoanDuration → LoanDefault (direct effect)
+- CreditScore → LoanDefault (direct effect)
+- LoanDuration → CreditScore (indi","Based on the causal graph, we have a direct causal relationship: LoanDuration -> LoanDefault.
+
+If LoanDuration is extended, we can infer that LoanDefault will increase.
+
+However, the graph does not provide a specific numeric effect or confidence interval. The relationship is a direct causal effect, ",,,,Vanilla,GraphRAG,RAG,CauGAG
+7,Does Income directly cause Age?,AI should REFUSE — no causal evidence exists,"Based on the context provided, we can analyze the relationship between Income and Age.
+
+Income and Age are correlated, but correlation does not imply causation. However, in this case, it's unlikely that Income directly causes Age. Age is a fundamental aspect of an individual's life, and it's more li","No, income does not directly cause age. Age is a natural process that occurs over time due to biological factors, and it is not directly influenced by income.","Based on the provided causal graph, there is no directed path from Income to Age. This means that the graph does not support a causal claim between Income and Age.
+
+In other words, the graph provides **NO EVIDENCE** of Income causing Age. I will not assert causation between these two variables.
+
+It'","No, Income does not directly cause Age. The known causal relationships from the graph show that Age directly causes Income, but not the reverse.",,,,RAG,Vanilla,CauGAG,GraphRAG
+8,Does Age directly affect Income?,AI should CONFIRM — causation is verified,"Age can have both positive and negative effects on income, depending on various factors. Here are some general trends:
+
+1. **Early career (20s-30s):** Income often increases as people gain experience, skills, and seniority in their careers. This is especially true for professionals in fields like la","Yes, Age directly affects Income. This is a known causal relationship from the graph.","The causal graph has VERIFIED that Age causally affects Income. 
+
+Causal relationship: Age directly causes Income.","To determine if Age directly affects Income, we need to consider the causal relationship between these two variables. 
+
+In general, Age is often correlated with Income. As people get older, they tend to earn more due to factors like experience, education, and career advancement. However, correlation",,,,Vanilla,GraphRAG,CauGAG,RAG
+9,Does Income directly cause LoanDefault?,AI should CONFIRM — causation is verified,"Based on the causal graph, the answer is: 
+
+Yes, Income directly causes LoanDefault.
+
+The graph has a directed path: Income -> LoanDefault, indicating a direct causal relationship between Income and LoanDefault.","To determine if Income directly causes LoanDefault, we need to consider the relationship between these two variables. 
+
+Let's assume we have a causal graph where Income (X) and LoanDefault (Y) are connected. 
+
+If there's a direct arrow from Income (X) to LoanDefault (Y), then we can say that Income ","No, income does not directly cause loan default. However, income can be a factor that influences the likelihood of loan default. 
+
+A more accurate representation would be:
+
+Income → Ability to Repay → Loan Default
+
+In this relationship, income is one of the factors that affects an individual's abili","Yes, Income directly causes LoanDefault. This is a known causal relationship from the graph.",,,,CauGAG,RAG,Vanilla,GraphRAG
+10,Does LoanDefault directly cause CreditHistory?,AI should REFUSE — no causal evidence exists,"Based on the context provided, we cannot directly conclude that LoanDefault causes CreditHistory. 
+
+To establish causation, we would need to consider the relationships between LoanDefault, CreditHistory, and any potential common causes or confounding variables. 
+
+However, if we assume that LoanDefau","No, LoanDefault does not directly cause CreditHistory.","Based on the provided causal graph, there is no directed path from LoanDefault to CreditHistory. This means that the graph does not support a causal claim between LoanDefault and CreditHistory.
+
+In other words, the graph provides **NO EVIDENCE** of LoanDefault causing CreditHistory. I must **REFUSE*","In general, LoanDefault can be a contributing factor to a negative CreditHistory. However, it's not a direct cause. A direct cause would imply a one-to-one relationship where LoanDefault always results in a specific change to CreditHistory.
+
+In reality, the relationship between LoanDefault and Credi",,,,RAG,GraphRAG,CauGAG,Vanilla
