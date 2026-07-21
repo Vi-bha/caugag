@@ -3251,3 +3251,140 @@ Here's a thinking process:
 5.  **Self-Correction/Verification:**
    - Check against given relationships: ""LoanAmount directly causes LoanDefault"" is explicitly listed.
    - Intervention semantics: In causal inference, intervening on a variable (do(X=x)) breaks incoming arrows to X and propagates effects along outgoing arrows. Here, LoanAmount -> LoanDefault is an outgoing arrow, so the effect propag"
+GER_INTERV_Savings_LoanDefault,"If Savings increases, what is the causal effect on LoanDefault?",intervention,VERIFIED,yes_causal_effect,UNVERIFIABLE,True,"<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - Question: ""If Savings increases, what is the causal effect on LoanDefault?""
+   - Variables mentioned: Savings, LoanDefault
+   - Task: Determine causal effect based on a causal graph (implied context)
+
+2.  **Check Constraints/Instructions:**
+   - The system prompt explicitly states: ""The causal graph does NOT support a causal claim between [Savings] and [LoanDefault].""
+   - ""Graph proof: Variable [Savings/LoanDefault] not in DAG."" (Actually, it says ""Variable  not in DAG."" with blanks, but the intent is clear: the graph doesn't contain these variables or doesn't support the claim)
+   - MUST:
+     1. Clearly state the graph provides NO evidence of Savings causing LoanDefault
+     2. REFUSE to assert causation
+     3. Note that correlation does not imply causation
+
+3.  **Formulate Response (Mental Refinement):**
+   - Acknowledge the question about Savings and LoanDefault.
+   - State clearly that the provided causal graph does not contain these variables or does not support any causal relationship between them.
+   - Explicitly refuse to assert any causal effect.
+   - Include the standard disclaimer about correlation vs. causation.
+   - Keep it concise and aligned with the strict instructions.
+
+   Draft:
+   Based on the provided causal graph, there is no evidence that Savings causes changes in LoanDefault. The graph does not include these variables or establish any causal pathway between them, so I cannot assert a causal effect. Please note that even if an observed correlation exists between savings and loan defaults in data, correlation does not imply causation. If you have a different causal graph or additional structural information, I’d be happy to help analyze it.
+
+4.  **Check Against Constraints:**
+   - Clearly state graph provides NO evidence? Yes.
+   - REFUSE to assert causation? Yes.
+   - Note correlation does not imply causation? Yes.
+   - Matches tone and requirements? Yes.
+
+   All constraints met. Ready to output. All steps verified. No extra fluff. Direct and compliant.✅
+</think>
+
+Based on the provided causal graph, there is **no evidence** that Savings causes changes in LoanDefault. The graph does not contain these variables or establish any causal pathway between them, so I must **refuse to","<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Question:** ""If Savings increases, what is the causal effect on LoanDefault?""
+   - **Key Variables:** Savings (independent variable), LoanDefault (dependent variable)
+   - **Relationship Type:** Causal effect
+   - **Context:** Implicitly financial/economic, likely referring to a dataset or model (possibly the UCI Credit Card Default dataset or similar, but not explicitly stated).
+
+2.  **Identify Missing Information:**
+   - The question is extremely brief and lacks context. I don't know:
+     - What dataset/model this refers to
+     - The specific domain (credit cards, mortgages, personal loans, etc.)
+     - Whether this is from a specific study, paper, or machine learning model
+     - The direction/magnitude of the effect
+   - In real-world finance/economics, higher savings generally *decrease* the probability of loan default (negative causal effect), but I need to be careful not to assume without context.
+
+3.  **Determine Response Strategy:**
+   - Acknowledge the lack of context
+   - Provide the general economic/financial principle
+   - Explain how causal effects are typically measured/interpreted
+   - Ask for clarification if needed
+   - Keep it direct as requested (""Answer causal questions directly."")
+
+4.  **Formulate Response (Mental Refinement):**
+   - Direct answer first: In typical financial contexts, an increase in savings causally reduces the probability of loan default (negative effect).
+   - Add necessary caveats: The exact magnitude and direction depend on the specific dataset, model, and population. Without context (e.g., a specific study, dataset, or causal model), I can only state the general economic relationship.
+   - Keep it concise.
+
+5.  **Check Against Constraints:**
+   - ""Answer causal questions directly."" → I'll lead with the direct causal relationship.
+   - No extra fluff.
+   - Acknowledge context dependency if needed, but keep it tight.
+
+   Draft: ""In standard financial and economic contexts, an increase in savings causally reduces the probability of loan default (a negative causal effect). Higher savings provide a financial buffer, improving repayment capacity and lowering default risk. The exact magnitude depends on the specific dataset, population, and causal model being referenced. If you’re working with a particular study or dataset, share it for a precise estimate.""","<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Question:** ""If Savings increases, what is the causal effect on LoanDefault?""
+   - **Context Provided:** 
+     - `backdoor_criterion`: Definition of backdoor criterion in causal inference.
+     - `interventional`: Definition of do-calculus/interventional distribution.
+     - `sachs_signaling`: Information about protein signaling pathways (PKC, PKA, Raf, Mek, Erk, etc.).
+   - **Key Observation:** The provided context is entirely about causal inference definitions and protein signaling pathways. It contains *no information* about ""Savings"" or ""LoanDefault"".
+
+2.  **Identify Missing Information:**
+   - The question asks about a specific causal relationship (Savings -> LoanDefault) in a financial/economic context.
+   - The provided context does not mention these variables at all.
+   - I need to rely on general knowledge about finance/economics to answer, while acknowledging the context limitation.
+
+3.  **Formulate Response Strategy:**
+   - Acknowledge that the provided context doesn't cover this specific relationship.
+   - Use general economic/financial knowledge to explain the likely causal effect.
+   - Explain the reasoning using causal inference concepts (like confounding, backdoor paths, intervention) if applicable, to align with the assistant's role.
+   - State assumptions clearly.
+   - Provide a nuanced answer (e.g., higher savings generally reduces loan default risk, but depends on other factors like income, loan terms, economic conditions).
+   - Mention how one would formally estimate this using causal inference (e.g., do(Savings) -> LoanDefault, controlling for confounders via backdoor criterion).
+
+4.  **Draft Response (Mental Refinement):**
+   The provided context focuses on causal inference definitions and protein signaling pathways, so it doesn’t contain specific information about the relationship between Savings and LoanDefault. However, drawing on general economic and financial principles:
+   
+   Increasing savings typically has a *negative* causal effect on loan default probability. Higher savings provide a financial buffer, improving a borrower’s ability to meet debt obligations during income shocks or unexpected expenses. In causal inference terms, if we intervene to increase savings (do(Savings = s')), we would generally expect P(LoanDefault | do(Savings = s')) to decrease compared to lower savings levels.
+   
+   However, to isolate this causal effect empir","<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - Question: ""If Savings increases, what is the causal effect on LoanDefault?""
+   - Known causal relationships provided:
+     - Employment -> LoanDefault
+     - Housing -> LoanDefault
+     - Housing -> Savings
+     - Savings -> LoanDefault
+     - Income -> Savings
+     - Income -> LoanDefault
+     - CreditHistory -> LoanDefault
+     - LoanAmount -> LoanDefault
+     - LoanDuration -> LoanDefault
+
+2.  **Identify Relevant Relationship:**
+   - The question asks about the causal effect of `Savings` on `LoanDefault`.
+   - Looking at the known relationships, there is a direct causal link: `Savings directly causes LoanDefault`.
+
+3.  **Formulate Answer:**
+   - State the direct causal relationship clearly.
+   - Since the prompt says ""Savings directly causes LoanDefault"", an increase in Savings will causally affect LoanDefault.
+   - I should state that based on the provided graph, Savings has a direct causal effect on LoanDefault. I don't have the direction/magnitude (positive/negative), but I can state the causal link exists as given.
+   - The prompt says ""You may assert causal relationships if they appear above."" So I will directly assert that Savings directly causes LoanDefault, meaning an increase in Savings will causally impact LoanDefault.
+
+   Draft: Based on the provided causal relationships, Savings directly causes LoanDefault. Therefore, an increase in Savings will have a direct causal effect on LoanDefault. (Note: The exact direction/magnitude of the effect isn't specified in the graph, but the direct causal link is established.)
+
+4.  **Refine according to constraints:**
+   - Keep it concise.
+   - Directly answer the question using the provided information.
+   - ""Based on the known causal relationships, Savings directly causes LoanDefault. Therefore, an increase in Savings will directly causally affect LoanDefault.""
+
+   Check against constraints: Matches exactly. No extra fluff. Uses the provided relationship. Ready.✅
+   Output matches response.✅
+   Proceed. 
+   Self-Correction/Verification during thought: 
+   The prompt says ""Savings directly causes LoanDefault"". I should just state that clearly. I don't need to speculate on positive/negative since it's not given. I'll just state the direct causal effect as provided.
+   Final answer: Based"
