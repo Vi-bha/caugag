@@ -225,3 +225,98 @@ Thinking Process:
 </think>
 
 Yes, Income directly causes LoanDefault."
+GER_TRUE_CreditHistory_LoanDefault,Does CreditHistory directly cause LoanDefault?,direction,VERIFIED,yes,UNVERIFIABLE,True,"<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - Question: ""Does CreditHistory directly cause LoanDefault?""
+   - Variables mentioned: CreditHistory, LoanDefault
+   - Task: Determine if there's a direct causal relationship based on a causal graph (DAG).
+
+2.  **Check Constraints/Instructions:**
+   - The prompt explicitly states: ""The causal graph does NOT support a causal claim between  and . Graph proof: Variable  not in DAG.""
+   - Wait, the prompt has placeholders: ""between  and ."" and ""Variable  not in DAG."" This seems like a template where the variables weren't filled in, but the instruction is clear: I MUST state the graph provides NO evidence, REFUSE to assert causation, and note correlation ≠ causation.
+   - I need to follow the exact instructions regardless of the missing placeholders. The instruction says: ""The causal graph does NOT support a causal claim between [CreditHistory] and [LoanDefault]. Graph proof: Variable [CreditHistory/LoanDefault] not in DAG."" (I'll adapt to the actual variables mentioned).
+   - I must:
+     1. Clearly state the graph provides NO evidence of CreditHistory causing LoanDefault.
+     2. REFUSE to assert causation.
+     3. Note that correlation does not imply causation.
+
+3.  **Formulate Response (Mental Refinement):**
+   - Acknowledge the question.
+   - State clearly that based on the provided causal graph, there is NO evidence that CreditHistory directly causes LoanDefault.
+   - Explicitly refuse to assert a causal relationship.
+   - Explain that even if these variables are correlated in data, correlation does not imply causation.
+   - Mention that the graph does not contain the necessary variables/edges to support this claim (as per the prompt's instruction about variables not being in the DAG).
+   - Keep it concise and strictly follow the 3 mandatory points.
+
+   Draft:
+   Based on the provided causal graph, there is **no evidence** that CreditHistory directly causes LoanDefault. I must **refuse to assert** any causal relationship between these two variables, as the graph does not contain the necessary structure or variables to support such a claim. Please note that even if CreditHistory and LoanDefault appear correlated in observational data, **correlation does not imply causation**. Without a valid directed path in a properly specified DAG, no causal","<think>
+Here's a thinking process:
+
+1.  **Analyze User Question:** The user asks: ""Does CreditHistory directly cause LoanDefault?""
+2.  **Identify Key Concepts:** 
+   - CreditHistory: A record of a borrower's past borrowing and repayment behavior.
+   - LoanDefault: Failure to repay a loan according to agreed terms.
+   - Causal relationship: ""directly cause"" implies a direct causal link.
+3.  **Evaluate Causal Relationship:**
+   - In reality, credit history is a *predictor* or *indicator* of loan default risk, not a direct cause.
+   - Credit history reflects past behavior, financial habits, income stability, debt management, etc.
+   - Loan default is caused by factors like inability to pay (income loss, unemployment, excessive debt), unwillingness to pay, economic shocks, poor financial management, etc.
+   - Credit history correlates with these underlying factors but doesn't *cause* default. In fact, a poor credit history might lead to higher interest rates or loan denial, which could indirectly affect default risk, but it's not a direct cause.
+   - Causality vs. Correlation: This is a classic example of correlation/prediction vs. causation. Credit history is used by lenders to *predict* default probability, not to cause it.
+4.  **Formulate Response:**
+   - Direct answer: No.
+   - Explain why: Credit history is a predictor/indicator, not a cause. It reflects past financial behavior and underlying factors that actually influence default risk.
+   - Clarify the relationship: It's correlational/predictive, not causal. Lenders use it to assess risk, but it doesn't directly cause someone to default.
+   - Mention actual causes: Income changes, debt burden, economic conditions, financial management, etc.
+   - Keep it concise and direct as requested.
+5.  **Check Against Guidelines:** 
+   - Answer causal questions directly.
+   - No extra fluff.
+   - Clear, accurate, and grounded in standard financial/economic understanding.
+   - Ready.✅
+</think>
+
+No. Credit history does not directly cause loan default. It is a **predictor** or **indicator** of default risk, reflecting past borrowing and repayment behavior, financial habits, and underlying economic factors. Actual causes of default include income loss, excessive debt, poor cash flow management, economic shocks, or changes in financial circumstances","<think>
+Here's a thinking process:
+
+1.  **Analyze User Question:** The user asks: ""Does CreditHistory directly cause LoanDefault?""
+2.  **Identify Key Concepts:** The question is about causal inference, specifically whether one variable (CreditHistory) directly causes another (LoanDefault).
+3.  **Check Provided Context:**
+   - `[correlation_causation]`: Correlation ≠ causation. Need randomization/causal identification.
+   - `[backdoor_criterion]`: Defines backdoor criterion for causal identification.
+   - `[d_separation]`: Defines d-separation and conditional independence.
+   - The context provides general causal inference principles but *does not* contain specific information about ""CreditHistory"" or ""LoanDefault"".
+4.  **Evaluate Knowledge/Context Gap:** The provided context is purely theoretical. It doesn't mention credit history or loan defaults. I need to answer based on general causal inference principles and domain knowledge, while explicitly acknowledging the limitations of the provided context.
+5.  **Formulate Response (Mental Refinement):**
+   - Acknowledge the question.
+   - State that based on the provided context alone, there's no specific information about CreditHistory and LoanDefault.
+   - Apply causal inference principles: To determine if CreditHistory *directly causes* LoanDefault, we need more than correlation. We need to rule out confounding (common causes), use causal identification methods (like satisfying the backdoor criterion), or ideally have randomized/experimental data (though not feasible here).
+   - Discuss domain knowledge: In finance/economics, credit history is a strong predictor of loan default, but ""direct cause"" is complex. Credit history reflects past borrowing behavior, which is correlated with financial stability, income, spending habits, etc. These underlying factors (confounders) likely cause both poor credit history and loan default. So, credit history might be a proxy or mediator rather than a direct cause.
+   - Explain how to test it: Use causal graphs, identify confounders (income, debt-to-income ratio, employment status), apply backdoor adjustment, or use instrumental variables/difference-in-differences if possible.
+   - Conclude: Correlation exists, but direct causation is unlikely without controlling for confounders. Credit history is more of a predictive signal reflecting underlying financial health rather than a direct causal mechanism.
+6.  **Structure Response:**
+   - Direct answer first (likely no, or at least not","<think>
+Thinking Process:
+
+1.  **Analyze the Request:** The user is asking whether ""CreditHistory"" directly causes ""LoanDefault"" based on the provided causal relationships.
+2.  **Scan the Known Causal Relationships:**
+    *   Age -> CreditHistory
+    *   Employment -> LoanDefault
+    *   Housing -> LoanDefault
+    *   Savings -> LoanDefault
+    *   Income -> LoanDefault
+    *   **CreditHistory -> LoanDefault**
+    *   LoanAmount -> LoanDefault
+    *   LoanDuration -> LoanDefault
+3.  **Evaluate the specific relationship:** The list explicitly states ""CreditHistory directly causes LoanDefault"".
+4.  **Formulate the answer:** Yes, CreditHistory directly causes LoanDefault.
+5.  **Final Polish:** Keep it concise and direct as per the prompt's instruction (""You may assert causal relationships if they appear above"").
+
+*Self-Correction/Verification:* Does the graph say ""CreditHistory directly causes LoanDefault""? Yes. Is there any ambiguity? No.
+
+Output: Yes, CreditHistory directly causes LoanDefault.
+</think>
+
+Yes, CreditHistory directly causes LoanDefault."
