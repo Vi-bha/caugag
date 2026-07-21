@@ -3974,3 +3974,136 @@ Here's a thinking process:
    Therefore, the answer is definitively ""no effect"" or ""Savings remains unchanged.""
 
 4.  **Draft Response (Mental Refinement):**"
+GER_FALSE_Income_Age,"If Income increases, what happens to Age?",intervention,UNVERIFIABLE,no_causal_effect,UNVERIFIABLE,True,"<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - Question: ""If Income increases, what happens to Age?""
+   - Implied causal claim: Income causes changes in Age.
+   - Variables: Income, Age
+
+2.  **Check Constraints/Instructions:**
+   - The prompt explicitly states: ""The causal graph does NOT support a causal claim between [Income] and [Age].""
+   - ""Graph proof: Variable [Age/Income] not in DAG."" (Actually, it says ""Variable  not in DAG"" with blanks, but the intent is clear: the graph doesn't support this causal link, possibly because one or both variables aren't in the DAG, or there's no path).
+   - I MUST:
+     1. Clearly state the graph provides NO evidence of Income causing Age
+     2. REFUSE to assert causation
+     3. Note that correlation does not imply causation
+
+3.  **Formulate Response (Mental Refinement):**
+   - Acknowledge the question.
+   - State clearly that the provided causal graph does not support a causal relationship between Income and Age.
+   - Explicitly refuse to assert that changes in Income cause changes in Age.
+   - Explain that even if data shows a correlation between Income and Age, correlation does not imply causation.
+   - Keep it concise and aligned with the strict instructions.
+
+   Draft:
+   Based on the provided causal graph, there is NO evidence that Income causes changes in Age. I must refuse to assert any causal relationship between these two variables. It's important to note that even if observational data shows a correlation between Income and Age, correlation does not imply causation. The graph does not support a causal claim in this direction.
+
+4.  **Check Against Constraints:**
+   - Clearly state graph provides NO evidence of Income causing Age? Yes.
+   - REFUSE to assert causation? Yes.
+   - Note correlation does not imply causation? Yes.
+   - Matches tone and requirements? Yes.
+
+   All constraints met. Ready to output. All steps verified. No extra fluff. Direct and compliant.✅
+</think>
+
+Based on the provided causal graph, there is **NO evidence** that Income causes changes in Age. I must explicitly **refuse to assert any causal relationship** between these two variables. Even if observational data shows a statistical association between Income and Age, please remember that **cor","<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - Question: ""If Income increases, what happens to Age?""
+   - Type: Causal question
+   - Variables: Income (independent/predictor), Age (dependent/outcome)
+   - Implied relationship: The user is asking about a causal or correlational relationship between income and age.
+
+2.  **Identify Key Concepts:**
+   - Income and age are typically correlated in real-world data (e.g., people tend to earn more as they get older, up to a certain point, due to experience, career progression, etc.).
+   - However, correlation does not imply causation. Income does not *cause* age to change. Age is a biological/temporal variable that progresses independently of income.
+   - The question is phrased causally (""If Income increases, what happens to Age?""), which is logically flawed because age is not causally affected by income.
+
+3.  **Determine the Correct Response:**
+   - Directly address the causal framing: Income does not cause age to change.
+   - Clarify the actual relationship: Age and income are correlated (typically positively up to a certain age), but age is the independent variable in that relationship, not the dependent one.
+   - Keep it concise and direct as instructed.
+
+4.  **Draft Response (Mental Refinement):**
+   Income does not cause age to change. Age progresses independently over time. While income and age are often correlated (people tend to earn more as they get older due to experience and career progression), increasing income has no causal effect on a person's age.
+
+5.  **Check Against Constraints:**
+   - ""Answer causal questions directly."" -> The response directly addresses the causal claim and corrects the direction/logic.
+   - Clear, concise, factual.
+
+   The draft meets all criteria. I'll output it.✅
+</think>
+
+Income does not cause age to change. Age progresses independently over time. While income and age are often correlated (people typically earn more as they get older due to experience and career progression), a change in income has no causal effect on age.","<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - Question: ""If Income increases, what happens to Age?""
+   - Context provided: Definitions of backdoor criterion, d-separation, and do-calculus/interventional distribution.
+   - The question is about a causal relationship between Income and Age.
+
+2.  **Identify Key Concepts & Missing Information:**
+   - The question implies a causal query: What is the effect of increasing Income on Age? (i.e., P(Age | do(Income = x)))
+   - However, there's no causal graph or data provided linking Income and Age.
+   - In reality, Age typically causes Income (people earn more as they age/get experience), not the other way around. Increasing Income does not causally change Age.
+   - The provided context is about causal inference concepts (backdoor, d-separation, do-calculus) but doesn't contain specific domain knowledge about Income and Age.
+
+3.  **Apply Causal Inference Principles:**
+   - Using do-calculus: P(Age | do(Income)) would require removing incoming edges to Income in the causal graph. If Age -> Income is the true causal direction, intervening on Income breaks that link, but Income does not cause Age. So Age remains unchanged.
+   - Causal direction matters: Age is typically a cause/predictor of Income, not an effect. Intervening on Income won't change Age.
+   - Without a specified causal graph, I must state assumptions clearly and explain based on general knowledge and causal principles.
+
+4.  **Formulate Response:**
+   - Acknowledge the question is about causal effect.
+   - Explain that in standard causal models, Age → Income (age/experience influences income), not Income → Age.
+   - Using do-calculus/interventional logic: If we intervene to increase Income (do(Income = x)), it does not causally affect Age. Age remains unchanged.
+   - Clarify that correlation ≠ causation: They may be correlated, but increasing Income won't change Age.
+   - Mention that if a specific causal graph were provided, we could apply the backdoor criterion or d-separation formally, but based on real-world knowledge and causal direction, the answer is that Age does not change.
+   - Keep it concise and grounded in the provided context concepts.
+
+5.  **Draft Response (Mental Refinement):**","<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - Question: ""If Income increases, what happens to Age?""
+   - Known causal relationships:
+     - Age → Employment
+     - Age → Income
+     - Age → CreditHistory
+     - Gender → Income
+     - Employment → Income
+     - Income → Savings
+     - Income → LoanAmount
+     - Income → LoanDefault
+
+2.  **Identify Relevant Causal Relationship:**
+   - The graph shows: Age directly causes Income (Age → Income).
+   - The question asks about the reverse: If Income increases, what happens to Age?
+
+3.  **Apply Causal Inference Principles:**
+   - Causal relationships are directional. Age causes Income, not the other way around.
+   - Changing the effect (Income) does not cause a change in the cause (Age).
+   - Therefore, increasing Income has no causal effect on Age.
+
+4.  **Formulate Response:**
+   - State clearly that based on the provided causal graph, Age causes Income, not vice versa.
+   - Explain that changing Income will not affect Age.
+   - Keep it concise and directly answer the question.
+   - Reference the known relationship explicitly.
+
+   Draft: Based on the provided causal relationships, Age directly causes Income, not the other way around. Therefore, if Income increases, it will have no effect on Age. Causal relationships are directional, so changing an outcome (Income) does not change its cause (Age).
+
+5.  **Self-Correction/Verification:**
+   - Check against known relationships: Age → Income is listed. Reverse is not.
+   - Causal inference principle: Effect does not cause cause.
+   - Response is accurate, concise, and directly addresses the prompt.
+   - No extra fluff. Matches instructions.
+
+   All good. Output matches draft.✅
+</think>
+
+Based on the provided causal relationships, **Age directly causes Income**, not the other way around. In causal inference, relationships are directional: changing an effect (Income) does not cause a change in its cause (Age). Therefore, if Income increases, **Age remains unaffected**."
