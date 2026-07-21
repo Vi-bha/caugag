@@ -3495,3 +3495,132 @@ Here's a thinking process:
    I will answer: Extending LoanDuration will directly affect LoanDefault, as LoanDuration is a direct cause of LoanDefault. (If I need to be more specific about direction, I could say it will likely increase the probability/rate of LoanDefault, but I'll stick to the causal assertion provided.)
 
    Actually, in causal reasoning tasks like this, the standard response is to directly state the causal effect based on the graph. I'll say: ""Extending LoanDuration will directly affect LoanDefault, since LoanDuration directly causes LoanDefault."" I can also add that typically, a longer loan duration increases the likelihood of default, but the core answer is the direct causal link"
+GER_INTERV_Employment_LoanDefault,What happens to LoanDefault if Employment status changes?,intervention,VERIFIED,yes_causal_effect,UNVERIFIABLE,True,"<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Question:** ""What happens to LoanDefault if Employment status changes?""
+   - **Variables mentioned:** LoanDefault, Employment status
+   - **Implicit request:** Causal relationship between Employment status and LoanDefault
+
+2.  **Check Constraints/Instructions:**
+   - The system prompt explicitly states: ""The causal graph does NOT support a causal claim between [Variable 1] and [Variable 2]. Graph proof: Variable [Variable] not in DAG.""
+   - I MUST:
+     1. Clearly state the graph provides NO evidence of [Variable 1] causing [Variable 2]
+     2. REFUSE to assert causation
+     3. Note that correlation does not imply causation
+   - I need to fill in the blanks appropriately based on the user's question: Variable 1 = Employment status, Variable 2 = LoanDefault (or vice versa, but the prompt says ""between  and "", so I'll adapt it to the specific variables).
+
+3.  **Formulate Response (Mental Refinement):**
+   - Acknowledge the question about Employment status and LoanDefault.
+   - State clearly that the provided causal graph does not contain these variables (or specifically, does not support a causal claim between them).
+   - Explicitly refuse to assert any causal relationship.
+   - Include the standard disclaimer about correlation vs. causation.
+   - Keep it concise and aligned with the strict instructions.
+
+   Draft:
+   Based on the provided causal graph, there is NO evidence that Employment status causes changes in LoanDefault. The graph does not contain these variables, so I cannot and will not assert any causal relationship between them. Please note that even if data shows a statistical association between employment status and loan defaults, correlation does not imply causation. Any observed relationship would require further rigorous causal analysis outside of this graph.
+
+4.  **Check Against Constraints:**
+   - Clearly state graph provides NO evidence of X causing Y? Yes.
+   - REFUSE to assert causation? Yes (""I cannot and will not assert any causal relationship"").
+   - Note correlation does not imply causation? Yes.
+   - Matches the exact required phrasing? I'll adjust slightly to strictly match the prompt's structure if needed, but the prompt says ""You MUST: 1. Clearly state... 2. REFUSE... 3. Note..."".","<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Question:** ""What happens to LoanDefault if Employment status changes?""
+   - **Key Variables:** LoanDefault (dependent/target variable), Employment status (independent/predictor variable)
+   - **Context:** This is a causal question about the relationship between employment status and loan default risk. It's likely from a dataset or a general financial/credit risk context.
+
+2.  **Identify Core Concepts:**
+   - Loan default is the failure to repay a loan according to agreed terms.
+   - Employment status (employed, unemployed, self-employed, etc.) is a key factor in credit risk assessment.
+   - Causal relationship: Changes in employment status typically affect income stability, which directly impacts the ability to repay loans.
+
+3.  **Determine the Causal Mechanism:**
+   - If employment status changes from employed to unemployed → income decreases or becomes unstable → higher probability of loan default.
+   - If employment status changes from unemployed to employed → income increases/stabilizes → lower probability of loan default.
+   - Other changes (e.g., job loss, reduced hours, career change, self-employment) also affect income stability and thus default risk.
+
+4.  **Formulate Direct Answer:**
+   - Need to be direct and causal as instructed.
+   - State the direction of the effect clearly.
+   - Acknowledge that the exact impact depends on the direction of the employment change and other factors, but the core causal mechanism is income stability/ability to repay.
+
+   Draft: A change in employment status directly affects LoanDefault through its impact on income stability and repayment capacity. If employment status worsens (e.g., becoming unemployed or underemployed), the probability of LoanDefault increases. If it improves (e.g., gaining stable employment), the probability of LoanDefault decreases. The magnitude depends on factors like income level, loan terms, and financial reserves, but the causal direction is consistent: reduced employment stability raises default risk, while improved stability lowers it.
+
+5.  **Check Against Constraints:**
+   - ""Answer causal questions directly."" → The draft is direct and focuses on causality.
+   - No extra fluff.
+   - Clear cause-effect relationship stated.
+
+6.  **Refine (Self-Correction/Verification):**
+   - Is it too vague? Could be more precise about the causal mechanism.
+   - Should I mention","<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Question:** ""What happens to LoanDefault if Employment status changes?""
+   - **Context Provided:** Definitions of backdoor criterion, d-separation, and do-calculus/interventional distribution.
+   - **Missing Information:** The user hasn't provided a causal graph, dataset, or specific relationships between ""Employment status"" and ""LoanDefault"". The context only provides general causal inference concepts.
+
+2.  **Identify Key Concepts Needed:**
+   - To answer what happens to LoanDefault when Employment status changes, I need to know the causal relationship between them.
+   - In causal inference terms, this is asking for the interventional effect: P(LoanDefault | do(Employment status = x)).
+   - Without a specific causal graph or data, I can only explain *how* to determine this using the provided concepts (do-calculus, backdoor criterion, d-separation) and state that the actual effect depends on the underlying causal structure and data.
+
+3.  **Formulate Response Strategy:**
+   - Acknowledge the question.
+   - Explain that to determine the effect of changing Employment status on LoanDefault, we need a causal graph/model linking them.
+   - Use the provided context to explain the causal inference framework:
+     - The question is about an interventional effect: P(LoanDefault | do(Employment status)).
+     - To estimate this from observational data, we'd need to satisfy the backdoor criterion (find a set Z that blocks all backdoor paths from Employment to LoanDefault without blocking causal paths or including descendants of Employment).
+     - If the backdoor criterion is satisfied, we can use adjustment: P(LoanDefault | do(Employment)) = Σ_Z P(LoanDefault | Employment, Z) P(Z).
+     - D-separation helps verify if Z blocks all confounding paths.
+   - State that without the specific causal graph or data, I can't give a numerical or directional answer (e.g., ""increases"" or ""decreases""), but I can explain the methodology.
+   - Offer to help if they provide the causal graph, variables, or data.
+
+4.  **Draft Response (Mental Refinement):**
+   To determine what happens to `LoanDefault` when `Employment status` changes, we need to evaluate the **interventional effect**: P(LoanDefault | do(E","<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Question:** What happens to LoanDefault if Employment status changes?
+   - **Known Causal Relationships:**
+     - Age → Employment
+     - Gender → Employment
+     - Employment → Income
+     - Employment → LoanDefault
+     - Housing → LoanDefault
+     - Savings → LoanDefault
+     - Income → LoanDefault
+     - CreditHistory → LoanDefault
+     - LoanAmount → LoanDefault
+     - LoanDuration → LoanDefault
+
+2.  **Identify Relevant Causal Path:**
+   - The question asks about the effect of a change in `Employment` on `LoanDefault`.
+   - Looking at the known relationships, there is a direct causal link: `Employment directly causes LoanDefault`.
+   - There's also an indirect path: `Employment → Income → LoanDefault`.
+
+3.  **Formulate Answer:**
+   - State the direct causal relationship clearly.
+   - Mention the indirect effect via Income if relevant, but keep it concise.
+   - Use causal language as instructed (""You may assert causal relationships if they appear above"").
+   - Answer: A change in Employment status will directly cause a change in LoanDefault. Additionally, since Employment also directly causes Income, and Income directly causes LoanDefault, changes in Employment can also indirectly affect LoanDefault through changes in Income.
+
+4.  **Check Against Constraints:**
+   - Does it use the provided graph? Yes.
+   - Does it answer the question? Yes.
+   - Is it accurate according to the provided relationships? Yes.
+   - Keep it direct and causal.
+
+   Draft: Based on the provided causal relationships, a change in Employment status will directly cause a change in LoanDefault. Additionally, because Employment directly causes Income, and Income directly causes LoanDefault, changes in Employment can also indirectly affect LoanDefault through changes in Income. Therefore, altering Employment status will impact LoanDefault both directly and indirectly.
+
+5.  **Refine (Self-Correction/Verification):**
+   - The prompt says ""You may assert causal relationships if they appear above.""
+   - The direct link is explicitly stated: ""Employment directly causes LoanDefault"".
+   - I should stick closely to the provided facts.
+   - The answer is solid. I'll output it.✅
+   - Structure: Direct effect first, then indirect effect, concluding with the overall impact. All grounded"
