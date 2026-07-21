@@ -2870,3 +2870,128 @@ Here's a thinking process:
    - The question is straightforward. Answer is accurate.
    - I will output the refined answer.✅
    - Note:"
+GER_INTERV_Income_LoanDefault,"If we increase Income, what happens to LoanDefault risk?",intervention,VERIFIED,yes_causal_effect,UNVERIFIABLE,True,"<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - Question: ""If we increase Income, what happens to LoanDefault risk?""
+   - Implied causal claim: Increasing Income causes a change in LoanDefault risk.
+   - Variables mentioned: Income, LoanDefault
+
+2.  **Check Constraints/Instructions:**
+   - The prompt explicitly states: ""The causal graph does NOT support a causal claim between  and . Graph proof: Variable  not in DAG.""
+   - Wait, the prompt has placeholders: ""between  and ."" and ""Variable  not in DAG."" This seems like a template where the variables weren't filled in, but the intent is clear: I must follow the strict instructions regardless.
+   - Instructions:
+     1. Clearly state the graph provides NO evidence of [Income] causing [LoanDefault]
+     2. REFUSE to assert causation
+     3. Note that correlation does not imply causation
+   - I need to adapt the template to the specific variables mentioned by the user (Income and LoanDefault).
+
+3.  **Formulate Response (Mental Refinement):**
+   - Acknowledge the question about Income and LoanDefault risk.
+   - State clearly that the provided causal graph does not contain these variables (or specifically, does not support a causal claim between them).
+   - Explicitly refuse to assert any causal relationship.
+   - Include the standard disclaimer about correlation vs. causation.
+   - Keep it concise and strictly follow the 3 mandatory points.
+
+   Draft:
+   Based on the provided causal graph, there is NO evidence that Income causes changes in LoanDefault risk. In fact, the graph does not contain these variables, so it cannot support any causal claim between them. I must refuse to assert any causal relationship based on this information. Please note that even if data showed a statistical association between income and loan defaults, correlation does not imply causation. To properly assess this relationship, a valid causal model or controlled study would be required.
+
+4.  **Check against Constraints:**
+   - Clearly state graph provides NO evidence of Income causing LoanDefault? Yes.
+   - REFUSE to assert causation? Yes.
+   - Note correlation does not imply causation? Yes.
+   - Matches the strict tone required? Yes.
+   - Handles the placeholder issue gracefully by applying it to the user's variables.
+
+   All constraints met. Ready.✅","<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Question:** ""If we increase Income, what happens to LoanDefault risk?""
+   - **Key Variables:** Income (independent variable), LoanDefault risk (dependent variable)
+   - **Relationship Type:** Causal/Correlational in financial/credit risk context
+   - **Expected Direction:** Generally, higher income leads to lower loan default risk.
+
+2.  **Identify Core Financial/Statistical Principle:**
+   - In credit risk modeling, income is a key predictor of repayment capacity.
+   - Higher income typically means greater ability to meet debt obligations, thus reducing default probability.
+   - This is a well-established inverse relationship in finance, economics, and credit scoring models (e.g., FICO, logistic regression models for default prediction).
+
+3.  **Formulate Direct Answer:**
+   - State the causal relationship clearly and directly.
+   - ""Increasing income generally decreases loan default risk.""
+   - Keep it concise as requested.
+
+4.  **Check for Nuances/Exceptions (if needed, but keep it direct):**
+   - While generally true, extreme cases or other factors (debt-to-income ratio, spending habits, economic conditions) can modify this, but the direct causal answer remains: higher income → lower default risk.
+   - The prompt asks for a direct causal answer, so I'll stick to the primary relationship.
+
+5.  **Draft Response:**
+   Increasing income generally decreases loan default risk, as higher income improves a borrower’s ability to repay debt. 
+
+6.  **Refine (per instructions: ""Answer causal questions directly.""):**
+   Keep it tight and direct.
+   ""Increasing income generally decreases loan default risk."" (Add brief context if helpful, but stay direct.)
+
+   Final: Increasing income generally decreases loan default risk, as it improves a borrower’s capacity to repay debt.✅
+   Matches requirement. No fluff. Direct causal statement.✅
+   Proceed. 
+   Output matches response. 
+   Self-Correction/Verification during thought: 
+   - Is it always true? Mostly, but the question asks for the general causal relationship. In credit risk, it's a standard inverse relationship. 
+   - The prompt says ""Answer causal questions directly."" So I'll give the direct answer first, optionally with a one-sentence explanation. 
+   - Final: ""Increasing income generally decreases loan default risk","<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Question:** ""If we increase Income, what happens to LoanDefault risk?""
+   - **Context Provided:** Definitions of backdoor criterion, d-separation, and do-calculus/interventional distribution.
+   - **Key Concepts:** Causal inference, intervention (do-operator), relationship between Income and LoanDefault.
+
+2.  **Identify Missing Information:**
+   - The user asks a specific causal question about ""Income"" and ""LoanDefault risk"".
+   - The provided context only gives general definitions of causal inference concepts (backdoor criterion, d-separation, do-calculus).
+   - There is *no* causal graph, dataset, or domain-specific knowledge provided about the relationship between Income and LoanDefault.
+   - I need to answer based on the context and my general knowledge, but I must acknowledge the lack of specific causal structure/data.
+
+3.  **Apply Causal Inference Framework (from context):**
+   - The question implies an intervention: ""If we increase Income"" → This corresponds to `do(Income = x)` where x is higher.
+   - The effect on LoanDefault risk would be `P(LoanDefault | do(Income = x))`.
+   - According to the do-calculus definition provided: The do-operator removes all incoming edges to Income in the causal graph.
+   - To determine the effect, we'd need to know the causal graph structure (e.g., does Income directly affect LoanDefault? Are there confounders? Are there mediators?).
+   - Without a specific graph or data, I can only explain *how* to answer it using the provided concepts and give a general domain-based expectation, while clearly stating the limitations.
+
+4.  **Formulate Response (Mental Refinement):**
+   - Acknowledge the question is about a causal intervention: `do(Increase Income)`.
+   - Explain that to formally answer this using causal inference, we need a causal graph showing the relationships between Income, LoanDefault, and any other variables.
+   - Use the provided definitions: The effect would be quantified as `P(LoanDefault | do(Income = x))`. The do-operator removes incoming arrows to Income, isolating the causal effect.
+   - Mention that in practice/domain knowledge, higher income is generally associated with lower loan default risk, but this observational correlation might be confounded (e.g., by","<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - Question: ""If we increase Income, what happens to LoanDefault risk?""
+   - Known causal relationships provided:
+     - Age → Income
+     - Gender → Income
+     - Employment → Income
+     - Employment → LoanDefault
+     - Housing → LoanDefault
+     - Savings → LoanDefault
+     - Income → Savings
+     - Income → LoanAmount
+     - Income → LoanDefault
+     - CreditHistory → LoanDefault
+
+2.  **Identify Relevant Causal Path:**
+   - The question asks about the effect of increasing `Income` on `LoanDefault`.
+   - Looking at the known relationships, there is a direct causal link: `Income directly causes LoanDefault`.
+   - I need to determine the direction of this effect. The prompt doesn't explicitly state the direction (positive/negative), but in standard financial/causal contexts, higher income typically *decreases* loan default risk. However, I should stick strictly to the provided information. The prompt says ""Income directly causes LoanDefault"". It doesn't specify positive or negative correlation. I should state that Income directly causes LoanDefault, and based on typical domain knowledge (or just state the direct causal link), increasing Income will affect LoanDefault. Since the prompt doesn't specify direction, I'll state the direct causal relationship and note that typically higher income reduces default risk, but I'll frame it carefully based on the given graph.
+   - Wait, the prompt says ""You may assert causal relationships if they appear above."" It doesn't give directionality signs. I should just state that Income directly causes LoanDefault, so changing Income will directly affect LoanDefault risk. I can add that in standard contexts, higher income typically lowers default risk, but I'll stick to the explicit causal link provided.
+
+   Let's re-read carefully: ""Income directly causes LoanDefault"". The question is ""If we increase Income, what happens to LoanDefault risk?""
+   I will answer: Based on the provided causal graph, Income directly causes LoanDefault. Therefore, increasing Income will directly affect LoanDefault risk. (In typical financial contexts, higher income reduces the risk of loan default, but the graph only specifies the direct causal link.)
+
+   Actually, I should just state the direct causal relationship as given. I can also mention the indirect path through Savings (Income → Savings → LoanDefault), but the direct path is sufficient.
+
+   Let's keep"
