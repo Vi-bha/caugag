@@ -27,15 +27,36 @@ class GraphVerifier:
         self.dag = dag
         self.nodes = list(dag.nodes())
 
+    def _resolve_node(self, var: str):
+        """Resolve a parsed variable name to an actual DAG node, tolerating
+        natural-language padding (e.g. 'Employment status' -> 'Employment')."""
+        if var in self.nodes:
+            return var
+        var_lower = var.lower().strip()
+        # exact case-insensitive match
+        for node in self.nodes:
+            if node.lower() == var_lower:
+                return node
+        # node name contained in the parsed variable (e.g. "Employment status")
+        candidates = [node for node in self.nodes if node.lower() in var_lower]
+        if len(candidates) == 1:
+            return candidates[0]
+        if len(candidates) > 1:
+            # prefer the longest matching node name (most specific)
+            return max(candidates, key=len)
+        return None
+
     def verify(self, query) -> VerificationResult:
         from caugag.claim_parser import QueryType
-        source, target = query.source_var, query.target_var
-        if source not in self.nodes:
-            return VerificationResult(Verdict.UNVERIFIABLE, source, target,
-                explanation=f"Variable {source} not in DAG.")
-        if target not in self.nodes:
-            return VerificationResult(Verdict.UNVERIFIABLE, source, target,
-                explanation=f"Variable {target} not in DAG.")
+        raw_source, raw_target = query.source_var, query.target_var
+        source = self._resolve_node(raw_source)
+        target = self._resolve_node(raw_target)
+        if source is None:
+            return VerificationResult(Verdict.UNVERIFIABLE, raw_source, raw_target,
+                explanation=f"Variable '{raw_source}' not in DAG. Available: {self.nodes}")
+        if target is None:
+            return VerificationResult(Verdict.UNVERIFIABLE, raw_source, raw_target,
+                explanation=f"Variable '{raw_target}' not in DAG. Available: {self.nodes}")
         if query.query_type == QueryType.ASSOCIATION:
             if self._has_common_cause(source, target):
                 return self._check_confounding(source, target)
