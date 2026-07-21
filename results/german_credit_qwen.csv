@@ -751,3 +751,114 @@ Result is clear. No complex reasoning needed, just lookup.
 </think>
 
 Yes, Employment directly causes Income."
+GER_TRUE_LoanDuration_LoanDefault,Does LoanDuration directly cause LoanDefault?,direction,VERIFIED,yes,VERIFIED,False,"<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - Question: ""Does LoanDuration directly cause LoanDefault?""
+   - Context provided: Causal graph has VERIFIED that LoanDuration causally affects LoanDefault. Graph proof: VERIFIED. Path: ['LoanDuration', 'LoanDefault']. No confounders. Directed path: LoanDuration -> LoanDefault.
+   - Instructions: Answer clearly. State the causal relationship. If numeric effect provided, report it with CI. Do NOT speculate beyond the graph.
+
+2.  **Identify Key Information from Context:**
+   - Causal relationship: LoanDuration -> LoanDefault (directed path)
+   - Verification: VERIFIED
+   - Confounders: None
+   - Numeric effect: Not provided in the prompt.
+
+3.  **Formulate Response:**
+   - Directly answer the question: Yes.
+   - State the causal relationship clearly based on the graph: The causal graph verifies a direct causal relationship where LoanDuration directly causes LoanDefault (LoanDuration → LoanDefault).
+   - Note absence of numeric effect: No specific numeric effect or confidence interval was provided in the graph data.
+   - Adhere to constraints: Clear, direct, no speculation.
+
+   Draft: Yes, based on the verified causal graph, LoanDuration directly causes LoanDefault. The graph confirms a direct causal path (LoanDuration → LoanDefault) with no confounding variables. No specific numeric effect or confidence interval was provided in the graph data.
+
+4.  **Check against Constraints:**
+   - Answer clearly? Yes.
+   - State causal relationship? Yes.
+   - Report numeric effect if provided? Not provided, so noted appropriately.
+   - Do NOT speculate? Strictly adhered to graph info.
+   - Matches prompt exactly? Yes.
+
+   All constraints met. Output matches draft.✅
+</think>
+
+Yes. Based on the verified causal graph, **LoanDuration directly causes LoanDefault** (LoanDuration → LoanDefault). The graph confirms a direct causal path with no confounding variables. No specific numeric effect or confidence interval was provided in the graph data.","<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Question:** ""Does LoanDuration directly cause LoanDefault?""
+   - **Key Concepts:** LoanDuration (length of a loan), LoanDefault (failure to repay a loan), Causality (direct cause)
+   - **Domain:** Finance/Lending/Credit Risk
+
+2.  **Identify Core Question:**
+   - The user is asking about a direct causal relationship between loan duration and loan default.
+   - I need to answer directly, as instructed: ""Answer causal questions directly.""
+
+3.  **Evaluate Causal Relationship:**
+   - Does longer loan duration *directly cause* default? 
+   - In reality, loan duration is a risk factor/correlate, not a direct cause. Default is caused by borrower's inability/unwillingness to pay, which is influenced by income, employment, credit history, economic conditions, loan terms, etc.
+   - Longer duration increases exposure to risk (more time for things to go wrong, higher total interest, potential for changing circumstances), but it doesn't *directly cause* default. It's a contributing factor/moderator, not a direct cause.
+   - Causality in lending is complex and multivariate. Direct causation implies that changing duration alone would deterministically change default, which isn't true.
+
+4.  **Formulate Direct Answer:**
+   - Start with a clear ""No.""
+   - Briefly explain why: Loan duration is a risk factor/correlate, not a direct cause. Default is primarily caused by borrower financial capacity, economic conditions, and other factors. Duration influences risk exposure but doesn't directly cause default.
+   - Keep it concise as per instruction.
+
+5.  **Check Against Constraints:**
+   - ""Answer causal questions directly."" -> I will state clearly whether it's a direct cause or not, then give a brief, direct explanation.
+   - No fluff, straight to the point.
+
+   Draft: No. Loan duration does not directly cause loan default. It is a risk factor that increases exposure to potential default over time, but default is directly caused by a borrower’s inability or unwillingness to repay, which depends on income stability, creditworthiness, economic conditions, and other financial factors. Duration correlates with higher default risk but does not directly cause it.
+
+6.  **Refine (Self-Correction/Verification):**
+   - Is it direct? Yes.
+   - Does it address causality? Yes.
+   - Is it accurate? Yes, aligns with credit risk modeling principles.
+   - Matches constraint? Yes.
+   - Ready. Output matches draft.✅
+</think>
+
+No. Loan duration does not directly cause loan default. It is a risk factor that increases exposure to potential default over time, but default is directly caused by a borrower's inability or unwillingness to repay, which depends on income stability, creditworthiness, economic conditions, debt burden, and other financial factors. Duration correlates with higher default risk but does not directly cause it.","<think>
+Here's a thinking process:
+
+1.  **Analyze User Question:** The user asks: ""Does LoanDuration directly cause LoanDefault?""
+2.  **Identify Key Concepts:** The question is about causal inference, specifically whether one variable (LoanDuration) directly causes another (LoanDefault).
+3.  **Check Provided Context:** The context provides general causal inference principles:
+   - Correlation does not imply causation
+   - Backdoor criterion
+   - D-separation
+   None of these directly address the specific domain of loans, loan duration, or loan default.
+4.  **Apply General Knowledge & Causal Reasoning:**
+   - In finance/credit risk, loan duration (term length) and loan default are often correlated.
+   - Does duration *directly cause* default? Not necessarily. Longer loans might have higher default rates due to:
+     - Increased exposure to economic shocks over time
+     - Borrower's financial situation changing over a longer period
+     - Selection effects (riskier borrowers might get longer terms, or lenders price risk differently)
+     - Confounding variables (income stability, credit score, loan amount, interest rate, macroeconomic conditions)
+   - Causation requires ruling out confounding, reverse causation, and coincidence. Without a specific causal model or empirical study controlling for confounders, we cannot claim direct causation.
+   - In causal inference terms, to claim LoanDuration → LoanDefault, we'd need to satisfy identification criteria (like backdoor criterion) by controlling for confounders, or use experimental/quasi-experimental designs.
+5.  **Formulate Response:**
+   - Acknowledge the question
+   - State that correlation ≠ causation (reference context)
+   - Explain that while longer loan durations are often associated with higher default rates, this doesn't mean duration *directly causes* default
+   - Discuss potential confounders/mechanisms (time exposure, borrower risk, economic conditions, selection bias)
+   - Explain what would be needed to establish causation (causal graph, controlling for confounders via backdoor criterion, d-separation, randomized experiments, or quasi-experimental methods)
+   - Conclude that without a specific causal model or controlled study, we cannot assert direct causation; it's likely influenced by confounding factors and indirect pathways.
+6.  **Check Against Context:** The response should explicitly use/reference the provided concepts (correlation vs causation,","<think>
+Thinking Process:
+1.  **Analyze the Request:** The user is asking if ""LoanDuration"" directly causes ""LoanDefault"" based on the provided causal relationships.
+2.  **Scan the Provided Knowledge:** Look for the relationship between ""LoanDuration"" and ""LoanDefault"" in the given list.
+    - ""Employment directly causes LoanDefault""
+    - ""Housing directly causes LoanDefault""
+    - ""Savings directly causes LoanDefault""
+    - ""Income directly causes LoanDefault""
+    - ""CreditHistory directly causes LoanDefault""
+    - ""LoanAmount directly causes LoanDefault""
+    - ""LoanDuration directly causes LoanDefault"" -> Found it.
+3.  **Formulate the Answer:** State clearly that yes, LoanDuration directly causes LoanDefault, based on the provided causal graph. Keep it concise. Match the exact phrasing if possible. ""Yes, LoanDuration directly causes LoanDefault."" or simply ""Yes."" Provide the direct assertion as instructed.
+4.  **Final Check:** Does the answer directly address the prompt using only the provided information? Yes. Output matches the requirement.✅
+</think>
+
+Yes, based on the provided causal relationships, LoanDuration directly causes LoanDefault."
