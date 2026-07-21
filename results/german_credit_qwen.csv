@@ -320,3 +320,117 @@ Output: Yes, CreditHistory directly causes LoanDefault.
 </think>
 
 Yes, CreditHistory directly causes LoanDefault."
+GER_TRUE_LoanAmount_LoanDefault,Does LoanAmount directly cause LoanDefault?,direction,VERIFIED,yes,UNVERIFIABLE,True,"<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - Question: ""Does LoanAmount directly cause LoanDefault?""
+   - Variables mentioned: LoanAmount, LoanDefault
+   - Task: Determine if there's a direct causal relationship based on a causal graph (DAG).
+
+2.  **Check Constraints/Instructions:**
+   - The prompt explicitly states: ""The causal graph does NOT support a causal claim between  and . Graph proof: Variable  not in DAG.""
+   - It gives strict instructions:
+     1. Clearly state the graph provides NO evidence of [X] causing [Y]
+     2. REFUSE to assert causation
+     3. Note that correlation does not imply causation
+   - Note: The prompt has placeholders """" but clearly refers to the variables in the question (LoanAmount and LoanDefault). I will adapt the response to specifically address these variables while following the exact required structure.
+
+3.  **Formulate Response (Mental Refinement):**
+   - Acknowledge the question about LoanAmount and LoanDefault.
+   - State clearly that the provided causal graph does not contain these variables (or specifically, does not support a causal claim between them).
+   - Explicitly refuse to assert causation.
+   - Include the standard disclaimer about correlation vs. causation.
+   - Ensure tone is direct and adheres strictly to the constraints.
+
+   Draft:
+   Based on the provided causal graph, there is NO evidence that LoanAmount directly causes LoanDefault. In fact, the graph does not contain these variables, so it cannot support any causal claim between them. I must refuse to assert any causal relationship based on this information. Please note that even if an association or correlation were observed between loan amount and default rates in data, correlation does not imply causation. Any causal claims would require a properly specified causal model or experimental evidence.
+
+4.  **Check Against Constraints:**
+   - Clearly state graph provides NO evidence? Yes.
+   - REFUSE to assert causation? Yes.
+   - Note correlation does not imply causation? Yes.
+   - Matches the exact required phrasing/structure? Yes.
+
+   The prompt says: ""The causal graph does NOT support a causal claim between  and . Graph proof: Variable  not in DAG."" I should explicitly mention that the variables are not in the DAG as per the prompt's instruction.
+
+   Refined Draft:
+   Based","<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Question:** ""Does LoanAmount directly cause LoanDefault?""
+   - **Key Concepts:** LoanAmount, LoanDefault, direct causation
+   - **Domain:** Finance/Lending/Credit Risk
+
+2.  **Identify Core Question:**
+   - The user is asking about a causal relationship between two variables: loan amount and loan default.
+   - Specifically, they're asking if there's a *direct* causal link.
+
+3.  **Evaluate Causal Relationship (Domain Knowledge):**
+   - In credit risk and lending, loan default is influenced by many factors: borrower's creditworthiness, income, debt-to-income ratio, employment stability, economic conditions, loan terms, interest rate, collateral, and yes, loan amount.
+   - Does loan amount *directly* cause default? Not exactly. A larger loan amount might increase the financial burden, making it harder to repay, but it's not a direct, standalone cause. It interacts with other factors (like income, cash flow, interest rate).
+   - In statistical/causal inference terms, loan amount is often a *risk factor* or *correlate*, but direct causation is complex. It's more accurate to say loan amount can *contribute* to default risk, especially when relative to income/cash flow, but it doesn't directly cause default in isolation.
+   - There's also selection bias: lenders approve larger loans to borrowers with higher creditworthiness, which can create a negative correlation between loan amount and default in some datasets.
+   - Causal diagrams (DAGs) in credit risk typically show LoanAmount as a node influenced by BorrowerIncome, CreditScore, etc., and influencing DefaultRisk, but usually mediated through DebtBurden, CashFlow, etc.
+
+4.  **Formulate Response (Direct & Accurate):**
+   - Acknowledge the question directly.
+   - State clearly: No, LoanAmount does not *directly* cause LoanDefault.
+   - Explain why: It's an indirect/risk factor that interacts with other variables (income, debt-to-income ratio, cash flow, economic conditions).
+   - Mention that larger loans can increase repayment burden, but default is primarily driven by the borrower's ability and willingness to pay, not the loan size alone.
+   - Note potential confounding/selection effects (lenders often approve larger loans to lower-risk borrowers).","<think>
+Here's a thinking process:
+
+1.  **Analyze User Question:** The user asks: ""Does LoanAmount directly cause LoanDefault?""
+2.  **Identify Key Concepts:** The question is about causal inference, specifically whether one variable (LoanAmount) directly causes another (LoanDefault).
+3.  **Check Provided Context:**
+   - `[correlation_causation]`: Correlation does not imply causation. Need randomization/causal identification.
+   - `[backdoor_criterion]`: Defines backdoor criterion for causal identification.
+   - `[d_separation]`: Defines d-separation and conditional independence.
+   - The context provides general causal inference principles but *no specific information* about LoanAmount or LoanDefault.
+4.  **Evaluate Knowledge/Context:**
+   - I don't have domain-specific data or a causal graph for LoanAmount and LoanDefault.
+   - In reality, loan amount might be correlated with default risk, but causation is complex. Higher loan amounts might correlate with higher risk profiles, but the amount itself might not *directly cause* default. Other factors (income, credit score, economic conditions, loan terms) likely play a role. There could be confounding variables.
+   - Based on the provided context, I must emphasize that correlation ≠ causation, and without a causal graph, randomization, or proper identification (like backdoor criterion), we cannot claim direct causation.
+5.  **Formulate Response:**
+   - Acknowledge the question.
+   - State clearly that based on the provided context and general causal inference principles, we cannot conclude that LoanAmount directly causes LoanDefault.
+   - Explain why: Correlation does not imply causation. There could be confounding variables (e.g., borrower's financial health, income, credit history) that influence both loan amount and default probability.
+   - Mention that to establish direct causation, one would need a causal diagram, apply criteria like the backdoor criterion to block confounding paths, or use randomized experiments/quasi-experimental methods.
+   - Keep it concise and grounded in the provided context.
+   - Avoid making unsupported claims about the specific relationship.
+6.  **Self-Correction/Refinement during thought:**
+   - Check if I'm overcomplicating: The prompt is straightforward. I should directly answer based on the context.
+   - The context explicitly says: ""Correlation does not imply causation... Without random","<think>
+Thinking Process:
+1.  **Analyze the Request:** The user is asking whether ""LoanAmount"" directly causes ""LoanDefault"" based on the provided causal relationships.
+2.  **Scan the Provided Knowledge:** Look for the exact relationship ""LoanAmount directly causes LoanDefault"" in the list.
+    - Employment directly causes LoanDefault
+    - Housing directly causes LoanDefault
+    - Savings directly causes LoanDefault
+    - Income directly causes LoanAmount
+    - Income directly causes LoanDefault
+    - CreditHistory directly causes LoanDefault
+    - **LoanAmount directly causes LoanDefault**  <-- Found it.
+    - LoanDuration directly causes LoanDefault
+    - LoanPurpose directly causes LoanAmount
+3.  **Formulate the Answer:** State clearly that yes, LoanAmount directly causes LoanDefault, based on the provided causal graph. Keep it concise. Provide a direct ""Yes"" and reference the given relationship. Ensure tone matches the prompt's instruction (""You may assert causal relationships if they appear above."").
+4.  **Final Output Generation:** ""Yes, based on the provided causal relationships, LoanAmount directly causes LoanDefault."" (or similar)✅
+Check against constraints: ""You may assert causal relationships if they appear above."" -> Directly answers the question. No extra fluff. Matches exactly.✅
+Done. 
+Output matches response. 
+Proceed. 
+[Self-Correction/Verification during thought]
+- Question: Does LoanAmount directly cause LoanDefault?
+- Graph says: LoanAmount directly causes LoanDefault
+- Answer: Yes.
+- All good. 
+Output Generation. 
+""Yes, LoanAmount directly causes LoanDefault."" (or similar) -> I will just state it clearly. 
+Final: Yes, based on the provided causal relationships, LoanAmount directly causes LoanDefault. 
+Done. 
+[Output Generation] -> *Proceeds*
+</think>
+
+Yes, based on the provided causal relationships, LoanAmount directly causes LoanDefault."
