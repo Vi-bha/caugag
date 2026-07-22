@@ -3,27 +3,34 @@
   "model": "qwen/qwen3.6-27b",
   "n_total": 39,
   "n_refusal_cases": 18,
-  "verifier_accuracy": "41.0%",
-  "caugag": 18,
-  "graphrag": 7,
+  "verifier_accuracy": "89.7%",
+  "caugag": 15,
+  "graphrag": 9,
   "rag": 16,
-  "vanilla": 7,
+  "vanilla": 11,
   "mcnemar": {
     "CauGAG vs Vanilla": {
-      "stat": 9.0909,
-      "p": 0.002569,
-      "sig": "**"
+      "stat": 1.125,
+      "p": 0.288844,
+      "sig": "ns"
     },
     "CauGAG vs RAG": {
-      "stat": 0.5,
-      "p": 0.4795,
+      "stat": 0.0,
+      "p": 1.0,
       "sig": "ns"
     },
     "CauGAG vs GraphRAG": {
-      "stat": 9.0909,
-      "p": 0.002569,
-      "sig": "**"
+      "stat": 4.1667,
+      "p": 0.041227,
+      "sig": "*"
     }
   },
-  "comparison_note": "Llama (llama-3.1-8b-instant) on same dataset: CauGAG 83.3%, GraphRAG 11.1%, RAG 22.2%, Vanilla 5.6%"
+  "note": "Fixed run after patching claim_parser <think>-block handling and graph_verifier fuzzy node matching",
+  "comparison_llama": {
+    "verifier": "82.1%",
+    "caugag": "83.3%",
+    "graphrag": "11.1%",
+    "rag": "22.2%",
+    "vanilla": "5.6%"
+  }
 }
