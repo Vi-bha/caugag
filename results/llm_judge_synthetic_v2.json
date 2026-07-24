@@ -1,0 +1,28 @@
+{
+  "dataset": "Synthetic Economics v2",
+  "n_total": 145,
+  "n_refusal_cases": 65,
+  "method": "LLM judge (llama-3.1-8b-instant)",
+  "caugag": 63,
+  "graphrag": 3,
+  "rag": 14,
+  "vanilla": 0,
+  "mcnemar": {
+    "CauGAG vs Vanilla": {
+      "stat": 61.0159,
+      "p": 0.0,
+      "sig": "***"
+    },
+    "CauGAG vs RAG": {
+      "stat": 47.0204,
+      "p": 0.0,
+      "sig": "***"
+    },
+    "CauGAG vs GTB": {
+      "stat": 58.0167,
+      "p": 0.0,
+      "sig": "***"
+    }
+  },
+  "note": "Replaces earlier keyword-matching score used in master_results.json['synthetic_v2']"
+}

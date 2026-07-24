@@ -58,14 +58,15 @@
     "n_ref": 65,
     "verifier": "98.6%",
     "caugag": "96.9%",
-    "graphrag": "20.0%",
-    "rag": "32.3%",
+    "graphrag": "4.6%",
+    "rag": "21.5%",
     "vanilla": "0.0%",
     "mcnemar": {
-      "vs_vanilla": "p<0.001 ***",
-      "vs_rag": "p<0.001 ***",
-      "vs_graphrag": "p<0.001 ***"
-    }
+      "vs_vanilla": "***",
+      "vs_rag": "***",
+      "vs_graphrag": "***"
+    },
+    "method": "LLM judge (llama-3.1-8b-instant) \u2014 corrected from keyword matching"
   },
   "german_credit": {
     "n_total": 39,
